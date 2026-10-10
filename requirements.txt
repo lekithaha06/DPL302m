@@ -7,20 +7,20 @@
 # --- Core DL ---
 transformers==5.17.0
 accelerate==1.15.0
-peft>=0.13
-datasets>=3.0
+peft==0.21.2
+datasets==5.1.0
 sentencepiece>=0.2
 tokenizers>=0.20
 
 # --- Audio ---
-soundfile>=0.12
-librosa>=0.10
-silero-vad>=5.1
-faster-whisper>=1.0
+soundfile==0.14.0
+librosa==0.11.0
+silero-vad==6.2.3
+faster-whisper==1.2.1
 
 # --- Metrics ---
 sacrebleu==2.6.0
-jiwer>=3.0
+jiwer==4.0.0
 # bert-score / unbabel-comet are optional (COMET bonus): uncomment if used
 # unbabel-comet>=2.2
 

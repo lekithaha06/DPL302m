@@ -27,12 +27,13 @@
 ---
 
 ## Phase 0 — Setup
-- [ ] Tạo repo GitHub, mời đủ thành viên; mỗi người commit bằng tài khoản của mình (điểm cá nhân dựa trên git log)
+- [x] Repo GitHub: https://github.com/lekithaha06/DPL302m (commit đầu tiên đã push)
+- [ ] Mời các thành viên còn lại vào repo (Settings → Collaborators); mỗi người commit bằng tài khoản của mình (điểm cá nhân dựa trên git log)
 - [x] Cấu trúc thư mục theo gợi ý của đề (`data/ notebooks/ src/ configs/ app/ api/ docker/ reports/`)
 - [x] `requirements.txt` (ghim `==` các thư viện đã cài trên máy; còn lại `>=`, chạy `pip freeze` sau khi cài đủ)
 - [x] Cố định seed (`src/utils/seed.py`), ghi môi trường vào README, test pytest
-- [ ] Cài thư viện còn thiếu: `peft datasets jiwer faster-whisper silero-vad librosa soundfile`
-- [ ] Cài git, `git init`, tạo repo GitHub và push
+- [x] Cài thư viện còn thiếu: `peft datasets jiwer faster-whisper silero-vad librosa soundfile` (đã ghim phiên bản)
+- [x] Cài git, `git init`, nối remote và push
 - [ ] Điền tên, MSSV, vai trò từng thành viên → cập nhật slide 1–2 Task 1
 
 ## Phase 1 — TASK 1 (Proposal) ← ĐANG LÀM
