@@ -1,0 +1,20 @@
+# Shared defaults. Task-specific configs (asr_*.yaml, mt_*.yaml) override these.
+seed: 42
+sample_rate: 16000
+device: auto            # auto | cuda | cpu
+
+paths:
+  data_dir: data
+  checkpoint_dir: checkpoints
+  log_dir: runs
+  report_dir: reports
+
+text_normalization:
+  unicode_form: NFC
+  lowercase: true
+  strip_punctuation: true
+  numbers_to_words: true   # same rule for train and eval
+
+audio:
+  min_seconds: 0.5
+  max_seconds: 30.0
