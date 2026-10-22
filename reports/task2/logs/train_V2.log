@@ -1,0 +1,71 @@
+train pairs=7376 dev pairs=361
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 10452.83it/s]
+trainable params=4,718,592 / 453,144,576 (1.04%)
+train pairs=7376 dev pairs=361
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 10344.10it/s]
+trainable params=4,718,592 / 453,144,576 (1.04%)
+epoch 0 (baseline) dev loss 1.7174 BLEU 24.65 chrF++ 51.19
+epoch 1 step 50/922 loss 1.4079
+epoch 1 step 100/922 loss 1.3406
+epoch 1 step 150/922 loss 1.3125
+epoch 1 step 200/922 loss 1.2854
+epoch 1 step 250/922 loss 1.2609
+epoch 1 step 300/922 loss 1.2452
+epoch 1 step 350/922 loss 1.2312
+epoch 1 step 400/922 loss 1.2165
+epoch 1 step 450/922 loss 1.2102
+epoch 1 step 500/922 loss 1.2019
+epoch 1 step 550/922 loss 1.1932
+epoch 1 step 600/922 loss 1.1894
+epoch 1 step 650/922 loss 1.1830
+epoch 1 step 700/922 loss 1.1773
+epoch 1 step 750/922 loss 1.1736
+epoch 1 step 800/922 loss 1.1698
+epoch 1 step 850/922 loss 1.1637
+epoch 1 step 900/922 loss 1.1609
+{'epoch': 1, 'train_loss': 1.1596075376564408, 'dev_loss': 1.490506244742352, 'dev_bleu': 27.16552424673455, 'dev_chrf++': 53.12996213207657, 'seconds': 587.2}
+epoch 2 step 50/922 loss 1.0300
+epoch 2 step 100/922 loss 1.0225
+epoch 2 step 150/922 loss 1.0175
+epoch 2 step 200/922 loss 1.0103
+epoch 2 step 250/922 loss 1.0193
+epoch 2 step 300/922 loss 1.0216
+epoch 2 step 350/922 loss 1.0152
+epoch 2 step 400/922 loss 1.0105
+epoch 2 step 450/922 loss 1.0016
+epoch 2 step 500/922 loss 0.9961
+epoch 2 step 550/922 loss 0.9926
+epoch 2 step 600/922 loss 0.9934
+epoch 2 step 650/922 loss 0.9935
+epoch 2 step 700/922 loss 0.9937
+epoch 2 step 750/922 loss 0.9907
+epoch 2 step 800/922 loss 0.9888
+epoch 2 step 850/922 loss 0.9858
+epoch 2 step 900/922 loss 0.9838
+{'epoch': 2, 'train_loss': 0.9830504055589502, 'dev_loss': 1.524448944174725, 'dev_bleu': 26.98426755465822, 'dev_chrf++': 53.04847788403374, 'seconds': 569.6}
+epoch 3 step 50/922 loss 0.8646
+epoch 3 step 100/922 loss 0.8763
+epoch 3 step 150/922 loss 0.8735
+epoch 3 step 200/922 loss 0.8812
+epoch 3 step 250/922 loss 0.8763
+epoch 3 step 300/922 loss 0.8774
+epoch 3 step 350/922 loss 0.8826
+epoch 3 step 400/922 loss 0.8794
+epoch 3 step 450/922 loss 0.8812
+epoch 3 step 500/922 loss 0.8794
+epoch 3 step 550/922 loss 0.8761
+epoch 3 step 600/922 loss 0.8722
+epoch 3 step 650/922 loss 0.8700
+epoch 3 step 700/922 loss 0.8704
+epoch 3 step 750/922 loss 0.8660
+epoch 3 step 800/922 loss 0.8661
+epoch 3 step 850/922 loss 0.8628
+epoch 3 step 900/922 loss 0.8622
+{'epoch': 3, 'train_loss': 0.8604302326471842, 'dev_loss': 1.5841657286104949, 'dev_bleu': 27.03785912638841, 'dev_chrf++': 52.62782708734225, 'seconds': 541.7}
+best {'epoch': 1, 'train_loss': 1.1596075376564408, 'dev_loss': 1.490506244742352, 'dev_bleu': 27.16552424673455, 'dev_chrf++': 53.12996213207657, 'seconds': 587.2}

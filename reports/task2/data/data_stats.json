@@ -1,0 +1,208 @@
+{
+  "fleurs": {
+    "train": {
+      "cleaning_steps": [
+        [
+          "raw",
+          2994
+        ],
+        [
+          "có câu tiếng Anh tham chiếu",
+          2927
+        ],
+        [
+          "transcript không rỗng",
+          2927
+        ],
+        [
+          "âm thanh đọc được, không rỗng",
+          2927
+        ],
+        [
+          "không trùng file âm thanh (hash)",
+          2927
+        ]
+      ],
+      "removed_total": 67,
+      "utterances": 2927,
+      "unique_sentences": 1449,
+      "hours": 8.859,
+      "mean_sec": 10.9,
+      "median_sec": 10.38,
+      "min_sec": 2.52,
+      "max_sec": 42.18,
+      "over_30s": 4,
+      "sample_rates": {
+        "16000": 2927
+      },
+      "gender": {
+        "FEMALE": 2175,
+        "MALE": 752
+      },
+      "recordings_per_sentence": {
+        "1": 285,
+        "2": 850,
+        "3": 314
+      },
+      "length_buckets": {
+        "<5 s": 63,
+        "5–10 s": 1271,
+        "10–20 s": 1533,
+        "20–30 s": 56,
+        ">30 s": 4
+      },
+      "words_mean": 28.94
+    },
+    "dev": {
+      "cleaning_steps": [
+        [
+          "raw",
+          361
+        ],
+        [
+          "có câu tiếng Anh tham chiếu",
+          361
+        ],
+        [
+          "transcript không rỗng",
+          361
+        ],
+        [
+          "âm thanh đọc được, không rỗng",
+          361
+        ],
+        [
+          "không trùng file âm thanh (hash)",
+          361
+        ]
+      ],
+      "removed_total": 0,
+      "utterances": 361,
+      "unique_sentences": 149,
+      "hours": 1.194,
+      "mean_sec": 11.91,
+      "median_sec": 11.16,
+      "min_sec": 4.32,
+      "max_sec": 31.98,
+      "over_30s": 2,
+      "sample_rates": {
+        "16000": 361
+      },
+      "gender": {
+        "MALE": 361
+      },
+      "recordings_per_sentence": {
+        "1": 13,
+        "2": 60,
+        "3": 76
+      },
+      "length_buckets": {
+        "<5 s": 5,
+        "5–10 s": 120,
+        "10–20 s": 215,
+        "20–30 s": 19,
+        ">30 s": 2
+      },
+      "words_mean": 28.87
+    },
+    "test": {
+      "cleaning_steps": [
+        [
+          "raw",
+          857
+        ],
+        [
+          "có câu tiếng Anh tham chiếu",
+          857
+        ],
+        [
+          "transcript không rỗng",
+          857
+        ],
+        [
+          "âm thanh đọc được, không rỗng",
+          857
+        ],
+        [
+          "không trùng file âm thanh (hash)",
+          857
+        ]
+      ],
+      "removed_total": 0,
+      "utterances": 857,
+      "unique_sentences": 347,
+      "hours": 3.004,
+      "mean_sec": 12.62,
+      "median_sec": 11.64,
+      "min_sec": 4.98,
+      "max_sec": 38.1,
+      "over_30s": 7,
+      "sample_rates": {
+        "16000": 857
+      },
+      "gender": {
+        "MALE": 857
+      },
+      "recordings_per_sentence": {
+        "1": 34,
+        "2": 116,
+        "3": 197
+      },
+      "length_buckets": {
+        "<5 s": 2,
+        "5–10 s": 274,
+        "10–20 s": 510,
+        "20–30 s": 64,
+        ">30 s": 7
+      },
+      "words_mean": 30.36
+    }
+  },
+  "leakage": {
+    "train-dev": {
+      "id_overlap": 0,
+      "text_overlap": 0
+    },
+    "train-test": {
+      "id_overlap": 0,
+      "text_overlap": 0
+    },
+    "dev-test": {
+      "id_overlap": 0,
+      "text_overlap": 0
+    }
+  },
+  "split_ratio_percent": {
+    "train": 70.6,
+    "dev": 8.7,
+    "test": 20.7
+  },
+  "vivos_test": {
+    "utterances": 760,
+    "speakers": 19,
+    "mean_sec": 3.53,
+    "utt_per_speaker_min": 40,
+    "utt_per_speaker_max": 40
+  },
+  "phomt_lines": {
+    "train": 2977999,
+    "dev": 18719,
+    "test": 19151
+  },
+  "phomt_opensubtitles_train_share_percent": {
+    "value": 51.4,
+    "source": "PhoMT paper (EMNLP 2021), Table 1"
+  },
+  "sentence_balancing": {
+    "before_utterances_by_recordings_per_sentence": {
+      "1": 285,
+      "2": 1700,
+      "3": 942
+    },
+    "after_weight_by_recordings_per_sentence": {
+      "1": 285.0,
+      "2": 850.0,
+      "3": 314.0
+    }
+  }
+}

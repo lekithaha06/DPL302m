@@ -1,0 +1,21 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  32%|███▏      | 168/519 [00:00<00:00, 1613.50it/s]
+Loading weights:  64%|██████▎   | 330/519 [00:00<00:00, 1329.30it/s]
+Loading weights:  90%|████████▉ | 466/519 [00:00<00:00, 817.17it/s] 
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 724.58it/s]
+B0 {'BLEU': 40.96, 'chrF++': 60.96}
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  40%|████      | 210/519 [00:00<00:00, 2091.47it/s]
+Loading weights:  81%|████████  | 420/519 [00:00<00:00, 1161.84it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 938.75it/s] 
+V1 {'BLEU': 38.98, 'chrF++': 59.68}
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  43%|████▎     | 222/519 [00:00<00:00, 2046.69it/s]
+Loading weights:  82%|████████▏ | 427/519 [00:00<00:00, 1045.02it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 794.48it/s] 
+V2 {'BLEU': 40.8, 'chrF++': 60.68}
+FINAL V2

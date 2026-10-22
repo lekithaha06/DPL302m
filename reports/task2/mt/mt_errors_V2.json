@@ -1,0 +1,321 @@
+{
+  "by_asr_wer": {
+    "WER 0": {
+      "n": 183,
+      "BLEU_B0": 30.1,
+      "BLEU_V2": 33.93,
+      "chrF++_B0": 55.54,
+      "chrF++_V2": 58.24
+    },
+    "WER 0–10": {
+      "n": 283,
+      "BLEU_B0": 26.8,
+      "BLEU_V2": 29.79,
+      "chrF++_B0": 52.97,
+      "chrF++_V2": 54.95
+    },
+    "WER 10–30": {
+      "n": 306,
+      "BLEU_B0": 21.53,
+      "BLEU_V2": 23.82,
+      "chrF++_B0": 47.8,
+      "chrF++_V2": 49.2
+    },
+    "WER >30": {
+      "n": 85,
+      "BLEU_B0": 10.55,
+      "BLEU_V2": 18.07,
+      "chrF++_B0": 37.87,
+      "chrF++_V2": 44.02
+    }
+  },
+  "by_digits": {
+    "có số": {
+      "n": 171,
+      "BLEU_B0": 17.98,
+      "BLEU_V2": 24.11,
+      "chrF++_B0": 46.36,
+      "chrF++_V2": 50.14
+    },
+    "không có số": {
+      "n": 686,
+      "BLEU_B0": 25.53,
+      "BLEU_V2": 28.39,
+      "chrF++_B0": 51.16,
+      "chrF++_V2": 53.06
+    }
+  },
+  "sentences_better": 456,
+  "sentences_worse": 240,
+  "sentences_same": 161,
+  "examples_most_improved": [
+    {
+      "id": "1935",
+      "vi_ref": "Tuy nhiên, điều đó không đúng. Mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báu.",
+      "asr": "tuy nhiên điều đó không đúng mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báo.",
+      "en_ref": "However, that is not true. Although there is something written on the back of the document, it is not a treasure map.",
+      "base": "However that's not true even though there's something written on the back of the document but it's not a newspaper inventory map.",
+      "new": "However, that is not true. Although there is something written on the back of the document, it is not a map of the treasure.",
+      "asr_wer": 3.4,
+      "chrf_base": 61.68993224156001,
+      "chrf_new": 93.06759091284363
+    },
+    {
+      "id": "1935",
+      "vi_ref": "Tuy nhiên, điều đó không đúng. Mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báu.",
+      "asr": "tuy nhiên điều đó không đúng mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báo.",
+      "en_ref": "However, that is not true. Although there is something written on the back of the document, it is not a treasure map.",
+      "base": "However that's not true even though there's something written on the back of the document but it's not a newspaper inventory map.",
+      "new": "However, that is not true. Although there is something written on the back of the document, it is not a map of the treasure.",
+      "asr_wer": 3.4,
+      "chrf_base": 61.68993224156001,
+      "chrf_new": 93.06759091284363
+    },
+    {
+      "id": "1759",
+      "vi_ref": "Bác sĩ Malar Balasubramanian, 29 tuổi, được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng nặc thuốc ở Blue Ash, một vùng ngoại ô cách Cincinnati 15 dặm về phía bắc.",
+      "asr": "bác sĩ ma la ba lát su ran mi anh hai mươi chín tuổi được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng nặc thuốc ở lúa ác một vùng ngoại ô cách shin shin natty mười lăm dậm về phía bắc.",
+      "en_ref": "Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state.",
+      "base": "Dr. Ma la ba lát su ran mi anh hai mươi chín tuổi được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng ặc thuốc ở lúa ác... một vùng ngoại ô cách cách Shin Shin Natty mười fifteen dậm về phía Bắc.",
+      "new": "Dr. Ma-La-Pat Su-Ren-Mi-Anh, aged 29, was found lying on the roadside ground dressed in a smoking T-shirt and underwear in Wheatgrass, a suburb fifteen paces north of Shin Shin Natty.",
+      "asr_wer": 47.5,
+      "chrf_base": 11.538076946392964,
+      "chrf_new": 42.2552230722517
+    },
+    {
+      "id": "1712",
+      "vi_ref": "Từ năm 1966 Sundarbans là khu bảo tồn động vật hoang dã và ước tính hiện nay có 400 con cọp Hoàng gia Bengal và khoảng 30.000 con hươu đốm trong vùng này.",
+      "asr": "từ năm một ngàn chín trăm sáu mươi sáu sơn đa bang là khu bảo tồn động vật hoang dã và có tính hiện nay có bốn trăm con cọp hoàng gia ben gan và khoảng ba mươi ngàn con ưu đếm trong vùng này.",
+      "en_ref": "Since 1966 the Sundarbans have been a wildlife sanctuary, and it is estimated that there are now 400 Royal Bengal tigers and about 30,000 spotted deer in the area.",
+      "base": "From the year one thousand nine hundred and sixty - six, the Daba Mountains were a wildlife sanctuary and there are now four hundred golden tigers and about thirty thousand primates in this region.",
+      "new": "Since 1600, Shandabang has been a wildlife sanctuary, and it is estimated that there are now 400 tigers and about 30,000 birds in the area.",
+      "asr_wer": 58.8,
+      "chrf_base": 38.29088383204821,
+      "chrf_new": 68.33434227417783
+    },
+    {
+      "id": "1926",
+      "vi_ref": "Chấp nhận là quan điểm của Aristotle về tất cả mọi vấn đề liên quan đến khoa học, kể cả tâm lý học.",
+      "asr": "chấp nhận là quan điểm của erik stone về tất cả mọi vấn đề liên quan đến khoa học kể tả tâm lý học.",
+      "en_ref": "Accepted were Aristotle's views on all matters of science, including psychology.",
+      "base": "Acceptance is Erik Stone's view on everything from science to psychology.",
+      "new": "Acceptance is Erik Stone's view on all matters related to science, including psychology.",
+      "asr_wer": 13.0,
+      "chrf_base": 34.649179569526154,
+      "chrf_new": 63.8364007626439
+    },
+    {
+      "id": "1926",
+      "vi_ref": "Chấp nhận là quan điểm của Aristotle về tất cả mọi vấn đề liên quan đến khoa học, kể cả tâm lý học.",
+      "asr": "chấp nhận là quan điểm của arizona về tất cả mọi vấn đề liên quan đến khoa học kể cả tâm lý học.",
+      "en_ref": "Accepted were Aristotle's views on all matters of science, including psychology.",
+      "base": "Acceptance is Arizona's view on everything from science to psychology.",
+      "new": "Acceptance is Arizona's view on all matters related to science, including psychology.",
+      "asr_wer": 4.3,
+      "chrf_base": 34.698702865160676,
+      "chrf_new": 63.77386895204577
+    },
+    {
+      "id": "1772",
+      "vi_ref": "Vậy là, có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "asr": "vậy là có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "en_ref": "So, it is likely that the notation was added simply as a label.",
+      "base": "So there's a possibility that the footnotes are simply labels.",
+      "new": "Thus, it is possible that the annotation is added simply as a mark label.",
+      "asr_wer": 0.0,
+      "chrf_base": 30.563820584349937,
+      "chrf_new": 58.76017259792052
+    },
+    {
+      "id": "1772",
+      "vi_ref": "Vậy là, có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "asr": "vậy là có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "en_ref": "So, it is likely that the notation was added simply as a label.",
+      "base": "So there's a possibility that the footnotes are simply labels.",
+      "new": "Thus, it is possible that the annotation is added simply as a mark label.",
+      "asr_wer": 0.0,
+      "chrf_base": 30.563820584349937,
+      "chrf_new": 58.76017259792052
+    }
+  ],
+  "examples_most_worse": [
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gmt cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The vehicle was taken away from the scene of the accident at around twelve GMT that same day.",
+      "new": "The car was removed from the crash site around 12: 00 GMT that same day.",
+      "asr_wer": 9.5,
+      "chrf_base": 66.09626776500951,
+      "chrf_new": 25.822604517214074
+    },
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gmt cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The vehicle was taken away from the scene of the accident at around twelve GMT that same day.",
+      "new": "The car was removed from the crash site around 12: 00 GMT that same day.",
+      "asr_wer": 9.5,
+      "chrf_base": 66.09626776500951,
+      "chrf_new": 25.822604517214074
+    },
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gờ mờ tàu cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The car was taken away from the scene of the accident at around twelve o'clock on the eve of the same day.",
+      "new": "The car was removed from the crash site around 12: 00 a.m. on the same day.",
+      "asr_wer": 23.8,
+      "chrf_base": 63.13055285657651,
+      "chrf_new": 29.438202906161877
+    },
+    {
+      "id": "1731",
+      "vi_ref": "Trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền buồm.",
+      "asr": "trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền bùn.",
+      "en_ref": "In the archipelagos and lakes you do not necessarily need a yacht.",
+      "base": "in the archipelago and lakes you do not necessarily need mud boats.",
+      "new": "In the islands and lakes, you do not need a mud boat.",
+      "asr_wer": 7.1,
+      "chrf_base": 74.06304975799455,
+      "chrf_new": 44.92565545562855
+    },
+    {
+      "id": "1731",
+      "vi_ref": "Trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền buồm.",
+      "asr": "trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền bờm.",
+      "en_ref": "In the archipelagos and lakes you do not necessarily need a yacht.",
+      "base": "in archipelagoes and lakes you do not necessarily need to boat mane.",
+      "new": "In the islands and lakes, you do not need a boat.",
+      "asr_wer": 7.1,
+      "chrf_base": 69.29913645281886,
+      "chrf_new": 45.5144088540511
+    },
+    {
+      "id": "1664",
+      "vi_ref": "Vặn hai cục bột khô với nhau, rồi bóp chúng thành một viên cầu bằng tay ướt, sạch.",
+      "asr": "vặn hai cụp bột khô với nhau rồi bóp chúng thành một viên cầu bằng tay ướt sạch.",
+      "en_ref": "Swirl the two dry powders together and then, with clean wet hands, squeeze them into a ball.",
+      "base": "twist the two clumps of dry powder together and then squeeze them into a ball with clean wet hands.",
+      "new": "Twist two clumps of dry dough together and squeeze them into a ball with your wet, clean hands.",
+      "asr_wer": 5.6,
+      "chrf_base": 72.4260642378992,
+      "chrf_new": 50.90772730288443
+    },
+    {
+      "id": "1998",
+      "vi_ref": "Chân của chúng có vảy và móng vuốt. Chúng đẻ trứng và đi lại bằng hai chân sau như những con T-Rex.",
+      "asr": "chân của chúng có vẩy và móng vuốt chúng đẻ trứng và đi lại bằng hai chân sau như những con truy rét.",
+      "en_ref": "They have feet with scales and claws, they lay eggs, and they walk on their two back legs like a T-Rex.",
+      "base": "Their legs have scales and claws, they lay eggs, and they walk on their hind legs like trackers.",
+      "new": "Their legs have scales and claws. They lay their eggs and walk on their hind legs like queens.",
+      "asr_wer": 13.0,
+      "chrf_base": 65.91653534096133,
+      "chrf_new": 44.92435675854302
+    },
+    {
+      "id": "1912",
+      "vi_ref": "Hầu hết các quần đảo nhỏ hơn là những quốc gia độc lập, hoặc liên kết với Pháp, và được biết đến là những khu nghỉ mát bãi biển sang trọng.",
+      "asr": "hầu hết các quần đảo nhỏ hơn là những quốc gia độc lập hoặc liên kết với pháp và được biết đến là những khu nghỉ mát bãi biển sang trọng.",
+      "en_ref": "Most of the smaller islands are independent nations, or associated with France, and known as luxury beach resorts.",
+      "base": "Most of the smaller archipelagoes are independent countries or associated with France and are known as luxury beach resorts.",
+      "new": "Most of the smaller archipelagos are independent or French-affiliated countries and are known as luxurious beach resorts.",
+      "asr_wer": 0.0,
+      "chrf_base": 73.65573661865659,
+      "chrf_new": 54.887800500867314
+    }
+  ],
+  "examples_both_bad": [
+    {
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lát kha xin cũng trình bày chắp ranh không hazard ca sĩ gây du khăn đeo góc hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "base": "He also performed \"Cắp ranh không hazard\" [\"No Hazard\"] with him.",
+      "new": "He also performed \"Crystal No Danger\", singing with him.",
+      "asr_wer": 86.7,
+      "chrf_base": 10.382899196755396,
+      "chrf_new": 12.63038864557657
+    },
+    {
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lắp ca xin cũng trình bày chắp banh bong ba han ca sĩ gây du khăn đeo bót hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "base": "The singer also performed \"Bang Ba Han\" (Bang Ba Han), singing along with him.",
+      "new": "He also performed Chắp Banh Bong Ba Han, the singer who performed the song \"Nắn khăn đeo bót\", singing with him.",
+      "asr_wer": 93.3,
+      "chrf_base": 14.906524943494533,
+      "chrf_new": 17.053488762975377
+    },
+    {
+      "id": "1987",
+      "vi_ref": "Vụ rơi trực thăng diễn ra trên địa hình núi cao và được quy cho hỏa lực của quân địch gây ra.",
+      "asr": "vụ gây trực thăng diễn ra trên địa hình nước ao và được quy cho mã lực cổ quân định gây ra.",
+      "en_ref": "The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire.",
+      "base": "The helicopter incident took place on the pond water terrain and was attributed to the horsepower ancient troops intended to cause.",
+      "new": "The helicopter incident took place over a watery terrain and was attributed to Ma Ying-min.",
+      "asr_wer": 27.3,
+      "chrf_base": 20.962686548837123,
+      "chrf_new": 19.00846348298711
+    },
+    {
+      "id": "1814",
+      "vi_ref": "Ion hydro là proton đã bị loại bỏ electron (vì nguyên tử hydro bao gồm một proton và một electron).",
+      "asr": "eo ông hai pờ rô là bầu tông đã bị loại bỏ electron vì nguyên tử hai pờ rô bao gồm một bầu tâm và một electron.",
+      "en_ref": "Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).",
+      "base": "The two - pronged diamond is the diamond that has its electrons removed because the two - pronged atom consists of a center and an electron.",
+      "new": "The electron has been removed because the atom is composed of a helix and an electron.",
+      "asr_wer": 60.0,
+      "chrf_base": 27.740866794624225,
+      "chrf_new": 19.423661792702195
+    },
+    {
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cánh quang bằng cách viết vẽ khắc tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "base": "Do not damage the photosphere by writing, drawing, engraving, spray painting on the wall.",
+      "new": "Do n't sabotage the photosphere by writing, drawing, engraving, painting, spraying paint on walls.",
+      "asr_wer": 13.3,
+      "chrf_base": 24.016135891197713,
+      "chrf_new": 19.624125044390784
+    },
+    {
+      "id": "1978",
+      "vi_ref": "Đối với Springboks, trận này đã giúp đội tuyển kết thúc chuỗi thua 5 trận liền.",
+      "asr": "đối với spurs chặng này đã giúp đội tuyển kết thúc chửi thương năm chặng liền.",
+      "en_ref": "For the Springboks, it ended a five-match losing streak.",
+      "base": "For the spurs this stage helped the team finish five consecutive stages.",
+      "new": "For Spurs, this leg helped the team finish five straight legs.",
+      "asr_wer": 37.5,
+      "chrf_base": 20.56266603062444,
+      "chrf_new": 19.660217447455782
+    },
+    {
+      "id": "1817",
+      "vi_ref": "Tuy nhiên, về khía cạnh này thì khu vực Schengen vận hành gần như một quốc gia duy nhất.",
+      "asr": "tuy nhiên giải phía cạnh này thì khu vực chelsea vận hành gần như một quốc gia duy nhất.",
+      "en_ref": "The Schengen zone, however, works somewhat like one country in this respect.",
+      "base": "However this side of the league, the Chelsea area operates almost as a single nation.",
+      "new": "However, this side of the league, the Chelsea area, operates almost as a single nation.",
+      "asr_wer": 15.8,
+      "chrf_base": 17.90176600519847,
+      "chrf_new": 19.71422781192497
+    },
+    {
+      "id": "1677",
+      "vi_ref": "Ngày nay, những loại côn trung không thể gập cánh lại chỉ có chuồn chuồn và những con phù du.",
+      "asr": "ngày nay những lỗi côn trùng không thể gặp cánh lại chỉ có chuồng chùa và những con phù du.",
+      "en_ref": "Today, the only insects that cannot fold back their wings are dragon flies and mayflies.",
+      "base": "Nowadays the bugs of insects can not meet the wings, only the temple coop and the plankton.",
+      "new": "Nowadays, bugs can't meet wings. They only have enclosures and plankton.",
+      "asr_wer": 25.0,
+      "chrf_base": 26.58428671659383,
+      "chrf_new": 20.033479577229006
+    }
+  ]
+}

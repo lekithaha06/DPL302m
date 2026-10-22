@@ -87,8 +87,9 @@ def main():
         done = {r["id"] for r in rows}
         processor = WhisperProcessor.from_pretrained(source)
         model = WhisperForConditionalGeneration.from_pretrained(source, torch_dtype=torch.float16, attn_implementation="eager").to("cuda").eval()
-        prompt = processor.get_decoder_prompt_ids(language="vi", task="transcribe", no_timestamps=True)
-        genargs = {"forced_decoder_ids": prompt, "num_beams": 5, "do_sample": False, "max_new_tokens": 440,
+        # Task 2: same environment as Baseline B (transformers 5.x), where forced_decoder_ids is no longer accepted;
+        # language/task select the same <|vi|><|transcribe|><|notimestamps|> prompt.
+        genargs = {"language": "vi", "task": "transcribe", "num_beams": 5, "do_sample": False, "max_new_tokens": 440,
                    "return_timestamps": False, "suppress_tokens": config["suppress_tokens"],
                    "begin_suppress_tokens": config["begin_suppress_tokens"]}
         def decode(audio):

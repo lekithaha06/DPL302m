@@ -1,0 +1,27 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  23%|██▎       | 118/519 [00:00<00:00, 1082.11it/s]
+Loading weights:  44%|████▎     | 227/519 [00:00<00:00, 910.66it/s] 
+Loading weights:  62%|██████▏   | 320/519 [00:00<00:00, 806.52it/s]
+Loading weights:  77%|███████▋  | 402/519 [00:00<00:00, 587.93it/s]
+Loading weights:  90%|████████▉ | 467/519 [00:00<00:00, 584.35it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 590.49it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  36%|███▌      | 188/519 [00:00<00:00, 1834.47it/s]
+Loading weights:  72%|███████▏  | 372/519 [00:00<00:00, 1610.46it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1559.74it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  24%|██▍       | 124/519 [00:00<00:00, 1169.41it/s]
+Loading weights:  46%|████▋     | 241/519 [00:00<00:00, 1115.05it/s]
+Loading weights:  68%|██████▊   | 353/519 [00:00<00:00, 1030.37it/s]
+Loading weights:  88%|████████▊ | 457/519 [00:00<00:00, 1011.34it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1025.94it/s]
+V1 fleurs_cascade {'BLEU': 28.59, 'chrF++': 52.82, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 124.3}
+V1 fleurs_clean {'BLEU': 37.31, 'chrF++': 60.52, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 113.8}
+V1 phomt_test {'BLEU': 37.9, 'chrF++': 58.82, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 19151, 'seconds': 1755.2}
+saved

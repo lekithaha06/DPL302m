@@ -1,0 +1,48 @@
+train pairs=2927 dev pairs=361
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 9486.19it/s]
+trainable params=4,718,592 / 453,144,576 (1.04%)
+epoch 0 (baseline) dev loss 1.7174 BLEU 24.65 chrF++ 51.19
+epoch 1 step 50/366 loss 1.6357
+epoch 1 step 100/366 loss 1.6345
+epoch 1 step 150/366 loss 1.5755
+epoch 1 step 200/366 loss 1.5492
+epoch 1 step 250/366 loss 1.5181
+epoch 1 step 300/366 loss 1.5015
+epoch 1 step 350/366 loss 1.4857
+{'epoch': 1, 'train_loss': 1.4778374905794696, 'dev_loss': 1.4757210897362751, 'dev_bleu': 27.494134601999527, 'dev_chrf++': 52.85832957740758, 'seconds': 313.2}
+epoch 2 step 50/366 loss 1.3087
+epoch 2 step 100/366 loss 1.2951
+epoch 2 step 150/366 loss 1.2823
+epoch 2 step 200/366 loss 1.2724
+epoch 2 step 250/366 loss 1.2713
+epoch 2 step 300/366 loss 1.2691
+epoch 2 step 350/366 loss 1.2611
+{'epoch': 2, 'train_loss': 1.2592343214105388, 'dev_loss': 1.490693211555481, 'dev_bleu': 26.926576276550186, 'dev_chrf++': 52.57767509317279, 'seconds': 304.3}
+epoch 3 step 50/366 loss 1.1296
+epoch 3 step 100/366 loss 1.1488
+epoch 3 step 150/366 loss 1.1325
+epoch 3 step 200/366 loss 1.1288
+epoch 3 step 250/366 loss 1.1267
+epoch 3 step 300/366 loss 1.1109
+epoch 3 step 350/366 loss 1.1042
+{'epoch': 3, 'train_loss': 1.1028027342316882, 'dev_loss': 1.5332385042439336, 'dev_bleu': 26.756599931704915, 'dev_chrf++': 52.781331024800906, 'seconds': 294.3}
+epoch 4 step 50/366 loss 0.9786
+epoch 4 step 100/366 loss 0.9791
+epoch 4 step 150/366 loss 0.9761
+epoch 4 step 200/366 loss 0.9807
+epoch 4 step 250/366 loss 0.9769
+epoch 4 step 300/366 loss 0.9740
+epoch 4 step 350/366 loss 0.9783
+{'epoch': 4, 'train_loss': 0.9775465888078095, 'dev_loss': 1.5908337935157444, 'dev_bleu': 25.85088493027286, 'dev_chrf++': 51.73330679989525, 'seconds': 307.2}
+epoch 5 step 50/366 loss 0.9440
+epoch 5 step 100/366 loss 0.9284
+epoch 5 step 150/366 loss 0.9185
+epoch 5 step 200/366 loss 0.9078
+epoch 5 step 250/366 loss 0.8986
+epoch 5 step 300/366 loss 0.9075
+epoch 5 step 350/366 loss 0.9051
+{'epoch': 5, 'train_loss': 0.9056438134341943, 'dev_loss': 1.6287122239237246, 'dev_bleu': 26.22387094861576, 'dev_chrf++': 52.222519266340186, 'seconds': 305.9}
+best {'epoch': 1, 'train_loss': 1.4778374905794696, 'dev_loss': 1.4757210897362751, 'dev_bleu': 27.494134601999527, 'dev_chrf++': 52.85832957740758, 'seconds': 313.2}

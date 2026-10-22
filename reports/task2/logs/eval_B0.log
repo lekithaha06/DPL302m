@@ -1,0 +1,22 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  22%|██▏       | 114/519 [00:00<00:00, 1086.71it/s]
+Loading weights:  43%|████▎     | 223/519 [00:00<00:00, 908.94it/s] 
+Loading weights:  61%|██████    | 316/519 [00:00<00:00, 832.04it/s]
+Loading weights:  77%|███████▋  | 401/519 [00:00<00:00, 585.93it/s]
+Loading weights:  90%|████████▉ | 467/519 [00:00<00:00, 588.59it/s]
+Loading weights: 100%|██████████| 519/519 [00:01<00:00, 486.74it/s]
+B0 fleurs_cascade {'BLEU': 24.21, 'chrF++': 50.09, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 67.7}
+B0 fleurs_clean {'BLEU': 37.82, 'chrF++': 61.13, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 61.6}
+B0 phomt_test {'BLEU': 40.25, 'chrF++': 60.3, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 19151, 'seconds': 995.4}
+saved
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  44%|████▍     | 228/519 [00:00<00:00, 2233.51it/s]
+Loading weights:  87%|████████▋ | 452/519 [00:00<00:00, 1840.47it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1715.36it/s]
+B0 fleurs_cascade {'BLEU': 24.27, 'chrF++': 50.12, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 83.3}
+B0 fleurs_clean {'BLEU': 37.85, 'chrF++': 61.16, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 109.8}
+saved

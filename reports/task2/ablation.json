@@ -1,0 +1,32 @@
+[
+  {
+    "version": "B0",
+    "fleurs_cascade_BLEU": 24.27,
+    "fleurs_cascade_chrF++": 50.12,
+    "fleurs_clean_BLEU": 37.85,
+    "phomt_BLEU": 40.25,
+    "phomt_note": "B0 PhoMT from the run with batch 32 / max_length 512",
+    "train_pairs": null,
+    "delta_vs_B0": 0.0
+  },
+  {
+    "version": "V1",
+    "fleurs_cascade_BLEU": 28.59,
+    "fleurs_cascade_chrF++": 52.82,
+    "fleurs_clean_BLEU": 37.31,
+    "phomt_BLEU": 37.9,
+    "phomt_note": null,
+    "train_pairs": 2927,
+    "delta_vs_B0": 4.32
+  },
+  {
+    "version": "V2",
+    "fleurs_cascade_BLEU": 27.57,
+    "fleurs_cascade_chrF++": 52.44,
+    "fleurs_clean_BLEU": 37.46,
+    "phomt_BLEU": 39.8,
+    "phomt_note": null,
+    "train_pairs": 7376,
+    "delta_vs_B0": 3.3
+  }
+]

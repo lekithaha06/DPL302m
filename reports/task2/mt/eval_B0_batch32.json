@@ -1,0 +1,27 @@
+{
+  "name": "B0",
+  "adapter": null,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.6.0+cu124",
+  "fleurs_cascade": {
+    "BLEU": 24.21,
+    "chrF++": 50.09,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "n": 857,
+    "seconds": 67.7
+  },
+  "fleurs_clean": {
+    "BLEU": 37.82,
+    "chrF++": 61.13,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "n": 857,
+    "seconds": 61.6
+  },
+  "phomt_test": {
+    "BLEU": 40.25,
+    "chrF++": 60.3,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "n": 19151,
+    "seconds": 995.4
+  }
+}
