@@ -56,6 +56,7 @@ Hai baseline đều là **suy luận zero-shot** từ checkpoint công bố (kh�
 ## Cấu trúc repo
 
 ```
+├── WORKFLOW.md                # tiến độ Task 1–3, checklist, người phụ trách
 ├── configs/base.yaml          # seed, chuẩn hóa văn bản, cấu hình giải mã đã dùng
 ├── data/                      # chỉ chứa script tải dữ liệu và README (dữ liệu không commit)
 ├── src/
@@ -99,9 +100,11 @@ python src/mt/download_models.py
 
 ## Tiến độ
 
-- [x] **Task 1:** proposal, chạy lại 2 baseline, đo lỗi lan truyền, kiểm leakage
-- [ ] **Task 2:** xử lý dữ liệu, chạy lại 2 baseline trên cùng máy, Proposed Method V1 → Vn
+- [x] **Task 1** (nộp 13/10/2026): proposal, chạy lại 2 baseline, đo lỗi lan truyền, kiểm leakage
+- [ ] **Task 2** (đang làm): xử lý dữ liệu, chạy lại 2 baseline trên cùng máy, Proposed Method V1 → Vn
 - [ ] **Task 3:** demo Gradio, đóng gói, báo cáo cuối
+
+Checklist chi tiết và người phụ trách: [WORKFLOW.md](WORKFLOW.md).
 
 ## Quy ước làm việc
 
