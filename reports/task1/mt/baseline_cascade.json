@@ -1,0 +1,41 @@
+{
+  "n_utterances": 857,
+  "n_unique_sentences": 347,
+  "torch": "2.6.0+cu124",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "clean__vinai-translate-vi2en": {
+    "BLEU": 37.89,
+    "chrF++": 61.18,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "chrF++_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "seconds": 81.4
+  },
+  "clean__vinai-translate-vi2en-v2": {
+    "BLEU": 38.26,
+    "chrF++": 61.57,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "chrF++_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "seconds": 72.0
+  },
+  "asr_PhoWhisper-small": {
+    "WER": 12.21,
+    "CER": 7.65,
+    "seconds": 5973.4,
+    "audio_seconds": 10813.7,
+    "RTF": 0.552
+  },
+  "cascade__vinai-translate-vi2en": {
+    "BLEU": 24.27,
+    "chrF++": 50.12,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "chrF++_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "seconds": 41.8
+  },
+  "cascade__vinai-translate-vi2en-v2": {
+    "BLEU": 23.38,
+    "chrF++": 49.63,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "chrF++_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+    "seconds": 41.4
+  }
+}

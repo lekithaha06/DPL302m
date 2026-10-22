@@ -1,20 +1,31 @@
-# Shared defaults. Task-specific configs (asr_*.yaml, mt_*.yaml) override these.
+# Cấu hình chung đã dùng ở Task 1. Các script hiện nhận tham số qua dòng lệnh; giá trị ở đây là bản ghi để tái lập.
 seed: 42
 sample_rate: 16000
-device: auto            # auto | cuda | cpu
 
-paths:
-  data_dir: data
-  checkpoint_dir: checkpoints
-  log_dir: runs
-  report_dir: reports
-
-text_normalization:
+text_normalization:          # dùng cho WER/CER (src/asr/evaluate_asr.py, src/eval/recompute_metrics.py)
   unicode_form: NFC
   lowercase: true
-  strip_punctuation: true
-  numbers_to_words: true   # same rule for train and eval
+  punctuation_and_symbols: to_space
+  keep_vietnamese_diacritics: true
+  numbers_to_words: false
+  cer_spaces: removed
 
-audio:
-  min_seconds: 0.5
-  max_seconds: 30.0
+asr:                          # Baseline A (TV1)
+  models: [vinai/PhoWhisper-small, openai/whisper-small]
+  precision: float16
+  batch_size: 1
+  beam_size: 5
+  max_new_tokens: 440
+  language: vi
+  task: transcribe
+
+mt:                           # Baseline B (TV2)
+  model: vinai/vinai-translate-vi2en   # bản của paper; KHÔNG dùng vi2en-v2 (rủi ro leakage L2)
+  src_lang: vi_VN
+  tgt_lang: en_XX
+  precision: float16
+  beam_size: 5
+  max_length: 512
+
+metrics:
+  sacrebleu: "2.6.0"           # BLEU tok:13a, chrF++ word_order=2

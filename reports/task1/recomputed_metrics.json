@@ -1,0 +1,50 @@
+{
+  "fleurs_PhoWhisper-small": {
+    "n": 857,
+    "WER": 12.21,
+    "CER": 8.58,
+    "word_S": 2058,
+    "word_D": 112,
+    "word_I": 1007,
+    "word_ref": 26021
+  },
+  "vivos_PhoWhisper-small": {
+    "n": 760,
+    "WER": 6.25,
+    "CER": 3.26,
+    "word_S": 447,
+    "word_D": 22,
+    "word_I": 14,
+    "word_ref": 7722,
+    "speakers": 19,
+    "speaker_WER_min": [
+      "VIVOSDEV19",
+      0.78
+    ],
+    "speaker_WER_max": [
+      "VIVOSDEV10",
+      24.93
+    ],
+    "mean_duration_s": 3.53
+  },
+  "vivos_whisper-small": {
+    "n": 760,
+    "WER": 25.91,
+    "CER": 16.47,
+    "word_S": 1543,
+    "word_D": 137,
+    "word_I": 321,
+    "word_ref": 7722,
+    "speakers": 19,
+    "speaker_WER_min": [
+      "VIVOSDEV15",
+      13.33
+    ],
+    "speaker_WER_max": [
+      "VIVOSDEV03",
+      114.61
+    ],
+    "mean_duration_s": 3.53,
+    "WER_without_R193": 22.12
+  }
+}

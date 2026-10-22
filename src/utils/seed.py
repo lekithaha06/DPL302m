@@ -32,21 +32,8 @@ def set_seed(seed: int = 42, deterministic: bool = True) -> None:
 
 def environment_report() -> dict:
     """Collect python/OS/GPU/library versions to paste into the README or report."""
-    info: dict = {
-        "python": sys.version.split()[0],
-        "platform": platform.platform(),
-    }
-    for name in (
-        "torch",
-        "transformers",
-        "peft",
-        "datasets",
-        "accelerate",
-        "jiwer",
-        "sacrebleu",
-        "gradio",
-        "faster_whisper",
-    ):
+    info: dict = {"python": sys.version.split()[0], "platform": platform.platform()}
+    for name in ("torch", "transformers", "sacrebleu", "jiwer", "librosa", "soundfile", "huggingface_hub"):
         try:
             module = __import__(name)
             info[name] = getattr(module, "__version__", "unknown")
@@ -59,9 +46,7 @@ def environment_report() -> dict:
         if torch.cuda.is_available():
             info["gpu"] = torch.cuda.get_device_name(0)
             info["cuda"] = torch.version.cuda
-            info["vram_gb"] = round(
-                torch.cuda.get_device_properties(0).total_memory / 1024**3, 1
-            )
+            info["vram_gb"] = round(torch.cuda.get_device_properties(0).total_memory / 1024**3, 1)
     except ImportError:
         pass
     return info

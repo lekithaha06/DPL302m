@@ -1,0 +1,9 @@
+# Install a suitable PyTorch CUDA wheel separately, then these packages.
+# Actual run: torch 2.0.1+cu117, torchvision 0.15.2+cu117, driver 511.81.
+numpy==1.26.4
+transformers==4.44.2
+faster-whisper==1.1.1
+ctranslate2==4.8.2
+jiwer==3.0.5
+soundfile==0.13.1
+scipy==1.15.3

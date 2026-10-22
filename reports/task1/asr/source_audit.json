@@ -1,0 +1,36 @@
+{
+  "checked_on": "2026-10-11",
+  "scope": "Replacement content for slide 5 and supporting numbers. The original slide deck link was inaccessible; no claim of auditing the original deck.",
+  "sources": {
+    "W1": {"title": "Robust Speech Recognition via Large-Scale Weak Supervision", "authors": ["Alec Radford", "Jong Wook Kim", "Tao Xu", "Greg Brockman", "Christine McLeavey", "Ilya Sutskever"], "year": 2023, "preprint_year": 2022, "url": "https://proceedings.mlr.press/v202/radford23a/radford23a.pdf"},
+    "P1": {"title": "PhoWhisper Automatic Speech Recognition for Vietnamese", "authors": ["Thanh-Thien Le", "Linh The Nguyen", "Dat Quoc Nguyen"], "year": 2024, "url": "https://arxiv.org/pdf/2406.02555"},
+    "C1": {"title": "ChunkFormer Masked Chunking Conformer For Long-Form Speech Transcription", "authors": ["Khanh Le", "Tuan Vu Ho", "Dung Tran", "Duc Thanh Chau"], "year": 2025, "url": "https://arxiv.org/html/2502.14673v1"},
+    "C2": {"title": "ChunkFormer RNNT Large Vie model card", "url": "https://huggingface.co/khanhld/chunkformer-rnnt-large-vie", "type": "publisher self-reported model card, not a table in the 2025 paper"},
+    "V1": {"title": "ViP-VL Vietnamese Self-supervised Speech Pretraining Model with Vector-Quantization Learning", "year": 2026, "url": "https://arxiv.org/html/2606.10360v1"},
+    "D1": {"title": "VIVOS official dataset card", "url": "https://huggingface.co/datasets/AILAB-VNUHCM/vivos"},
+    "M1": {"title": "Whisper official implementation", "url": "https://github.com/openai/whisper"},
+    "M2": {"title": "Whisper official model card", "url": "https://raw.githubusercontent.com/openai/whisper/main/model-card.md"},
+    "M3": {"title": "PhoWhisper official model", "url": "https://huggingface.co/vinai/PhoWhisper-small"},
+    "R1": {"title": "Faster Whisper implementation and conversion instructions", "url": "https://github.com/SYSTRAN/faster-whisper"}
+  },
+  "claims": [
+    {"claim": "Whisper-small Vietnamese FLEURS WER", "value": 21.2, "unit": "percent", "source": "W1", "location": "Table 11 page 23, last block, Vietnamese column", "verified": true},
+    {"claim": "Whisper-small Vietnamese Common Voice 9 WER", "value": 33.3, "unit": "percent", "source": "W1", "location": "Table 9 page 22", "verified": true, "usage": "appendix only; never compare to Common Voice 14 as same test"},
+    {"claim": "PhoWhisper-small WER on CMV-Vi14, VIVOS, VLSP-T1, VLSP-T2", "value": [11.08, 6.33, 15.93, 32.96], "unit": "percent", "source": "P1", "location": "Table 2 page 2; confirmed visually against PDF", "verified": true},
+    {"claim": "PhoWhisper-medium and large VIVOS WER", "value": [4.97, 4.67], "unit": "percent", "source": "P1", "location": "Table 2 page 2", "verified": true},
+    {"claim": "PhoWhisper-small parameters", "value": 244, "unit": "million", "source": "P1", "location": "Table 2 page 2", "verified": true},
+    {"claim": "PhoWhisper total fine-tuning hours", "value": 843.79, "rounded_value": 844, "source": "P1", "location": "Table 1 page 1", "verified": true},
+    {"claim": "PhoWhisper-small learning rate and updates", "value": [0.0000125, 48000], "source": "P1", "location": "Section 2 page 2", "verified": true},
+    {"claim": "PhoWhisper train GPUs, per-device batch, accumulation, effective batch", "value": [8, 4, 2, 64], "source": "P1", "location": "Section 2 page 2", "verified": true},
+    {"claim": "PhoWhisper noise augmentation", "value": "Half of training recordings receive noise; total stays 844 hours, not 1688", "source": "P1", "location": "Section 2 page 2", "verified": true},
+    {"claim": "VIVOS paper train validation test hours", "value": [13.94, 0.98, 0.75], "source": "P1", "location": "Table 1 page 1", "verified": true},
+    {"claim": "VIVOS official train/test utterances and test speakers", "value": [11660, 760, 19], "source": "D1", "location": "Data Splits", "verified": true},
+    {"claim": "Whisper-small approximate VRAM", "value": 2, "unit": "GB", "source": "M1", "location": "Available models and languages; approximate implementation benchmark, not a guarantee", "verified": true},
+    {"claim": "ChunkFormer paper YouTube WER with context [128,64,128]", "value": 14.05, "unit": "percent", "source": "C1", "location": "Table II, YouTube internal test 3.2h", "verified": true},
+    {"claim": "ChunkFormer-RNNT publisher VIVOS WER and parameters", "value": [2.49, 113], "unit": ["percent", "million"], "source": "C2", "location": "Benchmark Results, row 1", "verified": true, "caveat": "Self-reported, manually normalizes numbers; not in original paper and not a controlled comparison with our run"},
+    {"claim": "ViP-VL VIVOS WER, average WER and parameters", "value": [5.25, 13.76, 78], "unit": ["percent", "percent", "million"], "source": "V1", "location": "Table 3; average across five specified ASR benchmarks", "verified": true},
+    {"claim": "ViP-VL pretraining and fine-tuning", "value": [17000, 250], "unit": "hours", "source": "V1", "location": "Table 3", "verified": true},
+    {"claim": "Whisper-small VIVOS WER from original paper", "value": null, "source": "W1", "verified": false, "reason": "Not reported; must use measured rerun result"},
+    {"claim": "PhoWhisper-small VIVOS CER from original paper", "value": null, "source": "P1", "verified": false, "reason": "Not reported; do not invent CER or convert from WER"}
+  ]
+}

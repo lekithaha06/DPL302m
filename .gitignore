@@ -1,26 +1,29 @@
-# Data & models (heavy: share via download script / HF Hub / Drive link)
+# Dữ liệu và trọng số: tải bằng script, không đẩy lên Git
 data/*
-!data/.gitkeep
 !data/README.md
 !data/*.py
 checkpoints/*
 !checkpoints/.gitkeep
+.work/
 runs/
 outputs/
-wandb/
-*.ckpt
+*.bin
+*.safetensors
+*.h5
 *.pt
 *.pth
-*.safetensors
-*.bin
+*.ckpt
 
-# Audio / archives
+# Âm thanh và file nén
 *.wav
 *.mp3
 *.flac
 *.zip
 *.tar
 *.tar.gz
+
+# Checkpoint tạm khi chạy ASR trong cascade
+reports/**/asr_checkpoint.json
 
 # Python
 __pycache__/
@@ -29,11 +32,10 @@ __pycache__/
 venv/
 .ipynb_checkpoints/
 .pytest_cache/
-.ruff_cache/
-*.egg-info/
 
-# Course documents (keep local)
+# Tài liệu môn học (giữ ở máy)
 *.docx
+*.pptx
 ~$*
 
 # OS / IDE
@@ -41,11 +43,4 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
-
-# Secrets
 .env
-*.key
-
-# Tools / nested clones living inside the working folder
-/Git/
-/DPL302m/

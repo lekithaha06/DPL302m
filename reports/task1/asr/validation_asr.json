@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "n": 760,
+  "independent_metric_implementation": "Python dynamic-programming Levenshtein",
+  "models": {
+    "PhoWhisper-small": {
+      "n": 760,
+      "word_errors": 483,
+      "reference_tokens": 7722,
+      "character_errors": 842,
+      "reference_characters": 25809,
+      "wer_percent": 6.2548562548562545,
+      "cer_percent": 3.262427835251269,
+      "checksum_verified": true,
+      "no_duplicate_or_missing_ids": true
+    },
+    "whisper-small": {
+      "n": 760,
+      "word_errors": 2001,
+      "reference_tokens": 7722,
+      "character_errors": 4250,
+      "reference_characters": 25809,
+      "wer_percent": 25.912975912975913,
+      "cer_percent": 16.46712387151769,
+      "checksum_verified": true,
+      "no_duplicate_or_missing_ids": true
+    }
+  },
+  "final_report_sha256": "36fa74b16409e2dc4f84374587b0c56287b30c7daac5d17340c0c91f14a9d1ab"
+}

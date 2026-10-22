@@ -1,0 +1,21 @@
+References and predictions for VIVOS test
+
+Audio and reference transcripts originate from VIVOS, prepared by AILAB at VNUHCM University of Science.
+Official source: https://huggingface.co/datasets/AILAB-VNUHCM/vivos
+Dataset license: Creative Commons Attribution NonCommercial ShareAlike 4.0.
+License text: https://creativecommons.org/licenses/by-nc-sa/4.0/
+The prediction JSONL files contain derived evaluation data and original references; retain this attribution and the dataset license when redistributing them.
+No raw audio files or model weights are included in the handover archive.
+
+Dataset citation
+Hieu-Thi Luong and Hai-Quan Vu, A non-expert Kaldi recipe for Vietnamese Speech Recognition System, WLSI/OIAF4HLT, pp. 51-55, 2016.
+https://aclanthology.org/W16-5207/
+
+Model and software sources
+PhoWhisper: https://github.com/VinAIResearch/PhoWhisper (BSD-3-Clause).
+Whisper: https://github.com/openai/whisper (MIT).
+faster-whisper: https://github.com/SYSTRAN/faster-whisper (MIT).
+CTranslate2: https://github.com/OpenNMT/CTranslate2 (MIT).
+Transformers: https://github.com/huggingface/transformers (Apache-2.0).
+
+Evaluation scripts in this handover were prepared with AI assistance and require the presenting team to understand and verify them.

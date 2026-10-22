@@ -1,0 +1,10 @@
+{
+  "split": "test",
+  "n": 19151,
+  "vinai-translate-vi2en": {
+    "BLEU": 40.25,
+    "chrF++": 60.3,
+    "seconds": 404.9,
+    "BLEU_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0"
+  }
+}

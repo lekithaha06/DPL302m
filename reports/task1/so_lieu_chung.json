@@ -1,0 +1,333 @@
+{
+ "problems": [],
+ "numbers": {
+  "vivos_pho_wer": {
+   "value": 6.25,
+   "source": "TV1 predictions_PhoWhisper-small.jsonl (760 câu VIVOS test)",
+   "method": "tính lại WER corpus từ dự đoán từng câu"
+  },
+  "vivos_pho_cer": {
+   "value": 3.26,
+   "source": "TV1 predictions_PhoWhisper-small.jsonl",
+   "method": "tính lại CER (bỏ khoảng trắng)"
+  },
+  "vivos_pho_rtf": {
+   "value": 0.135,
+   "source": "TV1 baseline_asr.json timing.rtf (RTX 3050 Laptop 4 GB, FP16, batch 1)",
+   "method": "đọc từ JSON; đo riêng khối ASR"
+  },
+  "vivos_pho_spk_min": {
+   "value": [
+    "VIVOSDEV19",
+    0.78
+   ],
+   "source": "TV1 speaker_metrics",
+   "method": "min theo người nói"
+  },
+  "vivos_pho_spk_max": {
+   "value": [
+    "VIVOSDEV10",
+    24.93
+   ],
+   "source": "TV1 speaker_metrics",
+   "method": "max theo người nói"
+  },
+  "vivos_n": {
+   "value": 760,
+   "source": "TV1 predictions",
+   "method": "đếm dòng"
+  },
+  "vivos_speakers": {
+   "value": 19,
+   "source": "TV1 predictions",
+   "method": "đếm speaker_id"
+  },
+  "vivos_minutes": {
+   "value": 44.76,
+   "source": "TV1 predictions duration_seconds",
+   "method": "cộng thời lượng"
+  },
+  "vivos_wsp_wer": {
+   "value": 25.91,
+   "source": "TV1 predictions_whisper-small.jsonl (760 câu VIVOS test)",
+   "method": "tính lại WER corpus từ dự đoán từng câu"
+  },
+  "vivos_wsp_cer": {
+   "value": 16.47,
+   "source": "TV1 predictions_whisper-small.jsonl",
+   "method": "tính lại CER (bỏ khoảng trắng)"
+  },
+  "vivos_wsp_rtf": {
+   "value": 0.172,
+   "source": "TV1 baseline_asr.json timing.rtf (RTX 3050 Laptop 4 GB, FP16, batch 1)",
+   "method": "đọc từ JSON; đo riêng khối ASR"
+  },
+  "vivos_wsp_spk_min": {
+   "value": [
+    "VIVOSDEV15",
+    13.33
+   ],
+   "source": "TV1 speaker_metrics",
+   "method": "min theo người nói"
+  },
+  "vivos_wsp_spk_max": {
+   "value": [
+    "VIVOSDEV03",
+    114.61
+   ],
+   "source": "TV1 speaker_metrics",
+   "method": "max theo người nói"
+  },
+  "vivos_wsp_wer_wo_r193": {
+   "value": 22.12,
+   "source": "TV1 predictions_whisper-small.jsonl bỏ VIVOSDEV03_R193",
+   "method": "tính lại"
+  },
+  "vivos_rel_wer_reduction": {
+   "value": 75.86,
+   "source": "từ hai WER chưa làm tròn",
+   "method": "(Whisper - PhoWhisper) / Whisper"
+  },
+  "fleurs_clean_bleu": {
+   "value": 37.89,
+   "source": "TV2 predictions.json, cột clean__vinai-translate-vi2en",
+   "method": "tính lại sacreBLEU 13a"
+  },
+  "fleurs_clean_chrf": {
+   "value": 61.18,
+   "source": "TV2 predictions.json, cột clean__vinai-translate-vi2en",
+   "method": "tính lại chrF++ (word_order=2)"
+  },
+  "fleurs_cascade_bleu": {
+   "value": 24.27,
+   "source": "TV2 predictions.json, cột cascade__vinai-translate-vi2en",
+   "method": "tính lại sacreBLEU 13a"
+  },
+  "fleurs_cascade_chrf": {
+   "value": 50.12,
+   "source": "TV2 predictions.json, cột cascade__vinai-translate-vi2en",
+   "method": "tính lại chrF++ (word_order=2)"
+  },
+  "fleurs_clean_v2_bleu": {
+   "value": 38.26,
+   "source": "TV2 predictions.json, cột clean__vinai-translate-vi2en-v2",
+   "method": "tính lại sacreBLEU 13a"
+  },
+  "fleurs_clean_v2_chrf": {
+   "value": 61.57,
+   "source": "TV2 predictions.json, cột clean__vinai-translate-vi2en-v2",
+   "method": "tính lại chrF++ (word_order=2)"
+  },
+  "fleurs_cascade_v2_bleu": {
+   "value": 23.38,
+   "source": "TV2 predictions.json, cột cascade__vinai-translate-vi2en-v2",
+   "method": "tính lại sacreBLEU 13a"
+  },
+  "fleurs_cascade_v2_chrf": {
+   "value": 49.63,
+   "source": "TV2 predictions.json, cột cascade__vinai-translate-vi2en-v2",
+   "method": "tính lại chrF++ (word_order=2)"
+  },
+  "fleurs_drop_bleu": {
+   "value": 13.62,
+   "source": "hiệu hai BLEU",
+   "method": "trừ"
+  },
+  "fleurs_drop_rel": {
+   "value": 35.9,
+   "source": "",
+   "method": "tương đối"
+  },
+  "fleurs_drop_chrf": {
+   "value": 11.06,
+   "source": "hiệu hai chrF++",
+   "method": "trừ"
+  },
+  "fleurs_pho_wer": {
+   "value": 12.21,
+   "source": "TV2 predictions.json cột asr (PhoWhisper-small, greedy, chunk 30 s)",
+   "method": "tính lại theo chuẩn hóa TV1"
+  },
+  "fleurs_pho_cer": {
+   "value": 8.58,
+   "source": "TV2 predictions.json",
+   "method": "CER bỏ khoảng trắng (chính sách TV1)"
+  },
+  "fleurs_pho_cer_with_spaces_OLD": {
+   "value": 7.65,
+   "source": "TV2 baseline_cascade.json cũ",
+   "method": "KHÔNG dùng: tính cả khoảng trắng"
+  },
+  "fleurs_n_utt": {
+   "value": 857,
+   "source": "TV2 predictions.json",
+   "method": "đếm"
+  },
+  "fleurs_n_sent": {
+   "value": 347,
+   "source": "TV2 predictions.json",
+   "method": "đếm id câu FLoRes"
+  },
+  "asr_commas": {
+   "value": [
+    895,
+    0
+   ],
+   "source": "TV2 predictions.json",
+   "method": "đếm dấu phẩy gốc / ASR"
+  },
+  "asr_upper": {
+   "value": 0,
+   "source": "TV2 predictions.json",
+   "method": "số transcript ASR có chữ hoa"
+  },
+  "clean_distinct_translations": {
+   "value": 348,
+   "source": "TV2 predictions.json",
+   "method": "số bản dịch khác nhau nhánh văn bản chuẩn"
+  },
+  "clean_nondeterministic_ids": {
+   "value": [
+    "1816"
+   ],
+   "source": "TV2 predictions.json",
+   "method": "id có >1 bản dịch cho cùng đầu vào"
+  },
+  "phomt_bleu": {
+   "value": 40.25,
+   "source": "TV2 bản dịch 19.151 câu PhoMT test (RTX 4060 Laptop 8 GB, fp16, beam 5)",
+   "method": "tính lại sacreBLEU"
+  },
+  "phomt_chrf": {
+   "value": 60.3,
+   "source": "như trên",
+   "method": "tính lại chrF++"
+  },
+  "phomt_n_test": {
+   "value": 19151,
+   "source": "PhoMT detokenization/test",
+   "method": "đếm dòng"
+  },
+  "fleurs_hours": {
+   "value": 3.0,
+   "source": "FLEURS vi_vn test.tsv num_samples/16000",
+   "method": "tính lại"
+  },
+  "fleurs_dur_mean": {
+   "value": 12.62,
+   "source": "như trên",
+   "method": "trung bình giây"
+  },
+  "fleurs_dur_max": {
+   "value": 38.1,
+   "source": "như trên",
+   "method": "max giây"
+  },
+  "fleurs_over30": {
+   "value": 7,
+   "source": "như trên",
+   "method": "số bản thu > 30 s"
+  },
+  "fleurs_gender": {
+   "value": {
+    "MALE": 857
+   },
+   "source": "FLEURS vi_vn test.tsv cột gender",
+   "method": "đếm nhãn trong file (chưa nghe kiểm)"
+  },
+  "phomt_split": {
+   "value": [
+    2977999,
+    18719,
+    19151
+   ],
+   "source": "PhoMT detokenization",
+   "method": "đếm dòng"
+  },
+  "leak_exact_vi": {
+   "value": 0,
+   "source": "347 câu FLEURS so với PhoMT train/dev/test (phía vi)",
+   "method": "trùng tuyệt đối sau chuẩn hóa, kiểm độc lập với TV4"
+  },
+  "paper_whisper_small_fleurs_vi_wer": {
+   "value": 21.2,
+   "source": "[1] Table 11 (WER on Fleurs), cột Vietnamese",
+   "method": "tìm trong PDF"
+  },
+  "paper_whisper_small_fleurs_vi_en_bleu": {
+   "value": 8.5,
+   "source": "[1] Table 12 (BLEU X→en on Fleurs), cột Vietnamese",
+   "method": "tìm trong PDF"
+  },
+  "paper_pho_small_vivos": {
+   "value": 6.33,
+   "source": "[2] Table 2",
+   "method": "tìm trong PDF"
+  },
+  "paper_pho_small_cmv": {
+   "value": 11.08,
+   "source": "[2] Table 2",
+   "method": "tìm trong PDF"
+  },
+  "paper_pho_hours": {
+   "value": 843.79,
+   "source": "[2] Table 1",
+   "method": "tìm trong PDF"
+  },
+  "paper_chunkformer_youtube": {
+   "value": 14.05,
+   "source": "[3] Table II, cột youtube (tập nội bộ tiếng Việt 3,2 giờ)",
+   "method": "tìm trong PDF"
+  },
+  "paper_vipvl_vivos": {
+   "value": 5.25,
+   "source": "[4] Table 3",
+   "method": "tìm trong PDF"
+  },
+  "paper_vipvl_avg": {
+   "value": 13.76,
+   "source": "[4] Table 3",
+   "method": "tìm trong PDF"
+  },
+  "paper_vinai_test_vien": {
+   "value": 40.42,
+   "source": "[5] Table 1, Test set VI-EN",
+   "method": "tìm trong PDF"
+  },
+  "paper_phomt_test_vien": {
+   "value": 39.78,
+   "source": "[5] Table 1 (số cao nhất của bài PhoMT [6])",
+   "method": "tìm trong PDF"
+  },
+  "paper_google_test_vien": {
+   "value": 35.76,
+   "source": "[5] Table 1",
+   "method": "tìm trong PDF"
+  },
+  "paper_phomt_opensub_train_share": {
+   "value": 51.4,
+   "source": "[6] Table 1 (OpenSub 1.529.772 / All 2.977.999)",
+   "method": "tìm trong PDF rồi chia"
+  },
+  "paper_phomt_opensub_test_share": {
+   "value": 49.9,
+   "source": "[6] Table 1 (OpenSub test 9.564 / 19.151)",
+   "method": "tìm trong PDF rồi chia"
+  },
+  "paper_pho_large_vivos": {
+   "value": 4.67,
+   "source": "[2] Table 2 (PhoWhisper-large, 1,55B)",
+   "method": "tìm trong PDF"
+  },
+  "vivos_mean_sec": {
+   "value": 3.53,
+   "source": "TV1 duration_seconds / 760",
+   "method": "chia"
+  },
+  "phomt_reproduce_gap": {
+   "value": 0.17,
+   "source": "40,42 - số tự chạy",
+   "method": "trừ"
+  }
+ }
+}

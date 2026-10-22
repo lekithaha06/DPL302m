@@ -1,0 +1,31 @@
+﻿{
+    "nguon":  "FLEURS vi_vn test.tsv, cot num_samples chia 16000",
+    "ngay_chay":  "2026-10-12",
+    "so_ban_thu":  857,
+    "so_cau_goc":  347,
+    "tong_giay":  10813.7,
+    "tong_gio":  3.004,
+    "trung_binh_giay":  12.62,
+    "trung_vi_giay":  11.64,
+    "ngan_nhat_giay":  4.98,
+    "dai_nhat_giay":  38.1,
+    "so_ban_thu_tren_30_giay":  7,
+    "phan_bo_gioi_tinh":  {
+                              "nhan":  "MALE",
+                              "so_ban_thu":  857
+                          },
+    "phan_bo_so_nguoi_doc_mot_cau":  [
+                                         {
+                                             "so_cau":  197,
+                                             "ban_thu_moi_cau":  3
+                                         },
+                                         {
+                                             "so_cau":  116,
+                                             "ban_thu_moi_cau":  2
+                                         },
+                                         {
+                                             "so_cau":  34,
+                                             "ban_thu_moi_cau":  1
+                                         }
+                                     ]
+}

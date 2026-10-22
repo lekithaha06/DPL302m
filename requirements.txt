@@ -1,43 +1,14 @@
-# DPL302m - Vietnamese ASR + vi->en Translation
-# Python 3.11. Torch is installed separately for CUDA 12.4:
-#   pip install torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
-# Versions marked == match the dev machine (RTX 4060 Laptop); others are lower bounds,
-# run `pip freeze > requirements.lock.txt` after the first successful setup to pin them.
-
-# --- Core DL ---
+# DPL302m Đề tài 1 — môi trường MT/cascade (TV2), đúng phiên bản đã chạy Task 1 trên RTX 4060 Laptop 8 GB.
+# Python 3.11. Cài torch riêng cho CUDA 12.4 trước:
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# Khối ASR (TV1) dùng môi trường riêng: src/asr/requirements-asr-gpu.txt (scripts/run_asr_baseline.ps1 tự tạo).
 transformers==5.17.0
-accelerate==1.15.0
-peft==0.21.2
-datasets==5.1.0
-sentencepiece>=0.2
-tokenizers>=0.20
-
-# --- Audio ---
-soundfile==0.14.0
-librosa==0.11.0
-silero-vad==6.2.3
-faster-whisper==1.2.1
-
-# --- Metrics ---
 sacrebleu==2.6.0
 jiwer==4.0.0
-# bert-score / unbabel-comet are optional (COMET bonus): uncomment if used
-# unbabel-comet>=2.2
-
-# --- Demo / API ---
-gradio==6.27.0
-fastapi>=0.110
-uvicorn>=0.29
-
-# --- Experiment tracking & analysis ---
-tensorboard>=2.16
-pandas>=2.0
-numpy>=1.26
-matplotlib>=3.8
-seaborn>=0.13
-tqdm>=4.66
-pyyaml>=6.0
-
-# --- Dev ---
-pytest==9.1.1
-ruff>=0.5
+soundfile==0.14.0
+librosa==0.11.0
+sentencepiece==0.2.2
+accelerate==1.15.0
+huggingface_hub==1.31.0
+datasets==5.1.0
+pytest
