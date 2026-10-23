@@ -23,7 +23,32 @@ python data/prepare_vivos.py
 python data/build_fleurs_eval.py
 ```
 
-**PhoMT**: đăng nhập Hugging Face, đồng ý điều khoản, tải `PhoMT.zip` và giải nén vào `data/phomt/`.
+**PhoMT**: đăng nhập Hugging Face, đồng ý điều khoản, tải `PhoMT.zip` và giải nén sao cho có `data/phomt/PhoMT/detokenization/`.
+
+**FLEURS train/dev/test (Task 2)**: tải cả ba tập (âm thanh vi_vn, chữ vi_vn và en_us) rồi ghép theo ID câu:
+
+```
+python data/download_fleurs.py --splits train,dev,test
+python data/build_fleurs_eval.py --split train --audio-dir data/fleurs_audio/train --output data/processed/fleurs_vi_en_train.json
+```
+
+## Sơ đồ thư mục dữ liệu trên máy chạy (không commit; Task 2 chạy trên RTX 4060)
+
+| Thư mục | Nội dung | Tạo bởi |
+|---|---|---|
+| `data/fleurs/` | TSV vi_vn, en_us và file nén âm thanh gốc (train/dev/test) | `download_fleurs.py` |
+| `data/fleurs_audio/{train,dev,test}/` | WAV 16 kHz đã giải nén: 2.994 / 361 / 857 file | `download_fleurs.py` |
+| `data/vivos_test/` | 760 WAV VIVOS test + `manifest.jsonl` | `prepare_vivos.py` |
+| `data/phomt/PhoMT/` | PhoMT (`detokenization/`, `tokenization/`) | tải tay (gated) |
+| `data/processed/` | Cặp Việt–Anh FLEURS theo ID câu; danh sách mẫu sau làm sạch | `build_fleurs_eval.py`, `src/data/clean_eda.py` |
+| `data/asr/` | Chữ PhoWhisper nghe FLEURS train/dev (dữ liệu dạy V1) | `src/asr/transcribe_fleurs.py` |
+| `data/mt/` | 1.449 cặp chữ chuẩn FLEURS train, 3.000 cặp PhoMT train (V2) | `src/mt/build_mix_data.py` |
+| `data/phomt_hyp/` | Bản dịch của từng phiên bản trên PhoMT test (không chia sẻ: license) | `src/mt/eval_mt.py` |
+| `checkpoints/pretrained/` | PhoWhisper-small, VinAI Translate vi2en (đúng revision) | `src/mt/download_models.py` |
+| `checkpoints/v1/`, `checkpoints/v2/` | Adapter LoRA V1, V2 (`best_adapter/`), log và trạng thái train | `src/mt/train_lora.py` |
+| `.work/source_models/` | PhoWhisper-small, Whisper-small cho Baseline A | `src/asr/download_checkpoints.py` |
+
+Mã hash SHA-256 của dữ liệu đã xử lý và checkpoint: `reports/task2/evidence/manifest.json`. Log tải dữ liệu: `reports/task2/logs/download/`.
 
 ## Quy tắc
 

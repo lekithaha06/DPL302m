@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $repo
 $py = if ($env:TASK2_PY) { $env:TASK2_PY } else { 'python' }
-$phomt = $env:PHOMT_ROOT   # e.g. ...\PhoMT\PhoMT (gated data, kept outside Git)
+$phomt = if ($env:PHOMT_ROOT) { $env:PHOMT_ROOT } else { 'data\phomt\PhoMT' }   # gated data: stays in data/ (ignored by Git)
 New-Item -ItemType Directory -Force reports\task2\logs, reports\task2\asr, reports\task2\mt, data\asr | Out-Null
 function Log($m) { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $m" | Tee-Object -FilePath reports\task2\logs\queue.log -Append }
 function Lines($f) { if (Test-Path $f) { (Get-Content $f | Measure-Object -Line).Lines } else { 0 } }

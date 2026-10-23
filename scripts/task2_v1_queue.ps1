@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $repo
 $py = if ($env:TASK2_PY) { $env:TASK2_PY } else { 'python' }
-$phomt = $env:PHOMT_ROOT
+$phomt = if ($env:PHOMT_ROOT) { $env:PHOMT_ROOT } else { 'data\phomt\PhoMT' }
 function Log($m) { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $m" | Tee-Object -FilePath reports\task2\logs\queue.log -Append }
 $need = (Get-Content data\processed\fleurs_vi_en_train.json -Raw | ConvertFrom-Json).Count
 while (((Get-Content data\asr\fleurs_train_asr.jsonl -ErrorAction SilentlyContinue | Measure-Object -Line).Lines) -lt $need) { Start-Sleep 60 }

@@ -1,0 +1,24 @@
+Downloading vinai/PhoWhisper-small added_tokens.json
+Downloading vinai/PhoWhisper-small config.json
+Downloading vinai/PhoWhisper-small generation_config.json
+Downloading vinai/PhoWhisper-small merges.txt
+Downloading vinai/PhoWhisper-small normalizer.json
+Downloading vinai/PhoWhisper-small preprocessor_config.json
+Downloading vinai/PhoWhisper-small pytorch_model.bin
+Downloading vinai/PhoWhisper-small special_tokens_map.json
+Downloading vinai/PhoWhisper-small tokenizer.json
+Downloading vinai/PhoWhisper-small tokenizer_config.json
+Downloading vinai/PhoWhisper-small vocab.json
+{"source_model": "vinai/PhoWhisper-small", "revision": "a86b604c346caf7148c37512eafe783a16420adb", "source_weight_file": "pytorch_model.bin"}
+Downloading openai/whisper-small added_tokens.json
+Downloading openai/whisper-small config.json
+Downloading openai/whisper-small generation_config.json
+Downloading openai/whisper-small merges.txt
+Downloading openai/whisper-small model.safetensors
+Downloading openai/whisper-small normalizer.json
+Downloading openai/whisper-small preprocessor_config.json
+Downloading openai/whisper-small special_tokens_map.json
+Downloading openai/whisper-small tokenizer.json
+Downloading openai/whisper-small tokenizer_config.json
+Downloading openai/whisper-small vocab.json
+{"source_model": "openai/whisper-small", "revision": "973afd24965f72e36ca33b3055d56a652f456b4d", "source_weight_file": "model.safetensors"}

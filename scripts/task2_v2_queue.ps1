@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $repo
 $py = if ($env:TASK2_PY) { $env:TASK2_PY } else { 'python' }
-$phomt = $env:PHOMT_ROOT
+$phomt = if ($env:PHOMT_ROOT) { $env:PHOMT_ROOT } else { 'data\phomt\PhoMT' }
 function Log($m) { "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') $m" | Tee-Object -FilePath reports\task2\logs\queue.log -Append }
 while (-not ((Get-Content reports\task2\logs\queue.log -Raw) -match 'V1 QUEUE COMPLETE')) { Start-Sleep 30 }
 

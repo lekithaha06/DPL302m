@@ -1,0 +1,10 @@
+tsv D:\CAIDCM\DPL302m_git\data\fleurs\data\vi_vn\train.tsv
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+tsv D:\CAIDCM\DPL302m_git\data\fleurs\data\en_us\train.tsv
+audio train 2994 files -> data/fleurs_audio\train
+tsv D:\CAIDCM\DPL302m_git\data\fleurs\data\vi_vn\dev.tsv
+tsv D:\CAIDCM\DPL302m_git\data\fleurs\data\en_us\dev.tsv
+audio dev 361 files -> data/fleurs_audio\dev
+tsv D:\CAIDCM\DPL302m_git\data\fleurs\data\vi_vn\test.tsv
+tsv D:\CAIDCM\DPL302m_git\data\fleurs\data\en_us\test.tsv
+audio test 857 files -> data/fleurs_audio\test

@@ -1,0 +1,10 @@
+Downloading official archive stream; extracting 760 test files
+Remaining 700
+Remaining 600
+Remaining 500
+Remaining 400
+Remaining 300
+Remaining 200
+Remaining 100
+Remaining 0
+{"repo": "AILAB-VNUHCM/vivos", "revision": "3cbfb2502e5e84776b4b778b020a09759f723f52", "split": "test", "n": 760, "license": "CC-BY-NC-SA-4.0", "source": "https://huggingface.co/datasets/AILAB-VNUHCM/vivos/resolve/3cbfb2502e5e84776b4b778b020a09759f723f52/data/vivos.tar.gz", "prompts_sha256": "c2e72704d07041077a2a11b42be0128ecae8c33b5976305f2ea38b96297bcf9b", "ordered_audio_ids_sha256": "f76b5cb21797c21be4680b8605db5d2de6f84bd5ca360356ab040f9dc9dd4cd2", "manifest_sha256": "aca58a7025015a314943dc259c93bdd606fef16865d3d70d543a1712516ba0ed"}

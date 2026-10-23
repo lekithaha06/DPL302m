@@ -8,7 +8,7 @@ import torch, sacrebleu
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--phomt", required=True)
+ap.add_argument("--phomt", default="data/phomt/PhoMT")
 ap.add_argument("--n", type=int, default=2000)
 ap.add_argument("--base", default="checkpoints/pretrained/vinai-translate-vi2en")
 ap.add_argument("--versions", default="B0,V1,V2")
