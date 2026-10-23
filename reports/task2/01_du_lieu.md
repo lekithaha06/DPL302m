@@ -30,9 +30,10 @@ Quy trình (áp dụng cho từng tập FLEURS, đếm số mẫu còn lại sau
 - Chuẩn hóa văn bản khi chấm WER/CER: NFC, viết thường, dấu câu và ký hiệu → khoảng trắng, **giữ dấu tiếng Việt**, không đổi số thành chữ.
 - Nhiễu và mẫu khó **không bị loại** mà giữ lại để phân tích lỗi (4 bản thu train và 2 dev dài hơn 30 giây vẫn giữ).
 - Gán nhãn: dùng **nhãn gốc** của dataset (transcript tiếng Việt, câu tiếng Anh FLoRes) để train và chấm.
-- Gán nhãn loại lỗi cho phân tích lỗi: 100 câu FLEURS dev (chọn tự động, seed 42) mà B0 nghe sai hoặc dịch kém, 5 loại lỗi
-  (dấu thanh, tên riêng, số, thiếu/thừa từ, sai nghĩa), hai người gán độc lập (Đăng, Uyên), tính Cohen's Kappa bằng `src/data/compute_kappa.py`.
-  Tiêu chí và file gán: `reports/task2/labeling/`. *Kết quả Kappa: chờ hai người gán xong.*
+- Gán nhãn loại lỗi cho phân tích lỗi: 100 câu FLEURS dev (chọn tự động, seed 42) mà B0 nghe sai hoặc dịch kém, gán **tự động theo quy tắc cố định**
+  (`src/data/auto_label_errors.py`, tiêu chí trong `reports/task2/labeling/TIEU_CHI_GAN_NHAN.md`): tên riêng sai 43 câu, bản dịch sai nghĩa
+  (chrF++ < 40) 31, thiếu/thừa từ 26, sai dấu thanh 21, số sai 17; 73/100 câu có ít nhất một lỗi. Chỉ có một quy trình gán nên **không tính
+  Cohen's Kappa** (đề: "nếu có sử dụng"). Bộ file để hai người gán tay và script tính Kappa vẫn có sẵn nếu nhóm muốn bổ sung.
 - Chống leakage: chia theo **ID câu**; đã kiểm train–dev, train–test, dev–test: **0 ID trùng, 0 câu trùng nội dung**. Task 1 đã kiểm FLEURS test với toàn bộ PhoMT: 0 câu trùng.
 
 ## 1.3. Thống kê mô tả và mất cân bằng

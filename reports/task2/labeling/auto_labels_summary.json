@@ -1,0 +1,20 @@
+{
+  "n": 100,
+  "method": "gán tự động theo quy tắc (src/data/auto_label_errors.py), không phải nhãn của người",
+  "counts": {
+    "sai_dau_thanh": 21,
+    "ten_rieng": 43,
+    "so": 17,
+    "thieu_thua_tu": 26,
+    "sai_nghia_dich": 31
+  },
+  "percent": {
+    "sai_dau_thanh": 21.0,
+    "ten_rieng": 43.0,
+    "so": 17.0,
+    "thieu_thua_tu": 26.0,
+    "sai_nghia_dich": 31.0
+  },
+  "sentences_with_any_error": 73,
+  "kappa": "không áp dụng (một quy trình gán duy nhất)"
+}

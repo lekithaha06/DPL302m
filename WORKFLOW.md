@@ -6,7 +6,7 @@ Cập nhật: 23/10/2026. Tick `[x]` khi xong và có file minh chứng trong re
 | Giai đoạn | Nội dung | Trạng thái |
 |---|---|---|
 | Task 1 | Proposal: bài toán, related work, 2 baseline, phương pháp đề xuất, dữ liệu, đánh giá | ✅ Đã nộp 13/10/2026 |
-| **Task 2** | Xử lý dữ liệu, chạy lại 2 baseline, Proposed Method V1 → V3, kết luận khả thi | ✅ Thực nghiệm xong · chờ Kappa, thuyết trình |
+| **Task 2** | Xử lý dữ liệu, chạy lại 2 baseline, Proposed Method V1 → V3, kết luận khả thi | ✅ Xong · chờ thuyết trình |
 | Task 3 | Demo Gradio, đóng gói (FastAPI, Docker: điểm cộng), báo cáo cuối | ⏳ |
 
 Phân công giữ theo vai trò Task 1: **TV1 Bảo** (ASR), **TV2 Kiệt** (MT, Proposed Method), **TV3 Đăng** (hệ thống, demo), **TV4 Uyên** (dữ liệu, đánh giá).
@@ -27,7 +27,7 @@ Phân công giữ theo vai trò Task 1: **TV1 Bảo** (ASR), **TV2 Kiệt** (MT,
 
 ---
 
-## Task 2: thực nghiệm xong (23/10/2026), chờ gán nhãn Kappa và thuyết trình
+## Task 2: xong (23/10/2026), chờ thuyết trình
 
 Kết quả chính (FLEURS test, cascade, cùng script và cấu hình): B0 24,27 → V1 28,59 → V2 27,57 → **V3 27,75 (bản cuối, chọn trên dev)**;
 PhoMT test B0 40,27 → V3 39,86; V3 so với B0 +3,49 BLEU, khoảng tin cậy 95% [+2,34; +4,70], p < 0,001. Chi tiết: `reports/task2/`.
@@ -36,7 +36,7 @@ PhoMT test B0 40,27 → V3 39,86; V3 so với B0 +3,49 BLEU, khoảng tin cậy 
 - [x] Tải FLEURS train/dev/test; ghép theo ID câu; 0 câu trùng giữa các tập (`data/download_fleurs.py`, `data/build_fleurs_eval.py`)
 - [x] 1.1 Bảng nguồn online/offline (offline: không thu thập, có lý do)
 - [x] 1.2 Làm sạch có số mẫu từng bước: train loại 67 bản thu thiếu câu Anh (`src/data/clean_eda.py`)
-- [ ] 1.2 Gán nhãn loại lỗi 100 câu dev và Cohen's Kappa: **cần 2 người gán độc lập (Đăng, Uyên)**
+- [x] 1.2 Gán nhãn loại lỗi 100 câu dev, tự động theo quy tắc (tên riêng 43%, sai nghĩa 31%, thiếu/thừa từ 26%, dấu thanh 21%, số 17%); không tính Kappa vì chỉ một quy trình gán
 - [x] 1.3 Thống kê và mất cân bằng có %: train 74,3% giọng nữ, dev/test 100% nam; tỉ lệ 70,6/8,7/20,7
 - [x] 1.4 Xử lý mất cân bằng (cân bằng theo câu, V2b) có biểu đồ trước/sau và kết quả đo: không cải thiện
 
@@ -56,7 +56,7 @@ PhoMT test B0 40,27 → V3 39,86; V3 so với B0 +3,49 BLEU, khoảng tin cậy 
 
 ### Slide và báo cáo
 - [x] 23 slide `reports/task2/slides/` (dựng từ file kết quả) · báo cáo `reports/task2/BaoCao_Task2_DeTai1.pdf`
-- [ ] Điền mã nhóm, GVHD (slide 1) và Kappa (slide 5)
+- [ ] Điền mã nhóm, GVHD (slide 1)
 
 ---
 ## Task 3: sau Task 2

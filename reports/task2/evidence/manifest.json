@@ -236,8 +236,8 @@
  "results": [
   {
    "path": "reports/task2/01_du_lieu.md",
-   "bytes": 5820,
-   "sha256": "74ea707e1632ebf7951d1dfc661c143ddc2347b12992487081fc73b746b8d056"
+   "bytes": 6054,
+   "sha256": "14fce9d14607b9a15acf0b3b1a729ade4d6056ab2c2655361a04043f08351227"
   },
   {
    "path": "reports/task2/02_baseline_asr.md",
@@ -256,13 +256,13 @@
   },
   {
    "path": "reports/task2/BaoCao_Task2_DeTai1.docx",
-   "bytes": 396985,
-   "sha256": "ad2719b12b632d682a95da02b3837fd197bc91ad5a1901d4796938f956056e02"
+   "bytes": 397117,
+   "sha256": "e037ae098a027edf54aaf8632da5e841582de95d82feee5dd7b3a651a073f6e8"
   },
   {
    "path": "reports/task2/BaoCao_Task2_DeTai1.pdf",
-   "bytes": 4940175,
-   "sha256": "a0fdd96c8e664de9e691f5455840b796c4e7819aa7a91f207b3d0b2ed4e81656"
+   "bytes": 4940445,
+   "sha256": "b0e5813f97c71a9edcdb5d0bc287c34f0341c72a1afdfeded253bc57977630b8"
   },
   {
    "path": "reports/task2/NHAT_KY_THUC_NGHIEM.md",
@@ -401,8 +401,8 @@
   },
   {
    "path": "reports/task2/labeling/TIEU_CHI_GAN_NHAN.md",
-   "bytes": 2998,
-   "sha256": "8ee4b8b4173fdb705d1155bb0362f507ed6e94046c8b05b5bbcac1c39a32dcc0"
+   "bytes": 3352,
+   "sha256": "98d5b1a3e9fd049eca98b6893effab2575bd79bc82de768b5024617eb4854ef1"
   },
   {
    "path": "reports/task2/labeling/annotator_Dang.csv",
@@ -413,6 +413,16 @@
    "path": "reports/task2/labeling/annotator_Uyen.csv",
    "bytes": 69056,
    "sha256": "4be22f738d16f3950369e846c368aea8138ff010c4e181e1c09bd46db0f3be9a"
+  },
+  {
+   "path": "reports/task2/labeling/auto_labels.csv",
+   "bytes": 74017,
+   "sha256": "476d8baf1eb7050ada8f00c919cfd721ed9dc1d1a3d2a0eb94b0cbf2eea74e3f"
+  },
+  {
+   "path": "reports/task2/labeling/auto_labels_summary.json",
+   "bytes": 519,
+   "sha256": "0696c7b778512bca590d0ee7c10f1ff9518050dbe4a01b718f48d4d833c2abff"
   },
   {
    "path": "reports/task2/labeling/items.csv",
@@ -841,18 +851,18 @@
   },
   {
    "path": "reports/task2/slides/Task2_DeTai1_Slide.pdf",
-   "bytes": 616520,
-   "sha256": "f3f87c93688ba2c8972dd8df034d384ae53714938bdcf880afe957db43bfad75"
+   "bytes": 618825,
+   "sha256": "3ae66d2ec4d2424d45d3eabc3e9e95fe932a69c02dd37539d5e6be94d8b32502"
   },
   {
    "path": "reports/task2/slides/Task2_DeTai1_Slide.pptx",
-   "bytes": 466091,
-   "sha256": "cb07a319b9e508e9c27c219b62adff0f3e38929a27e3f72a903e4d405228bdd2"
+   "bytes": 466420,
+   "sha256": "840234f6660e465f5552cdb0f3009b7b580926ccd234707e57708ebd7535cfc3"
   },
   {
    "path": "reports/task2/slides/build_task2_deck.py",
-   "bytes": 47326,
-   "sha256": "b7369bcba44cd6152e57b34f5b3e91e66bd9cc0c6c09c5c0c462f1bf367f1a7b"
+   "bytes": 48275,
+   "sha256": "1f6042263a07665d6a166dc87fe292b2ea05b7c754ae3ceaadb667d14fd6c040"
   },
   {
    "path": "reports/task2/system/speed_B0.json",

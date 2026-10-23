@@ -258,14 +258,15 @@ table(s, 0.6, 3.5, [3.2, 8.93], [
     ["Chống leakage", "Chia theo ID câu; train–dev, train–test, dev–test: 0 ID trùng, 0 câu trùng nội dung"]], size=12, first_bold=True, row_h=0.47)
 
 # 5 ----------------------------------------------------------------- Labeling (Đăng)
-s = new("Gán nhãn và độ đồng nhất", "Đăng (~45 giây). Ba bộ dữ liệu đều có nhãn gốc, nhóm không gán nhãn lại. Kiểm chất lượng nhãn bằng ghép ID và chống leakage. "
-        "Phần gán nhãn loại lỗi cho 100 câu dev do hai người làm độc lập để tính Cohen's Kappa.")
+s = new("Gán nhãn và độ đồng nhất", "Đăng (~45 giây). Ba bộ dữ liệu đều có nhãn gốc, nhóm dùng nhãn gốc để train và chấm. "
+        "Để phân tích lỗi, 100 câu dev baseline làm sai được gán loại lỗi tự động theo quy tắc cố định: tên riêng là lỗi phổ biến nhất (43%). "
+        "Vì chỉ có một quy trình gán, không có hai người gán độc lập, nên không tính Cohen's Kappa; đề Task 2 chỉ yêu cầu Kappa nếu có nhiều người gán.")
 table(s, 0.6, 1.35, [2.6, 9.53], [
     ["Dataset", "Nhãn dùng"],
     ["FLEURS", "Transcript tiếng Việt gốc + câu tiếng Anh FLoRes cùng ID (bản dịch chuyên nghiệp)"],
     ["VIVOS", "Transcript gốc của bộ dữ liệu, chia theo người nói"],
     ["PhoMT", "Cặp câu song ngữ gốc"]], size=12, first_bold=True, row_h=0.42)
-tb(s, 0.6, 3.25, 12.1, 0.4, [("Gán nhãn loại lỗi (Label Studio) cho 100 câu FLEURS dev mà baseline nghe hoặc dịch sai", {"size": 15, "bold": True})])
+tb(s, 0.6, 3.25, 12.1, 0.4, [("Gán nhãn loại lỗi cho 100 câu FLEURS dev mà baseline nghe hoặc dịch sai (chọn tự động, seed 42)", {"size": 15, "bold": True})])
 cats = ["Sai dấu thanh", "Tên riêng", "Số", "Thiếu / thừa từ", "Sai nghĩa"]
 for k, c in enumerate(cats):
     label(s, 0.6 + k * 2.47, 3.8, 2.3, 0.5, c, TINT, color=INK, size=12)
@@ -276,8 +277,15 @@ if has("labeling/kappa.json"):
           ["Kappa"] + [f(v["kappa"], 2) if v["kappa"] is not None else "–" for v in K["per_category"].values()],
           ["Đồng ý thô"] + [f"{f(100 * v['agreement'], 0)}%" for v in K["per_category"].values()]], size=12, first_bold=True, row_h=0.4)
     tb(s, 0.6, 5.85, 12.1, 0.4, [(f"{K['n_sentences']} câu · Kappa trung bình {f(K['mean_kappa'], 2)} · hai người gán độc lập (Đăng, Uyên)", {"size": 12, "bold": True})])
+elif has("labeling/auto_labels_summary.json"):
+    AL = J("labeling/auto_labels_summary.json")
+    names = {"sai_dau_thanh": "Dấu thanh", "ten_rieng": "Tên riêng", "so": "Số", "thieu_thua_tu": "Thiếu/thừa từ", "sai_nghia_dich": "Sai nghĩa"}
+    table(s, 0.6, 4.55, [2.6] + [1.9] * 5, [["Gán tự động (100 câu)"] + [names[k] for k in AL["counts"]],
+          ["Số câu có lỗi"] + [f"{v} ({f(AL['percent'][k], 0)}%)" for k, v in AL["counts"].items()]], size=12, first_bold=True, row_h=0.42)
+    tb(s, 0.6, 5.5, 12.1, 0.7, [(f"{AL['sentences_with_any_error']}/{AL['n']} câu có ít nhất một lỗi. Nhãn gán tự động theo quy tắc cố định (chạy lại ra đúng kết quả); "
+                                "chỉ một quy trình gán nên không tính Cohen's Kappa.", {"size": 12.5})])
 else:
-    pending(s, 0.6, 4.6, 12.13, 1.0, "CHỜ KẾT QUẢ: Đăng và Uyên gán nhãn độc lập cùng 100 câu (reports/task2/labeling) → chạy compute_kappa.py, slide tự điền")
+    pending(s, 0.6, 4.6, 12.13, 1.0, "CHỜ KẾT QUẢ gán nhãn loại lỗi")
 note(s, "Đề Task 2 mục 1.2: Kappa chỉ bắt buộc nếu có quy trình nhiều người gán nhãn. Tiêu chí: reports/task2/labeling/TIEU_CHI_GAN_NHAN.md", y=6.35)
 
 # 6 ----------------------------------------------------------------- Stats & imbalance (Uyên)

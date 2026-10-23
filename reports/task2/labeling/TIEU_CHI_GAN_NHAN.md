@@ -1,5 +1,8 @@
 # Gán nhãn loại lỗi: tiêu chí và cách làm (Task 2, mục 1.2)
 
+**Đã làm:** gán tự động theo quy tắc cho 100 câu (`auto_labels.csv`, tổng hợp `auto_labels_summary.json`, code `src/data/auto_label_errors.py`).
+Quy tắc tự động tương ứng với từng loại lỗi được ghi ở đầu file code. Phần dưới là hướng dẫn nếu nhóm muốn hai người gán tay để tính Kappa.
+
 **Người gán:** Hồ Lâm Bảo Đăng và Bùi Ngọc Phương Uyên, **mỗi người làm độc lập**, không xem hay bàn kết quả của nhau trước khi cả hai gán xong.
 **Dữ liệu:** 100 câu FLEURS dev (`items.csv`), chọn tự động: mỗi câu gốc một bản thu, chỉ câu mà baseline B0 nghe sai hoặc dịch kém, seed 42 (`selection.json`).
 Không dùng tập test.
