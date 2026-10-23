@@ -1,0 +1,65 @@
+train pairs=7376 dev pairs=361
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 10020.92it/s]
+trainable params=4,718,592 / 453,144,576 (1.04%)
+epoch 0 (baseline) dev loss 1.6951 BLEU 25.55 chrF++ 51.87
+epoch 1 step 50/922 loss 1.2144
+epoch 1 step 100/922 loss 1.2521
+epoch 1 step 150/922 loss 1.2486
+epoch 1 step 200/922 loss 1.2364
+epoch 1 step 250/922 loss 1.2372
+epoch 1 step 300/922 loss 1.2133
+epoch 1 step 350/922 loss 1.2051
+epoch 1 step 400/922 loss 1.2007
+epoch 1 step 450/922 loss 1.1940
+epoch 1 step 500/922 loss 1.1884
+epoch 1 step 550/922 loss 1.1831
+epoch 1 step 600/922 loss 1.1736
+epoch 1 step 650/922 loss 1.1678
+epoch 1 step 700/922 loss 1.1611
+epoch 1 step 750/922 loss 1.1606
+epoch 1 step 800/922 loss 1.1574
+epoch 1 step 850/922 loss 1.1538
+epoch 1 step 900/922 loss 1.1515
+{'epoch': 1, 'train_loss': 1.150183546665951, 'dev_loss': 1.4819138153739597, 'dev_bleu': 28.567222151846487, 'dev_chrf++': 53.098461291663945, 'seconds': 570.0}
+epoch 2 step 50/922 loss 0.9513
+epoch 2 step 100/922 loss 0.9793
+epoch 2 step 150/922 loss 0.9718
+epoch 2 step 200/922 loss 0.9838
+epoch 2 step 250/922 loss 0.9866
+epoch 2 step 300/922 loss 0.9829
+epoch 2 step 350/922 loss 0.9892
+epoch 2 step 400/922 loss 0.9911
+epoch 2 step 450/922 loss 0.9934
+epoch 2 step 500/922 loss 0.9861
+epoch 2 step 550/922 loss 0.9851
+epoch 2 step 600/922 loss 0.9827
+epoch 2 step 650/922 loss 0.9821
+epoch 2 step 700/922 loss 0.9821
+epoch 2 step 750/922 loss 0.9810
+epoch 2 step 800/922 loss 0.9805
+epoch 2 step 850/922 loss 0.9792
+epoch 2 step 900/922 loss 0.9758
+{'epoch': 2, 'train_loss': 0.9764022828118144, 'dev_loss': 1.5288162801576697, 'dev_bleu': 27.524883232394174, 'dev_chrf++': 53.31210271637447, 'seconds': 581.9}
+epoch 3 step 50/922 loss 0.9400
+epoch 3 step 100/922 loss 0.8809
+epoch 3 step 150/922 loss 0.8802
+epoch 3 step 200/922 loss 0.8733
+epoch 3 step 250/922 loss 0.8677
+epoch 3 step 300/922 loss 0.8674
+epoch 3 step 350/922 loss 0.8634
+epoch 3 step 400/922 loss 0.8545
+epoch 3 step 450/922 loss 0.8583
+epoch 3 step 500/922 loss 0.8565
+epoch 3 step 550/922 loss 0.8551
+epoch 3 step 600/922 loss 0.8570
+epoch 3 step 650/922 loss 0.8566
+epoch 3 step 700/922 loss 0.8518
+epoch 3 step 750/922 loss 0.8554
+epoch 3 step 800/922 loss 0.8556
+epoch 3 step 850/922 loss 0.8573
+epoch 3 step 900/922 loss 0.8570
+{'epoch': 3, 'train_loss': 0.8568927232911426, 'dev_loss': 1.5840447000835254, 'dev_bleu': 27.256051005407905, 'dev_chrf++': 52.91095135914375, 'seconds': 580.0}
+best {'epoch': 1, 'train_loss': 1.150183546665951, 'dev_loss': 1.4819138153739597, 'dev_bleu': 28.567222151846487, 'dev_chrf++': 53.098461291663945, 'seconds': 570.0}

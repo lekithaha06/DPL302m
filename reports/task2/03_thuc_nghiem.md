@@ -120,4 +120,10 @@ V2 40,80 (−0,16, đạt); V3 41,16 (+0,20, đạt). Trên FLEURS dev (cùng sc
 | **V3 so với B0** | **+3,49** | **[+2,34; +4,70]** | < 0,001 | +2,47 | [+1,69; +3,22] | < 0,001 |
 
 Không lần lấy mẫu nào V1, V2, V2b hay V3 thua B0, nên cải thiện là có ý nghĩa thống kê.
-File: `mt/significance_V1_vs_B0.json`, `mt/significance_V2_vs_B0.json`.
+File: `mt/significance_V1_vs_B0.json`, `mt/significance_V2_vs_B0.json`, `mt/significance_V3_vs_B0.json`.
+
+**Độ ổn định theo seed** (`mt/seed_robustness_V3.json`): train lại V3 với seed 13 và 7, mọi thứ khác giữ nguyên.
+BLEU cascade FLEURS test: seed 42 27,75 · seed 13 27,32 · seed 7 27,80, **trung bình 27,62 ± 0,26**; chữ chuẩn 37,31 ± 0,21.
+Seed kém nhất vẫn hơn B0 3,05 BLEU, nên cải thiện so với B0 không phụ thuộc vào khởi tạo.
+Ngược lại, V3 chỉ hơn V2 0,18 BLEU trên toàn tập, **nhỏ hơn độ lệch giữa các seed (0,26)**: không khẳng định V3 tốt hơn V2 trên toàn tập.
+Đóng góp rõ của V3 là ở nhóm câu có chữ số (+1,06 so với V2) và ví dụ sinh lặp được sửa; V3 được chọn theo quy tắc trên dev.

@@ -66,3 +66,13 @@
 2026-10-23 15:35:17 START speed V3 (final, with number normalisation)
 2026-10-23 15:46:27 DONE speed V3 (exit 0)
 2026-10-23 15:49:49 DONE session 3: slides, report, docs updated
+2026-10-23 15:50:10 START train V3_s13
+2026-10-23 16:21:31 DONE train V3_s13
+2026-10-23 16:21:31 START eval V3_s13
+2026-10-23 16:25:33 DONE eval V3_s13
+2026-10-23 16:25:33 START train V3_s7
+2026-10-23 16:56:53 DONE train V3_s7
+2026-10-23 16:56:53 START eval V3_s7
+2026-10-23 17:02:28 DONE eval V3_s7
+2026-10-23 17:02:28 SEEDS QUEUE COMPLETE
+2026-10-23 17:03:46 DONE seed robustness write-up

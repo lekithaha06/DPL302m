@@ -73,6 +73,16 @@ Máy: xem `evidence/gpu.txt`; thư viện: `evidence/pip_freeze.txt`; mã hash m
 2026-10-23 15:35:17 START speed V3 (final, with number normalisation)
 2026-10-23 15:46:27 DONE speed V3 (exit 0)
 2026-10-23 15:49:49 DONE session 3: slides, report, docs updated
+2026-10-23 15:50:10 START train V3_s13
+2026-10-23 16:21:31 DONE train V3_s13
+2026-10-23 16:21:31 START eval V3_s13
+2026-10-23 16:25:33 DONE eval V3_s13
+2026-10-23 16:25:33 START train V3_s7
+2026-10-23 16:56:53 DONE train V3_s7
+2026-10-23 16:56:53 START eval V3_s7
+2026-10-23 17:02:28 DONE eval V3_s7
+2026-10-23 17:02:28 SEEDS QUEUE COMPLETE
+2026-10-23 17:03:46 DONE seed robustness write-up
 ```
 
 ## Kết quả train từng phiên bản
@@ -103,3 +113,5 @@ Máy: xem `evidence/gpu.txt`; thư viện: `evidence/pip_freeze.txt`; mã hash m
 - `checkpoints/v2/best_adapter/adapter_model.safetensors`: `d7186a19355b1bc3…` (18,915,448 byte)
 - `checkpoints/v2b/best_adapter/adapter_model.safetensors`: `07199d4715a73b94…` (18,915,448 byte)
 - `checkpoints/v3/best_adapter/adapter_model.safetensors`: `4235dfa267f26ac4…` (18,915,448 byte)
+- `checkpoints/v3_s13/best_adapter/adapter_model.safetensors`: `47ec97387712ed65…` (18,915,448 byte)
+- `checkpoints/v3_s7/best_adapter/adapter_model.safetensors`: `c3608cb68d05af21…` (18,915,448 byte)

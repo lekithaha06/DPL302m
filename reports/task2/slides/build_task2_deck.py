@@ -484,6 +484,12 @@ for v in ("V1", "V2", "V2b", "V3"):
         g = SIG[v]["sentence_cluster"]
         sig_rows.append([v, f(g["delta_BLEU_mean"]), f"[{f(g['delta_BLEU_CI95'][0])}; {f(g['delta_BLEU_CI95'][1])}]", "< 0,001" if g["p_value_BLEU"] == 0 else f(g["p_value_BLEU"], 3)])
 table(s, 0.6, 1.5 + 0.48 * len(rows), [1.6, 1.4, 2.6, 1.4], sig_rows, size=11.5, first_bold=True, row_h=0.4)
+if has("mt/seed_robustness_V3.json"):
+    SR = J("mt/seed_robustness_V3.json")
+    tb(s, 7.85, 1.65 + 0.48 * len(rows), 4.9, 2.2, [("Độ ổn định theo seed (V3)", {"size": 13, "bold": True}),
+        (f"• Seed 42 / 13 / 7: " + " / ".join(f(v["cascade_BLEU"]) for v in SR["runs"].values()), {"size": 12}),
+        (f"• Trung bình {f(SR['cascade_mean'])} ± {f(SR['cascade_std'])}; kém nhất vẫn hơn B0 {f(SR['min_gain_vs_B0'])}", {"size": 12}),
+        ("• V3 hơn V2 trên toàn tập nhỏ hơn dao động seed; đóng góp rõ ở câu có chữ số (+1,06)", {"size": 12})])
 
 # 19 ---------------------------------------------------------------- Visual results (Đăng)
 s = new("Kết quả đầu ra tiêu biểu", "Đăng (~50 giây). Ví dụ được chọn tự động theo chrF++ từng câu, không chọn tay. "

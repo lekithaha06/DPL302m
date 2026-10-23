@@ -1,0 +1,26 @@
+{
+  "runs": {
+    "V3": {
+      "seed": 42,
+      "cascade_BLEU": 27.75,
+      "clean_BLEU": 37.51
+    },
+    "V3_s13": {
+      "seed": 13,
+      "cascade_BLEU": 27.32,
+      "clean_BLEU": 37.32
+    },
+    "V3_s7": {
+      "seed": 7,
+      "cascade_BLEU": 27.8,
+      "clean_BLEU": 37.1
+    }
+  },
+  "cascade_mean": 27.62,
+  "cascade_std": 0.26,
+  "clean_mean": 37.31,
+  "clean_std": 0.21,
+  "B0_cascade": 24.27,
+  "min_gain_vs_B0": 3.05,
+  "note": "seed 13 va 7 chi de do dao dong; ban cuoi van la V3 seed 42 chon tren dev"
+}
