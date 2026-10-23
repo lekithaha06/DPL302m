@@ -456,13 +456,13 @@
   },
   {
    "path": "reports/task2/logs/download/download_fleurs.log",
-   "bytes": 638,
-   "sha256": "1ec22ce310f7f7f0d6a0b1b8b96420081a13f263a321e2051cdf93f83dce0ea5"
+   "bytes": 506,
+   "sha256": "79ac8703ac463a72249f08273c85dd12fe1fbf31cad54994f4f20571a490d9de"
   },
   {
    "path": "reports/task2/logs/download/download_models.log",
-   "bytes": 1490,
-   "sha256": "deb7cd95567e5754b245ceea8c5b8f5e16e582f9b46e499aa28b8d43d1ffee1b"
+   "bytes": 1446,
+   "sha256": "72e0fbeebea1c5550bc88012c1fa3711b4509df24042913bb457fed9e084b477"
   },
   {
    "path": "reports/task2/logs/download/prepare_vivos.log",

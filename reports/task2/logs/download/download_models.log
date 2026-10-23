@@ -6,7 +6,7 @@ Fetching 5 files:  60%|██████    | 3/5 [00:01<00:00,  3.01it/s]
 Fetching 5 files:  80%|████████  | 4/5 [04:17<01:28, 88.85s/it]
 Fetching 5 files: 100%|██████████| 5/5 [05:27<00:00, 82.72s/it]
 Fetching 5 files: 100%|██████████| 5/5 [05:27<00:00, 65.52s/it]
-vinai/vinai-translate-vi2en 95d9a72c9e6a319c5a9c7dd2135975092e95252b -> D:\CAIDCM\DPL302m_git\checkpoints\pretrained\vinai-translate-vi2en
+vinai/vinai-translate-vi2en 95d9a72c9e6a319c5a9c7dd2135975092e95252b -> checkpoints\pretrained\vinai-translate-vi2en
 
 Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]
 Fetching 13 files:   8%|▊         | 1/13 [00:00<00:06,  1.83it/s]
@@ -16,4 +16,4 @@ Fetching 13 files:  69%|██████▉   | 9/13 [00:01<00:00,  9.65it/s]
 Fetching 13 files:  92%|█████████▏| 12/13 [00:12<00:00,  9.65it/s]
 Fetching 13 files: 100%|██████████| 13/13 [02:27<00:00, 17.45s/it]
 Fetching 13 files: 100%|██████████| 13/13 [02:27<00:00, 11.37s/it]
-vinai/PhoWhisper-small a86b604c346caf7148c37512eafe783a16420adb -> D:\CAIDCM\DPL302m_git\checkpoints\pretrained\PhoWhisper-small
+vinai/PhoWhisper-small a86b604c346caf7148c37512eafe783a16420adb -> checkpoints\pretrained\PhoWhisper-small
