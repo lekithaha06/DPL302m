@@ -28,6 +28,12 @@ for v in args.versions.split(","):
             if os.path.exists(alt):
                 e["phomt_test"] = json.load(open(alt, encoding="utf-8"))["phomt_test"]; phomt_note = note
                 break
+    # V3 = (bản LoRA cuối) + chuẩn hóa số ở đầu vào cascade: chữ chuẩn và PhoMT không đi qua bước này,
+    # nên hai cột đó lấy từ phiên bản gốc ghi trong eval_V3.json ("base_version").
+    if "fleurs_clean" not in e and e.get("base_version"):
+        src_e = json.load(open(f"{args.out}/mt/eval_{e['base_version']}.json", encoding="utf-8"))
+        e["fleurs_clean"] = src_e["fleurs_clean"]; e.setdefault("phomt_test", src_e.get("phomt_test", {}))
+        phomt_note = f"chữ chuẩn và PhoMT giống {e['base_version']} (chuẩn hóa số chỉ áp dụng cho chữ máy nghe)"
     cfg = f"{args.ckpt}/{v.lower()}/config.json"
     rows.append({"version": v,
                  "fleurs_cascade_BLEU": e["fleurs_cascade"]["BLEU"], "fleurs_cascade_chrF++": e["fleurs_cascade"]["chrF++"],

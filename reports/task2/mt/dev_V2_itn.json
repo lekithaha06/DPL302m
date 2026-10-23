@@ -1,0 +1,9 @@
+{
+  "name": "V2_itn",
+  "adapter": "checkpoints/v2/best_adapter",
+  "itn": true,
+  "n": 361,
+  "itn_changed_inputs": 64,
+  "BLEU": 27.17,
+  "chrF++": 53.01
+}

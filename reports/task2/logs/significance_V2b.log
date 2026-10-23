@@ -1,0 +1,39 @@
+{
+ "base": "B0",
+ "new": "V2b",
+ "B": 1000,
+ "full": {
+  "BLEU_base": 24.27,
+  "BLEU_new": 26.85,
+  "chrF_base": 50.12,
+  "chrF_new": 52.12
+ },
+ "utterance": {
+  "delta_BLEU_mean": 2.6,
+  "delta_BLEU_CI95": [
+   1.91,
+   3.35
+  ],
+  "p_value_BLEU": 0.0,
+  "delta_chrF_mean": 2.01,
+  "delta_chrF_CI95": [
+   1.53,
+   2.53
+  ],
+  "p_value_chrF": 0.0
+ },
+ "sentence_cluster": {
+  "delta_BLEU_mean": 2.59,
+  "delta_BLEU_CI95": [
+   1.61,
+   3.64
+  ],
+  "p_value_BLEU": 0.0,
+  "delta_chrF_mean": 2.01,
+  "delta_chrF_CI95": [
+   1.38,
+   2.68
+  ],
+  "p_value_chrF": 0.0
+ }
+}

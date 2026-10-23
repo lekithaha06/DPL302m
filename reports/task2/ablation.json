@@ -28,5 +28,15 @@
     "phomt_note": null,
     "train_pairs": 7376,
     "delta_vs_B0": 3.3
+  },
+  {
+    "version": "V2b",
+    "fleurs_cascade_BLEU": 26.85,
+    "fleurs_cascade_chrF++": 52.12,
+    "fleurs_clean_BLEU": 37.26,
+    "phomt_BLEU": null,
+    "phomt_note": null,
+    "train_pairs": 7376,
+    "delta_vs_B0": 2.58
   }
 ]

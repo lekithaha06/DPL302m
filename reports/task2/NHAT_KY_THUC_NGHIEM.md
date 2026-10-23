@@ -38,6 +38,24 @@ Máy: xem `evidence/gpu.txt`; thư viện: `evidence/pip_freeze.txt`; mã hash m
 2026-10-23 04:10:25 DONE speed final
 2026-10-23 04:10:25 SPEED COMPLETE
 2026-10-23 04:10:25 FINAL QUEUE COMPLETE
+2026-10-23 09:41:24 START train V2b (V2 + sentence balancing)
+2026-10-23 09:41:43 DONE train V2b (exit 1)
+2026-10-23 09:43:39 FAIL train V2b: lỗi import thư viện khi khởi động (chưa train bước nào); cố định lại phiên bản thư viện như evidence/pip_freeze.txt rồi chạy lại
+2026-10-23 09:43:39 START train V2b (V2 + sentence balancing)
+2026-10-23 10:10:35 DONE train V2b (exit 0)
+2026-10-23 10:10:51 START dev V2
+2026-10-23 10:12:05 DONE dev V2
+2026-10-23 10:12:05 START dev V2+ITN
+2026-10-23 10:13:16 DONE dev V2+ITN
+2026-10-23 10:13:16 START eval V2b
+2026-10-23 10:16:38 DONE eval V2b
+2026-10-23 10:16:38 START PhoMT dev V2b
+2026-10-23 10:21:16 DONE PhoMT dev V2b
+2026-10-23 10:21:16 BASE for V3 = V2 (FLEURS dev V2 27.1655242467345, V2b 26.9796055725761; PhoMT dev B0 40.96, V2b 40.93)
+2026-10-23 10:21:16 ITN on FLEURS dev (V2): 27.29 -> 27.17
+2026-10-23 10:21:16 V3 not adopted: ITN did not improve FLEURS dev
+2026-10-23 10:21:27 V3 QUEUE COMPLETE
+2026-10-23 10:27:20 ENV: kiểm tra pip freeze giống hệt evidence/pip_freeze.txt
 ```
 
 ## Kết quả train từng phiên bản
@@ -66,3 +84,4 @@ Máy: xem `evidence/gpu.txt`; thư viện: `evidence/pip_freeze.txt`; mã hash m
 
 - `checkpoints/v1/best_adapter/adapter_model.safetensors`: `83ca179b1713ded2…` (18,915,448 byte)
 - `checkpoints/v2/best_adapter/adapter_model.safetensors`: `d7186a19355b1bc3…` (18,915,448 byte)
+- `checkpoints/v2b/best_adapter/adapter_model.safetensors`: `07199d4715a73b94…` (18,915,448 byte)

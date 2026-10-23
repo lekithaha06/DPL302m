@@ -1,0 +1,51 @@
+{
+ "by_asr_wer": {
+  "WER 0": {
+   "n": 183,
+   "BLEU_B0": 30.1,
+   "BLEU_V2b": 33.74,
+   "chrF++_B0": 55.54,
+   "chrF++_V2b": 58.22
+  },
+  "WER 0–10": {
+   "n": 283,
+   "BLEU_B0": 26.8,
+   "BLEU_V2b": 28.56,
+   "chrF++_B0": 52.97,
+   "chrF++_V2b": 54.24
+  },
+  "WER 10–30": {
+   "n": 306,
+   "BLEU_B0": 21.53,
+   "BLEU_V2b": 23.74,
+   "chrF++_B0": 47.8,
+   "chrF++_V2b": 49.36
+  },
+  "WER >30": {
+   "n": 85,
+   "BLEU_B0": 10.55,
+   "BLEU_V2b": 16.45,
+   "chrF++_B0": 37.87,
+   "chrF++_V2b": 42.54
+  }
+ },
+ "by_digits": {
+  "có số": {
+   "n": 171,
+   "BLEU_B0": 17.98,
+   "BLEU_V2b": 22.91,
+   "chrF++_B0": 46.36,
+   "chrF++_V2b": 49.44
+  },
+  "không có số": {
+   "n": 686,
+   "BLEU_B0": 25.53,
+   "BLEU_V2b": 27.87,
+   "chrF++_B0": 51.16,
+   "chrF++_V2b": 52.85
+  }
+ },
+ "sentences_better": 427,
+ "sentences_worse": 241,
+ "sentences_same": 189
+}

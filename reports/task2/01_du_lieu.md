@@ -57,4 +57,7 @@ Hình: `data/figures/fleurs_split.png`, `fleurs_gender.png`, `fleurs_duration.pn
 - **Cân bằng theo câu:** gán trọng số 1/k cho mỗi bản thu của câu có k bản thu, để mỗi câu gốc đóng góp như nhau. Trước: nhóm câu 2 bản thu chiếm 1.700 bản thu; sau: tổng trọng số 850 (hình `fleurs_sentence_balance.png`).
 - Không dùng augmentation âm thanh vì nhóm không train khối nghe.
 - Lệch giới tính train/test: không sửa được bằng lấy mẫu vì test không có giọng nữ; ghi là hạn chế.
-- Tác động lên mô hình được đo ở phần thực nghiệm (nếu dùng ở một phiên bản V); **chưa khẳng định cải thiện khi chưa đo**.
+- **Kết quả đo (V2b = V2 + cân bằng theo câu, mọi thứ khác giữ nguyên):** FLEURS dev BLEU 26,98 so với V2 27,17;
+  cascade FLEURS test 26,85 so với V2 27,57; PhoMT dev 40,93 so với V2 40,80. **Cân bằng theo câu không cải thiện khối dịch**
+  nên không được dùng trong bản cuối. Lý do hợp lý: các bản thu khác nhau của cùng một câu cho ra lỗi nghe khác nhau,
+  nên chúng là dữ liệu bổ sung có ích, không phải dữ liệu trùng; hạ trọng số chúng làm mất bớt sự đa dạng của lỗi nghe.

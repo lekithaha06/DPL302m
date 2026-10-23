@@ -32,6 +32,9 @@ ap.add_argument("--targets", default="q_proj,k_proj,v_proj,out_proj")
 ap.add_argument("--max-len", type=int, default=256)
 ap.add_argument("--seed", type=int, default=42)
 ap.add_argument("--extra-train", default="", help="optional JSONL of clean pairs (src, en_ref) mixed in, e.g. PhoMT subset for V2")
+ap.add_argument("--balance-sentence", action="store_true",
+                help="imbalance handling (Task 2, 1.4): sample each recording of a FLEURS sentence with k recordings "
+                     "with weight 1/k, so every source sentence contributes equally (sampling with replacement)")
 args = ap.parse_args()
 
 
@@ -39,9 +42,10 @@ def set_seed(s):
     random.seed(s); np.random.seed(s); torch.manual_seed(s); torch.cuda.manual_seed_all(s)
 
 
-def read_jsonl(path, field):
+def read_jsonl(path, field, with_id=False):
     rows = [json.loads(l) for l in open(path, encoding="utf-8") if l.strip()]
-    return [(r[field] if field in r else r["src"], r["en_ref"]) for r in rows]
+    pairs = [(r[field] if field in r else r["src"], r["en_ref"]) for r in rows]
+    return (pairs, [r.get("id") if field in r else None for r in rows]) if with_id else pairs
 
 
 set_seed(args.seed)
@@ -52,9 +56,13 @@ en_id = tok.convert_tokens_to_ids("en_XX")
 eos = tok.eos_token_id
 pad = tok.pad_token_id
 
-train_pairs = [p for f in args.train for p in read_jsonl(f, args.src_field)]
+train_pairs, train_ids = [], []
+for f in args.train:
+    p, ids = read_jsonl(f, args.src_field, with_id=True)
+    train_pairs += p; train_ids += ids            # id only for ASR-transcript rows (recordings of FLEURS sentences)
 if args.extra_train:
-    train_pairs += read_jsonl(args.extra_train, "src")
+    p = read_jsonl(args.extra_train, "src")
+    train_pairs += p; train_ids += [None] * len(p)
 dev_pairs = read_jsonl(args.dev, args.src_field)
 print(f"train pairs={len(train_pairs)} dev pairs={len(dev_pairs)}", flush=True)
 
@@ -81,7 +89,16 @@ n_all = sum(p.numel() for p in model.parameters())
 print(f"trainable params={n_train:,} / {n_all:,} ({100 * n_train / n_all:.2f}%)", flush=True)
 
 g = torch.Generator(); g.manual_seed(args.seed)
-loader = DataLoader(train_pairs, batch_size=args.batch, shuffle=True, collate_fn=encode, generator=g)
+if args.balance_sentence:
+    from collections import Counter
+    from torch.utils.data import WeightedRandomSampler
+    k = Counter(i for i in train_ids if i is not None)
+    weights = [1.0 / k[i] if i is not None else 1.0 for i in train_ids]
+    sampler = WeightedRandomSampler(weights, num_samples=len(train_pairs), replacement=True, generator=g)
+    loader = DataLoader(train_pairs, batch_size=args.batch, sampler=sampler, collate_fn=encode)
+    print(f"sentence balancing: {len(k)} FLEURS sentences, recordings per sentence {dict(sorted(Counter(k.values()).items()))}", flush=True)
+else:
+    loader = DataLoader(train_pairs, batch_size=args.batch, shuffle=True, collate_fn=encode, generator=g)
 steps_total = math.ceil(len(loader) / args.grad_accum) * args.epochs
 opt = torch.optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=args.lr, weight_decay=0.0)
 sched = get_linear_schedule_with_warmup(opt, int(args.warmup * steps_total), steps_total)

@@ -1,0 +1,321 @@
+{
+  "by_asr_wer": {
+    "WER 0": {
+      "n": 183,
+      "BLEU_B0": 30.1,
+      "BLEU_V2b": 33.74,
+      "chrF++_B0": 55.54,
+      "chrF++_V2b": 58.22
+    },
+    "WER 0–10": {
+      "n": 283,
+      "BLEU_B0": 26.8,
+      "BLEU_V2b": 28.56,
+      "chrF++_B0": 52.97,
+      "chrF++_V2b": 54.24
+    },
+    "WER 10–30": {
+      "n": 306,
+      "BLEU_B0": 21.53,
+      "BLEU_V2b": 23.74,
+      "chrF++_B0": 47.8,
+      "chrF++_V2b": 49.36
+    },
+    "WER >30": {
+      "n": 85,
+      "BLEU_B0": 10.55,
+      "BLEU_V2b": 16.45,
+      "chrF++_B0": 37.87,
+      "chrF++_V2b": 42.54
+    }
+  },
+  "by_digits": {
+    "có số": {
+      "n": 171,
+      "BLEU_B0": 17.98,
+      "BLEU_V2b": 22.91,
+      "chrF++_B0": 46.36,
+      "chrF++_V2b": 49.44
+    },
+    "không có số": {
+      "n": 686,
+      "BLEU_B0": 25.53,
+      "BLEU_V2b": 27.87,
+      "chrF++_B0": 51.16,
+      "chrF++_V2b": 52.85
+    }
+  },
+  "sentences_better": 427,
+  "sentences_worse": 241,
+  "sentences_same": 189,
+  "examples_most_improved": [
+    {
+      "id": "1947",
+      "vi_ref": "Trước khi quân đội có mặt, Haiti không gặp phải các vấn đề liên quan đến bệnh này từ những năm 1800.",
+      "asr": "trước khi quân đội có mặt hai a tây không gặp phải các vấn đề liên quan đến bệnh này từ những năm một ngàn tám trăm.",
+      "en_ref": "Prior to the arrival of troops, Haiti had not encountered problems related to the disease since the 1800s.",
+      "base": "Before the army was present two a west did not experience problems related to this disease from the years one thousand eight hundred.",
+      "new": "Prior to the army's arrival, the West Coast had not experienced problems related to the disease since the 1800s.",
+      "asr_wer": 31.8,
+      "chrf_base": 35.89940273656392,
+      "chrf_new": 69.62850168550911
+    },
+    {
+      "id": "1759",
+      "vi_ref": "Bác sĩ Malar Balasubramanian, 29 tuổi, được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng nặc thuốc ở Blue Ash, một vùng ngoại ô cách Cincinnati 15 dặm về phía bắc.",
+      "asr": "bác sĩ ma la ba lát su ran mi anh hai mươi chín tuổi được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng nặc thuốc ở lúa ác một vùng ngoại ô cách shin shin natty mười lăm dậm về phía bắc.",
+      "en_ref": "Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state.",
+      "base": "Dr. Ma la ba lát su ran mi anh hai mươi chín tuổi được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng ặc thuốc ở lúa ác... một vùng ngoại ô cách cách Shin Shin Natty mười fifteen dậm về phía Bắc.",
+      "new": "Dr. Malah Laugher, 23, was found lying on the ground by the road in a smoking T-shirt and underwear in a suburb fifteen blocks north of Shin Shin Natty.",
+      "asr_wer": 47.5,
+      "chrf_base": 11.538076946392964,
+      "chrf_new": 42.73724289415702
+    },
+    {
+      "id": "1926",
+      "vi_ref": "Chấp nhận là quan điểm của Aristotle về tất cả mọi vấn đề liên quan đến khoa học, kể cả tâm lý học.",
+      "asr": "chấp nhận là quan điểm của erik stone về tất cả mọi vấn đề liên quan đến khoa học kể tả tâm lý học.",
+      "en_ref": "Accepted were Aristotle's views on all matters of science, including psychology.",
+      "base": "Acceptance is Erik Stone's view on everything from science to psychology.",
+      "new": "Acceptance is Erik Stone's view on all matters related to science, including psychology.",
+      "asr_wer": 13.0,
+      "chrf_base": 34.649179569526154,
+      "chrf_new": 63.8364007626439
+    },
+    {
+      "id": "1954",
+      "vi_ref": "Sự kỷ luật trong phòng thủ, khả năng xử lý bóng và tính đồng đội tuyệt vời khiến họ khác biệt và rõ ràng đây là đội hình chiến thắng.",
+      "asr": "sự kỷ luật trong phòng thủ khả năng xử lý bóng và tính đồng đội tuyệt vời khiến họ khác biệt và rõ ràng đây là đội hình chiến thắng.",
+      "en_ref": "Their disciplined defence, ball handling skills and excellent team work made them stand out and it was clear that this was the team to beat.",
+      "base": "the discipline in defense the ability to handle the ball and the great teamwork make them different and obviously this is the winning squad.",
+      "new": "Their discipline in defense, ability to handle the ball and excellent teamwork made them different and it was clear that this was the winning squad.",
+      "asr_wer": 0.0,
+      "chrf_base": 32.50154372837988,
+      "chrf_new": 61.57412070431595
+    },
+    {
+      "id": "1954",
+      "vi_ref": "Sự kỷ luật trong phòng thủ, khả năng xử lý bóng và tính đồng đội tuyệt vời khiến họ khác biệt và rõ ràng đây là đội hình chiến thắng.",
+      "asr": "sự kỷ luật trong phòng thủ khả năng xử lý bóng và tính đồng đội tuyệt vời khiến họ khác biệt và rõ ràng đây là đội hình chiến thắng.",
+      "en_ref": "Their disciplined defence, ball handling skills and excellent team work made them stand out and it was clear that this was the team to beat.",
+      "base": "the discipline in defense the ability to handle the ball and the great teamwork make them different and obviously this is the winning squad.",
+      "new": "Their discipline in defense, ability to handle the ball and excellent teamwork made them different and it was clear that this was the winning squad.",
+      "asr_wer": 0.0,
+      "chrf_base": 32.50154372837988,
+      "chrf_new": 61.57412070431595
+    },
+    {
+      "id": "1954",
+      "vi_ref": "Sự kỷ luật trong phòng thủ, khả năng xử lý bóng và tính đồng đội tuyệt vời khiến họ khác biệt và rõ ràng đây là đội hình chiến thắng.",
+      "asr": "sự kỷ luật trong phòng thủ khả năng xử lý bóng và tính đồng đội tuyệt vời khiến họ khác biệt và rõ ràng đây là đội hình chiến thắng.",
+      "en_ref": "Their disciplined defence, ball handling skills and excellent team work made them stand out and it was clear that this was the team to beat.",
+      "base": "the discipline in defense the ability to handle the ball and the great teamwork make them different and obviously this is the winning squad.",
+      "new": "Their discipline in defense, ability to handle the ball and excellent teamwork made them different and it was clear that this was the winning squad.",
+      "asr_wer": 0.0,
+      "chrf_base": 32.50154372837988,
+      "chrf_new": 61.57412070431595
+    },
+    {
+      "id": "1926",
+      "vi_ref": "Chấp nhận là quan điểm của Aristotle về tất cả mọi vấn đề liên quan đến khoa học, kể cả tâm lý học.",
+      "asr": "chấp nhận là quan điểm của arizona về tất cả mọi vấn đề liên quan đến khoa học kể cả tâm lý học.",
+      "en_ref": "Accepted were Aristotle's views on all matters of science, including psychology.",
+      "base": "Acceptance is Arizona's view on everything from science to psychology.",
+      "new": "Acceptance is Arizona's view on all matters relating to science, including psychology.",
+      "asr_wer": 4.3,
+      "chrf_base": 34.698702865160676,
+      "chrf_new": 62.73743032457634
+    },
+    {
+      "id": "1752",
+      "vi_ref": "Do đó, hai loài cá đã tuyệt chủng và hai loài khác đang có nguy cơ tuyệt chủng, bao gồm cả loài cá bống lưng gù.",
+      "asr": "do đó hai loài cá đã triệt chủng và hai loài khác đang có nguy cơ triệt chủng bao gồm cả loài cá bóng lưng gù.",
+      "en_ref": "As a result, two fish species have become extinct, and two others have become endangered, including the humpback chub.",
+      "base": "So two species of fish are extinct and two others are at risk of extinction including the humpback sailfish.",
+      "new": "As a result, two fish species have become extinct and two others are at risk of extinction, including the humpback wrasse.",
+      "asr_wer": 11.5,
+      "chrf_base": 43.35407318836103,
+      "chrf_new": 69.96942974072752
+    }
+  ],
+  "examples_most_worse": [
+    {
+      "id": "1731",
+      "vi_ref": "Trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền buồm.",
+      "asr": "trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền bùn.",
+      "en_ref": "In the archipelagos and lakes you do not necessarily need a yacht.",
+      "base": "in the archipelago and lakes you do not necessarily need mud boats.",
+      "new": "In the islands and lakes, you do not need a mud boat.",
+      "asr_wer": 7.1,
+      "chrf_base": 74.06304975799455,
+      "chrf_new": 44.92565545562855
+    },
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gmt cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The vehicle was taken away from the scene of the accident at around twelve GMT that same day.",
+      "new": "The vehicle was removed from the scene around 12: 00 GMT that same day.",
+      "asr_wer": 9.5,
+      "chrf_base": 66.09626776500951,
+      "chrf_new": 37.15182416844618
+    },
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gmt cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The vehicle was taken away from the scene of the accident at around twelve GMT that same day.",
+      "new": "The vehicle was removed from the scene around 12: 00 GMT that same day.",
+      "asr_wer": 9.5,
+      "chrf_base": 66.09626776500951,
+      "chrf_new": 37.15182416844618
+    },
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gờ mờ tàu cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The car was taken away from the scene of the accident at around twelve o'clock on the eve of the same day.",
+      "new": "The vehicle was removed from the scene around 12: 00 a.m. that same day.",
+      "asr_wer": 23.8,
+      "chrf_base": 63.13055285657651,
+      "chrf_new": 34.67067526945757
+    },
+    {
+      "id": "1731",
+      "vi_ref": "Trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền buồm.",
+      "asr": "trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền bờm.",
+      "en_ref": "In the archipelagos and lakes you do not necessarily need a yacht.",
+      "base": "in archipelagoes and lakes you do not necessarily need to boat mane.",
+      "new": "In islands and lakes, you do not need a boat.",
+      "asr_wer": 7.1,
+      "chrf_base": 69.29913645281886,
+      "chrf_new": 41.03692265251618
+    },
+    {
+      "id": "1664",
+      "vi_ref": "Vặn hai cục bột khô với nhau, rồi bóp chúng thành một viên cầu bằng tay ướt, sạch.",
+      "asr": "vặn hai cụp bột khô với nhau rồi bóp chúng thành một viên cầu bằng tay ướt sạch.",
+      "en_ref": "Swirl the two dry powders together and then, with clean wet hands, squeeze them into a ball.",
+      "base": "twist the two clumps of dry powder together and then squeeze them into a ball with clean wet hands.",
+      "new": "Twist the two clumps of dry dough together, then squeeze them together into a ball with your wet, clean hands.",
+      "asr_wer": 5.6,
+      "chrf_base": 72.4260642378992,
+      "chrf_new": 49.07185629679086
+    },
+    {
+      "id": "1912",
+      "vi_ref": "Hầu hết các quần đảo nhỏ hơn là những quốc gia độc lập, hoặc liên kết với Pháp, và được biết đến là những khu nghỉ mát bãi biển sang trọng.",
+      "asr": "hầu hết các quần đảo nhỏ hơn là những quốc gia độc lập hoặc liên kết với pháp và được biết đến là những khu nghỉ mát bãi biển sang trọng.",
+      "en_ref": "Most of the smaller islands are independent nations, or associated with France, and known as luxury beach resorts.",
+      "base": "Most of the smaller archipelagoes are independent countries or associated with France and are known as luxury beach resorts.",
+      "new": "Most of the smaller islands are independent or French-affiliated countries and are known for their luxurious beach resorts.",
+      "asr_wer": 0.0,
+      "chrf_base": 73.65573661865659,
+      "chrf_new": 57.76846833960624
+    },
+    {
+      "id": "1912",
+      "vi_ref": "Hầu hết các quần đảo nhỏ hơn là những quốc gia độc lập, hoặc liên kết với Pháp, và được biết đến là những khu nghỉ mát bãi biển sang trọng.",
+      "asr": "hầu hết các quần đảo nhỏ hơn là những quốc gia độc lập hoặc liên kết với pháp và được biết đến là những khu nghỉ mát bãi biển sang trọng.",
+      "en_ref": "Most of the smaller islands are independent nations, or associated with France, and known as luxury beach resorts.",
+      "base": "Most of the smaller archipelagoes are independent countries or associated with France and are known as luxury beach resorts.",
+      "new": "Most of the smaller islands are independent or French-affiliated countries and are known for their luxurious beach resorts.",
+      "asr_wer": 0.0,
+      "chrf_base": 73.65573661865659,
+      "chrf_new": 57.76846833960624
+    }
+  ],
+  "examples_both_bad": [
+    {
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lát kha xin cũng trình bày chắp ranh không hazard ca sĩ gây du khăn đeo góc hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "base": "He also performed \"Cắp ranh không hazard\" [\"No Hazard\"] with him.",
+      "new": "He also performed \"Chắp Ranh Không Hazard\", with singer Gêdu Lâu singing alongside him.",
+      "asr_wer": 86.7,
+      "chrf_base": 10.382899196755396,
+      "chrf_new": 14.818487234213562
+    },
+    {
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lắp ca xin cũng trình bày chắp banh bong ba han ca sĩ gây du khăn đeo bót hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "base": "The singer also performed \"Bang Ba Han\" (Bang Ba Han), singing along with him.",
+      "new": "He also performed Chắp Banh Bong Ba Han, the singer who sings along with him.",
+      "asr_wer": 93.3,
+      "chrf_base": 14.906524943494533,
+      "chrf_new": 15.868039197240073
+    },
+    {
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cánh quang bằng cách viết vẽ khắc tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "base": "Do not damage the photosphere by writing, drawing, engraving, spray painting on the wall.",
+      "new": "Do n't damage the wall by writing, drawing, engraving, painting, spray painting.",
+      "asr_wer": 13.3,
+      "chrf_base": 24.016135891197713,
+      "chrf_new": 16.769700890609823
+    },
+    {
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cảnh quan bằng cách vết vẻ khắc tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "base": "Don't ruin the scenery by staining your walls with paint stencils.",
+      "new": "Do n't ruin the scenery by staining the walls with paint stencils.",
+      "asr_wer": 13.3,
+      "chrf_base": 17.442714956741074,
+      "chrf_new": 17.99797215741202
+    },
+    {
+      "id": "1978",
+      "vi_ref": "Đối với Springboks, trận này đã giúp đội tuyển kết thúc chuỗi thua 5 trận liền.",
+      "asr": "đối với spurs chặng này đã giúp đội tuyển kết thúc chửi thương năm chặng liền.",
+      "en_ref": "For the Springboks, it ended a five-match losing streak.",
+      "base": "For the spurs this stage helped the team finish five consecutive stages.",
+      "new": "For Spurs, this leg helped the team finish five straight legs.",
+      "asr_wer": 37.5,
+      "chrf_base": 20.56266603062444,
+      "chrf_new": 19.660217447455782
+    },
+    {
+      "id": "1817",
+      "vi_ref": "Tuy nhiên, về khía cạnh này thì khu vực Schengen vận hành gần như một quốc gia duy nhất.",
+      "asr": "tuy nhiên giải phía cạnh này thì khu vực chelsea vận hành gần như một quốc gia duy nhất.",
+      "en_ref": "The Schengen zone, however, works somewhat like one country in this respect.",
+      "base": "However this side of the league, the Chelsea area operates almost as a single nation.",
+      "new": "However, this side of the league, the Chelsea area, operates almost as a single nation.",
+      "asr_wer": 15.8,
+      "chrf_base": 17.90176600519847,
+      "chrf_new": 19.71422781192497
+    },
+    {
+      "id": "1987",
+      "vi_ref": "Vụ rơi trực thăng diễn ra trên địa hình núi cao và được quy cho hỏa lực của quân địch gây ra.",
+      "asr": "vụ gây trực thăng diễn ra trên địa hình nước ao và được quy cho mã lực cổ quân định gây ra.",
+      "en_ref": "The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire.",
+      "base": "The helicopter incident took place on the pond water terrain and was attributed to the horsepower ancient troops intended to cause.",
+      "new": "The helicopter incident took place over a watery terrain and was attributed to the horsepower expended by Archduke.",
+      "asr_wer": 27.3,
+      "chrf_base": 20.962686548837123,
+      "chrf_new": 20.59866945732043
+    },
+    {
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cảnh quan bằng cách viết vẻ khách tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "base": "Don't ruin the scenery by writing guest murals on the walls.",
+      "new": "Do n't ruin the scenery by writing guest portraits, spray paintings on walls.",
+      "asr_wer": 13.3,
+      "chrf_base": 18.405936325689627,
+      "chrf_new": 21.072208013480967
+    }
+  ]
+}

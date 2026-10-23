@@ -1,0 +1,9 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  36%|███▌      | 185/519 [00:00<00:00, 1833.72it/s]
+Loading weights:  71%|███████   | 369/519 [00:00<00:00, 1529.69it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1408.21it/s]
+V2b fleurs_cascade {'BLEU': 26.85, 'chrF++': 52.12, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 95.3}
+V2b fleurs_clean {'BLEU': 37.26, 'chrF++': 60.84, 'BLEU_signature': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'n': 857, 'seconds': 82.6}
+saved

@@ -1,0 +1,21 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:   0%|          | 2/519 [00:00<00:26, 19.69it/s]
+Loading weights:  24%|██▍       | 124/519 [00:00<00:00, 716.92it/s]
+Loading weights:  39%|███▉      | 202/519 [00:00<00:00, 714.62it/s]
+Loading weights:  54%|█████▍    | 280/519 [00:00<00:00, 704.83it/s]
+Loading weights:  68%|██████▊   | 351/519 [00:00<00:00, 510.38it/s]
+Loading weights:  79%|███████▉  | 409/519 [00:00<00:00, 510.46it/s]
+Loading weights:  90%|████████▉ | 465/519 [00:00<00:00, 433.91it/s]
+Loading weights:  99%|█████████▉| 513/519 [00:01<00:00, 424.32it/s]
+Loading weights: 100%|██████████| 519/519 [00:01<00:00, 420.74it/s]
+{'name': 'V2', 'adapter': 'checkpoints/v2/best_adapter', 'itn': False, 'n': 361, 'itn_changed_inputs': 64, 'BLEU': 27.29, 'chrF++': 53.15}
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  29%|██▉       | 150/519 [00:00<00:00, 1356.19it/s]
+Loading weights:  57%|█████▋    | 298/519 [00:00<00:00, 1402.49it/s]
+Loading weights:  85%|████████▍ | 439/519 [00:00<00:00, 1196.94it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1214.46it/s]
+{'name': 'V2_itn', 'adapter': 'checkpoints/v2/best_adapter', 'itn': True, 'n': 361, 'itn_changed_inputs': 64, 'BLEU': 27.17, 'chrF++': 53.01}

@@ -78,7 +78,12 @@ Nguyên nhân lỗi chính của V1:
 | B0 | – | Baseline A → B | 24,27 | 40,25 | Mốc so sánh |
 | V1 | LoRA trên 2.927 cặp chữ máy nghe | Khối dịch chưa từng thấy lỗi nghe | **28,59** | 37,90 | Cải thiện mạnh nhất nhưng quên văn bản sạch |
 | V2 | + 1.449 cặp chữ chuẩn + 3.000 cặp PhoMT | V1 overfit và quên (PhoMT −2,35) | 27,57 | **39,80** | Giữ +3,30 BLEU, PhoMT chỉ −0,45 |
-| V3 (đề xuất, chưa chạy) | Đổi số đọc bằng chữ về chữ số trước khi dịch | Lỗi lặp và sai số ở câu nhiều số | – | – | Chưa chạy do giới hạn thời gian GPU |
+| V2b | V2 + lấy mẫu cân bằng theo câu (trọng số 1/k cho câu có k bản thu) | Mất cân bằng số bản thu mỗi câu (mục 1.3) | 26,85 | – (PhoMT dev 40,93) | Không hơn V2 trên dev (26,98 so với 27,17) nên không nhận |
+| V3 | V2 + chuẩn hóa số (`src/text/itn_vi.py`) ở đầu vào cascade, không train lại | Lỗi lặp và sai số ở câu nhiều số | không chấm test | – | Trên FLEURS dev giảm 27,29 → 27,17 nên không nhận |
+
+V3 thử trên dev cho kết quả âm: V2 được dạy trên chữ máy nghe, trong đó số vẫn viết bằng chữ, nên đổi sang chữ số chỉ ở lúc dịch
+làm đầu vào lệch so với lúc dạy. Hướng tiếp theo có căn cứ: áp dụng chuẩn hóa số **cả khi dạy lẫn khi dịch** (train lại).
+Bộ chuẩn hóa đổi 64/361 câu dev và 174/857 câu test, và không đổi nhầm từ thường ("một hệ thống", "năm nay", "hàng trăm người").
 
 **Chọn phiên bản cuối trên validation (không dùng test):** quy tắc đặt trước là BLEU dev FLEURS cao nhất trong các phiên bản
 có BLEU PhoMT dev không giảm quá 1 điểm so với B0. Trên 2.000 câu PhoMT dev (seed 42): B0 40,96; V1 38,98 (−1,98, loại);
@@ -91,6 +96,7 @@ V2 40,80 (−0,16, đạt). **Phiên bản cuối: V2.** Kết luận này trùn
 |---|---|---|---|---|---|---|
 | V1 so với B0 | +4,36 | [+3,19; +5,48] | < 0,001 | +2,71 | [+2,02; +3,43] | < 0,001 |
 | V2 so với B0 | +3,28 | [+2,11; +4,49] | < 0,001 | +2,33 | [+1,57; +3,04] | < 0,001 |
+| V2b so với B0 | +2,59 | [+1,61; +3,64] | < 0,001 | +2,01 | [+1,38; +2,68] | < 0,001 |
 
 Không lần lấy mẫu nào V1 hay V2 thua B0, nên cải thiện là có ý nghĩa thống kê.
 File: `mt/significance_V1_vs_B0.json`, `mt/significance_V2_vs_B0.json`.

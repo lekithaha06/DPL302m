@@ -17,6 +17,9 @@ ap.add_argument("--adapter", default="", help="LoRA adapter dir; empty = Baselin
 ap.add_argument("--fleurs", default="reports/task1/mt/predictions_fleurs_test.json")
 ap.add_argument("--phomt", default="", help="PhoMT root (…/PhoMT) to also score PhoMT test")
 ap.add_argument("--out", default="reports/task2/mt")
+ap.add_argument("--itn", action="store_true", help="V3: normalise spelled-out numbers in ASR transcripts (cascade input only)")
+ap.add_argument("--skip-clean", action="store_true", help="score only the cascade input (clean text is unaffected by --itn)")
+ap.add_argument("--base-version", default="", help="for summaries: version whose clean/PhoMT scores apply (e.g. V3 built on V2)")
 args = ap.parse_args()
 
 torch.manual_seed(42)
@@ -61,8 +64,18 @@ rows = json.load(open(args.fleurs, encoding="utf-8"))
 refs = [r["en_ref"] for r in rows]
 result = {"name": args.name, "adapter": args.adapter or None, "gpu": torch.cuda.get_device_name(0), "torch": torch.__version__,
           "decoding": "fp16, beam 5, max_length min(512, 2*src_tokens+10), length-sorted batches 16/8/4 (<300/<600/longer chars)"}
+if args.base_version:
+    result["base_version"] = args.base_version
 preds = {}
-for key, src in (("fleurs_cascade", [r["asr"] for r in rows]), ("fleurs_clean", [r["vi_raw"] for r in rows])):
+cascade_src = [r["asr"] for r in rows]
+if args.itn:
+    import sys
+    sys.path.insert(0, "src/text")
+    from itn_vi import itn
+    cascade_src = [itn(s) for s in cascade_src]
+    result["itn"] = {"changed_inputs": sum(a != b for a, b in zip(cascade_src, [r["asr"] for r in rows]))}
+sets = [("fleurs_cascade", cascade_src)] + ([] if args.skip_clean else [("fleurs_clean", [r["vi_raw"] for r in rows])])
+for key, src in sets:
     h, sec = translate(src)
     preds[key] = h
     result[key] = {**score(h, refs), "n": len(h), "seconds": round(sec, 1)}
@@ -79,7 +92,7 @@ if args.phomt:
     print(args.name, "phomt_test", result["phomt_test"], flush=True)
 
 json.dump(result, open(f"{args.out}/eval_{args.name}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-json.dump([{"id": r["id"], "audio": r["audio"], "asr": r["asr"], "en_ref": r["en_ref"],
-            "cascade": preds["fleurs_cascade"][i], "clean": preds["fleurs_clean"][i]} for i, r in enumerate(rows)],
+json.dump([{"id": r["id"], "audio": r["audio"], "asr": r["asr"], "mt_input": cascade_src[i], "en_ref": r["en_ref"],
+            "cascade": preds["fleurs_cascade"][i], "clean": preds.get("fleurs_clean", [None] * len(rows))[i]} for i, r in enumerate(rows)],
           open(f"{args.out}/predictions_{args.name}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("saved", flush=True)
