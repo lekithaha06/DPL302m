@@ -43,4 +43,6 @@ res = {"name": args.name, "adapter": args.adapter or None, "itn": args.itn, "n":
        "BLEU": round(sacrebleu.corpus_bleu(hyp, [ref]).score, 2), "chrF++": round(sacrebleu.corpus_chrf(hyp, [ref], word_order=2).score, 2)}
 os.makedirs("reports/task2/mt", exist_ok=True)
 json.dump(res, open(f"reports/task2/mt/dev_{args.name}.json", "w"), indent=2)
+json.dump([{"id": r["id"], "audio": r["audio"], "vi_raw": r["vi_raw"], "asr": r["asr"], "mt_input": src[i], "en_ref": r["en_ref"], "hyp": hyp[i]}
+           for i, r in enumerate(rows)], open(f"reports/task2/mt/dev_predictions_{args.name}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(res, flush=True)

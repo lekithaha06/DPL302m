@@ -1,0 +1,9 @@
+{
+  "name": "B0",
+  "adapter": null,
+  "itn": false,
+  "n": 361,
+  "itn_changed_inputs": 64,
+  "BLEU": 24.86,
+  "chrF++": 51.65
+}

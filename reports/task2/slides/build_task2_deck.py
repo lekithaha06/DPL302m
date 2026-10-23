@@ -269,8 +269,16 @@ tb(s, 0.6, 3.25, 12.1, 0.4, [("Gán nhãn loại lỗi (Label Studio) cho 100 c�
 cats = ["Sai dấu thanh", "Tên riêng", "Số", "Thiếu / thừa từ", "Sai nghĩa"]
 for k, c in enumerate(cats):
     label(s, 0.6 + k * 2.47, 3.8, 2.3, 0.5, c, TINT, color=INK, size=12)
-pending(s, 0.6, 4.6, 12.13, 1.0, "CHỜ KẾT QUẢ: Đăng và Uyên gán nhãn độc lập cùng 100 câu → điền Cohen's Kappa vào đây (không điền số khi chưa có)")
-note(s, "Đề Task 2 mục 1.2: Kappa chỉ bắt buộc nếu có quy trình nhiều người gán nhãn.", y=5.85)
+if has("labeling/kappa.json"):
+    K = J("labeling/kappa.json")
+    names = {"sai_dau_thanh": "Dấu thanh", "ten_rieng": "Tên riêng", "so": "Số", "thieu_thua_tu": "Thiếu/thừa từ", "sai_nghia_dich": "Sai nghĩa"}
+    table(s, 0.6, 4.55, [2.6] + [1.9] * 5, [["Cohen's Kappa"] + [names[c] for c in K["per_category"]],
+          ["Kappa"] + [f(v["kappa"], 2) if v["kappa"] is not None else "–" for v in K["per_category"].values()],
+          ["Đồng ý thô"] + [f"{f(100 * v['agreement'], 0)}%" for v in K["per_category"].values()]], size=12, first_bold=True, row_h=0.4)
+    tb(s, 0.6, 5.85, 12.1, 0.4, [(f"{K['n_sentences']} câu · Kappa trung bình {f(K['mean_kappa'], 2)} · hai người gán độc lập (Đăng, Uyên)", {"size": 12, "bold": True})])
+else:
+    pending(s, 0.6, 4.6, 12.13, 1.0, "CHỜ KẾT QUẢ: Đăng và Uyên gán nhãn độc lập cùng 100 câu (reports/task2/labeling) → chạy compute_kappa.py, slide tự điền")
+note(s, "Đề Task 2 mục 1.2: Kappa chỉ bắt buộc nếu có quy trình nhiều người gán nhãn. Tiêu chí: reports/task2/labeling/TIEU_CHI_GAN_NHAN.md", y=6.35)
 
 # 6 ----------------------------------------------------------------- Stats & imbalance (Uyên)
 s = new("Thống kê mô tả và mất cân bằng", "Uyên (~55 giây). Bài nghe và dịch không có lớp, nên mất cân bằng xét theo giới tính, số bản thu mỗi câu, độ dài. "

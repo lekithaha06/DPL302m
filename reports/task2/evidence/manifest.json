@@ -236,8 +236,8 @@
  "results": [
   {
    "path": "reports/task2/01_du_lieu.md",
-   "bytes": 5455,
-   "sha256": "3fc4f34537f22bc24a08c409845dcff9b58ca6b685e855c37986ace55d9af088"
+   "bytes": 5820,
+   "sha256": "74ea707e1632ebf7951d1dfc661c143ddc2347b12992487081fc73b746b8d056"
   },
   {
    "path": "reports/task2/02_baseline_asr.md",
@@ -256,18 +256,18 @@
   },
   {
    "path": "reports/task2/BaoCao_Task2_DeTai1.docx",
-   "bytes": 396793,
-   "sha256": "1f709cea447ba0041f20b0e6cb8f33db45c7907459ac00e5976ed991f7dd8114"
+   "bytes": 396985,
+   "sha256": "ad2719b12b632d682a95da02b3837fd197bc91ad5a1901d4796938f956056e02"
   },
   {
    "path": "reports/task2/BaoCao_Task2_DeTai1.pdf",
-   "bytes": 4934875,
-   "sha256": "ba536d928ab49765366ce9fe8ec19665fbb19587659c5f77da94b2f389b2e0bf"
+   "bytes": 4940175,
+   "sha256": "a0fdd96c8e664de9e691f5455840b796c4e7819aa7a91f207b3d0b2ed4e81656"
   },
   {
    "path": "reports/task2/NHAT_KY_THUC_NGHIEM.md",
-   "bytes": 4606,
-   "sha256": "c1948f6b5cb36db03f47bfdea215f38e9f18ed32a725bf68b2afc2bc619b33f1"
+   "bytes": 5214,
+   "sha256": "47e8d1bb715216ea1d44e5c58bea98b919f27a504705772e3a7e7c8a67510d99"
   },
   {
    "path": "reports/task2/ablation.json",
@@ -398,6 +398,41 @@
    "path": "reports/task2/figures/curves_V3.png",
    "bytes": 65701,
    "sha256": "a1afd877f8cc1120afc7c32e23b2a590a0d28dbf22c933bef9f2c03bed913b53"
+  },
+  {
+   "path": "reports/task2/labeling/TIEU_CHI_GAN_NHAN.md",
+   "bytes": 2998,
+   "sha256": "8ee4b8b4173fdb705d1155bb0362f507ed6e94046c8b05b5bbcac1c39a32dcc0"
+  },
+  {
+   "path": "reports/task2/labeling/annotator_Dang.csv",
+   "bytes": 69056,
+   "sha256": "4be22f738d16f3950369e846c368aea8138ff010c4e181e1c09bd46db0f3be9a"
+  },
+  {
+   "path": "reports/task2/labeling/annotator_Uyen.csv",
+   "bytes": 69056,
+   "sha256": "4be22f738d16f3950369e846c368aea8138ff010c4e181e1c09bd46db0f3be9a"
+  },
+  {
+   "path": "reports/task2/labeling/items.csv",
+   "bytes": 69056,
+   "sha256": "4be22f738d16f3950369e846c368aea8138ff010c4e181e1c09bd46db0f3be9a"
+  },
+  {
+   "path": "reports/task2/labeling/label_studio_config.xml",
+   "bytes": 812,
+   "sha256": "e0be464db9f93ed2ddd1a2d5c648cf7770ebfc6fe6165b42ec0d127c759c3cc4"
+  },
+  {
+   "path": "reports/task2/labeling/label_studio_tasks.json",
+   "bytes": 81804,
+   "sha256": "6d4e9d6bad8f6d28f3032a8381cf53f276c612aa761bbdad1eeae3967e9cf5f8"
+  },
+  {
+   "path": "reports/task2/labeling/selection.json",
+   "bytes": 125,
+   "sha256": "a38fcc99e417936f06a544ea6ad97bd596800f06935b2a90def2b776db47ad22"
   },
   {
    "path": "reports/task2/logs/baseline_a.log",
@@ -575,6 +610,11 @@
    "sha256": "05b0db91f5f93aae6391cd8321231f22b3dc1de9a722ab6961341dfe1ddecff2"
   },
   {
+   "path": "reports/task2/mt/dev_B0.json",
+   "bytes": 137,
+   "sha256": "d7407fd5b98e749a4b8a215232bc5d6ffc7d6344bdd2db047eca06580e545fac"
+  },
+  {
    "path": "reports/task2/mt/dev_V2.json",
    "bytes": 162,
    "sha256": "90e9b2a80c6952f8f40ec3b00dc6a8d75ea6c7d45a7c011e998c9f158a4902e3"
@@ -588,6 +628,11 @@
    "path": "reports/task2/mt/dev_V3.json",
    "bytes": 161,
    "sha256": "4a9b257ea1f91712219e93a1f73cecfb4a461165ce18031ca73549b322152aef"
+  },
+  {
+   "path": "reports/task2/mt/dev_predictions_B0.json",
+   "bytes": 331121,
+   "sha256": "92ea62415271e02762c07d7d21bf3642bc2e560acb249883133febfcd5b348a1"
   },
   {
    "path": "reports/task2/mt/eval_B0.json",
@@ -796,18 +841,18 @@
   },
   {
    "path": "reports/task2/slides/Task2_DeTai1_Slide.pdf",
-   "bytes": 616300,
-   "sha256": "859963dd5404d5277a8298523a4cf27cccdef12c77cefdb1e49a755b77b7191d"
+   "bytes": 616520,
+   "sha256": "f3f87c93688ba2c8972dd8df034d384ae53714938bdcf880afe957db43bfad75"
   },
   {
    "path": "reports/task2/slides/Task2_DeTai1_Slide.pptx",
-   "bytes": 466052,
-   "sha256": "34d66995e725873ff3a8f79905fa4a8e00efe497b14e76017fc7750cb611b5e6"
+   "bytes": 466091,
+   "sha256": "cb07a319b9e508e9c27c219b62adff0f3e38929a27e3f72a903e4d405228bdd2"
   },
   {
    "path": "reports/task2/slides/build_task2_deck.py",
-   "bytes": 46490,
-   "sha256": "d5c2cbf8b0aa3ef9a7fe344cc01cd042c363fea22650e0efe353a681dec8d420"
+   "bytes": 47326,
+   "sha256": "b7369bcba44cd6152e57b34f5b3e91e66bd9cc0c6c09c5c0c462f1bf367f1a7b"
   },
   {
    "path": "reports/task2/system/speed_B0.json",

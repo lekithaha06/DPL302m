@@ -1,0 +1,14 @@
+<View>
+  <Header value="Câu số $stt"/>
+  <Text name="ref" value="Câu đúng (vi): $cau_dung_vi"/>
+  <Text name="asr" value="Máy nghe (vi): $may_nghe_vi"/>
+  <Text name="enref" value="Tham chiếu (en): $tham_chieu_en"/>
+  <Text name="mt" value="Bản dịch B0 (en): $ban_dich_B0"/>
+  <Choices name="loai_loi" toName="asr" choice="multiple" showInLine="false">
+    <Choice value="sai_dau_thanh" alias="sai_dau_thanh" hint="Sai dấu thanh"/>
+    <Choice value="ten_rieng" alias="ten_rieng" hint="Tên riêng sai"/>
+    <Choice value="so" alias="so" hint="Số sai / đọc thành chữ"/>
+    <Choice value="thieu_thua_tu" alias="thieu_thua_tu" hint="Thiếu hoặc thừa từ"/>
+    <Choice value="sai_nghia_dich" alias="sai_nghia_dich" hint="Bản dịch sai nghĩa"/>
+  </Choices>
+</View>

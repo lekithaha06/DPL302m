@@ -1,0 +1,8 @@
+{
+  "n": 100,
+  "pool": 137,
+  "dev_recordings": 361,
+  "seed": 42,
+  "mean_asr_wer": 15.17,
+  "mean_chrf_B0": 47.58
+}
