@@ -17,8 +17,14 @@ def load_audio(path):
 
 
 class Cascade:
-    def __init__(self, asr_dir, mt_dir, adapter="", device="cuda"):
+    def __init__(self, asr_dir, mt_dir, adapter="", device="cuda", itn=False):
         self.dev = device
+        self.itn = None
+        if itn:  # V3: chuẩn hóa số trong chữ máy nghe trước khi dịch (src/text/itn_vi.py)
+            import os, sys
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "text"))
+            from itn_vi import itn as _itn
+            self.itn = _itn
         self.asr = pipeline("automatic-speech-recognition", model=asr_dir, device=0, torch_dtype=torch.float16)
         self.tok = AutoTokenizer.from_pretrained(mt_dir, src_lang="vi_VN")
         mt = AutoModelForSeq2SeqLM.from_pretrained(mt_dir, torch_dtype=torch.float16)
@@ -70,7 +76,8 @@ class Cascade:
             torch.cuda.synchronize(); t["asr"] += time.perf_counter() - t0
             out.append({"start": round(s / SR, 2), "end": round(e / SR, 2), "vi": vi})
         torch.cuda.synchronize(); t0 = time.perf_counter()
-        ens = self.translate([o["vi"] for o in out]) if out else []
+        src = [self.itn(o["vi"]) if self.itn else o["vi"] for o in out]   # thời gian chuẩn hóa số tính vào khối dịch
+        ens = self.translate(src) if out else []
         torch.cuda.synchronize(); t["mt"] = time.perf_counter() - t0
         for o, en in zip(out, ens):
             o["en"] = en

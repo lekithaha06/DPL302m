@@ -1,0 +1,86 @@
+{
+  "tốt lên": [
+    {
+      "audio": "17744918915672998950.wav",
+      "id": "1811",
+      "vi_ref": "Chuẩn 802.11n hoạt động trên cả hai tần số 2.4 Ghz và 5.0 Ghz.",
+      "asr": "chuẩn tám không hai chấm một một n hoạt động trên cả hai tần số hai chấm bốn ghi ra hệt và năm chấm không ghi ra hệt.",
+      "en_ref": "The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies.",
+      "B0": "standard eight zeros two dots one one one n works on both frequencies two dots four writes out exactly and five dots dots do not write out exactly.",
+      "final": "The 802.11 n standard operates on both 2.4 GHz and 5.0 GHz frequencies.",
+      "version": "V3",
+      "chrf_B0": 29.8,
+      "chrf_final": 72.4,
+      "has_digits": true
+    },
+    {
+      "audio": "7706235671499326256.wav",
+      "id": "1772",
+      "vi_ref": "Vậy là, có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "asr": "vậy là có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "en_ref": "So, it is likely that the notation was added simply as a label.",
+      "B0": "So there's a possibility that the footnotes are simply labels.",
+      "final": "Thus, it is possible that the annotation was added simply as a mark label.",
+      "version": "V3",
+      "chrf_B0": 30.6,
+      "chrf_final": 66.8,
+      "has_digits": false
+    },
+    {
+      "audio": "3554584753359809648.wav",
+      "id": "1935",
+      "vi_ref": "Tuy nhiên, điều đó không đúng. Mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báu.",
+      "asr": "tuy nhiên điều đó không đúng mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báo.",
+      "en_ref": "However, that is not true. Although there is something written on the back of the document, it is not a treasure map.",
+      "B0": "However that's not true even though there's something written on the back of the document but it's not a newspaper inventory map.",
+      "final": "However, that is not true. Although there is something written on the back of the document, it is not a map of the treasure.",
+      "version": "V3",
+      "chrf_B0": 61.7,
+      "chrf_final": 93.1,
+      "has_digits": false
+    }
+  ],
+  "Câu có số": [
+    {
+      "audio": "9214200957588648961.wav",
+      "id": "1988",
+      "vi_ref": "Trong thập niên 1920, quan điểm phổ biến của hầu hết mọi công dân và quốc gia là theo khuynh hướng của chủ nghĩa hòa bình và cô lập.",
+      "asr": "trong thập niên một nghìn chín trăm hai mươi quan điểm phổ biến của hầu hết mọi công dân và quốc gia là theo khuynh hướng của chủ nghĩa hòa bình và cô lập.",
+      "en_ref": "During the 1920s, the prevailing attitudes of most citizens and nations was that of pacifism and isolation.",
+      "B0": "In the decade of one thousand nine hundred and twenty, the prevailing view of almost every citizen and nation was towards pacifism and isolationism.",
+      "final": "During the 1920s, the prevailing view of most citizens and nations was towards pacifism and isolationism.",
+      "version": "V3",
+      "chrf_B0": 47.5,
+      "chrf_final": 76.9,
+      "has_digits": true
+    }
+  ],
+  "vẫn sai": [
+    {
+      "audio": "14566257005506189223.wav",
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lát kha xin cũng trình bày chắp ranh không hazard ca sĩ gây du khăn đeo góc hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "B0": "He also performed \"Cắp ranh không hazard\" [\"No Hazard\"] with him.",
+      "final": "He also performed \"Crystals Without Hazard\", where singer Zhao Yuen sings alongside him.",
+      "version": "V3",
+      "chrf_B0": 10.4,
+      "chrf_final": 14.9,
+      "has_digits": false
+    },
+    {
+      "audio": "3208631991451020626.wav",
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cánh quang bằng cách viết vẽ khắc tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "B0": "Do not damage the photosphere by writing, drawing, engraving, spray painting on the wall.",
+      "final": "Do n't ruin the wing by writing, painting, engraving, spray painting on the wall.",
+      "version": "V3",
+      "chrf_B0": 24.0,
+      "chrf_final": 17.4,
+      "has_digits": false
+    }
+  ]
+}

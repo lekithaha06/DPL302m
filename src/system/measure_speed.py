@@ -14,6 +14,7 @@ ap.add_argument("--name", required=True)
 ap.add_argument("--asr", default="checkpoints/pretrained/PhoWhisper-small")
 ap.add_argument("--mt", default="checkpoints/pretrained/vinai-translate-vi2en")
 ap.add_argument("--adapter", default="")
+ap.add_argument("--itn", action="store_true", help="V3: normalise spelled-out numbers before translating")
 ap.add_argument("--test", default="data/processed/fleurs_vi_en_test.json")
 ap.add_argument("--n", type=int, default=100)
 ap.add_argument("--k-long", type=int, default=20)
@@ -27,7 +28,7 @@ def dir_mb(d, exts=(".bin", ".safetensors")):
     return round(sum(os.path.getsize(os.path.join(d, f)) for f in os.listdir(d) if f.endswith(exts)) / 2**20, 1)
 
 
-cas = Cascade(args.asr, args.mt, args.adapter)
+cas = Cascade(args.asr, args.mt, args.adapter, itn=args.itn)
 rows = sorted(json.load(open(args.test, encoding="utf-8")), key=lambda r: os.path.basename(r["audio"]))[: args.n]
 warm = load_audio(rows[0]["audio"])
 for _ in range(2):
@@ -62,7 +63,7 @@ size = {"asr_params": sum(p.numel() for p in cas.asr.model.parameters()), "asr_w
         "mt_params": sum(p.numel() for p in cas.mt.parameters()), "mt_weights_mb": dir_mb(args.mt),
         "adapter_mb": dir_mb(args.adapter) if args.adapter else 0.0,
         "gpu_peak_allocated_mb": round(torch.cuda.max_memory_allocated() / 2**20, 1)}
-res = {"name": args.name, "adapter": args.adapter or None, "gpu": torch.cuda.get_device_name(0), "torch": torch.__version__,
+res = {"name": args.name, "adapter": args.adapter or None, "itn": args.itn, "gpu": torch.cuda.get_device_name(0), "torch": torch.__version__,
        "python": platform.python_version(), "precision": "fp16", "short_utterances": short, "long_audio": longr, "size": size}
 json.dump(res, open(f"{args.out}/speed_{args.name}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 print(json.dumps(res, ensure_ascii=False, indent=1))

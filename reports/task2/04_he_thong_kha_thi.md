@@ -9,7 +9,7 @@ Code: `src/system/cascade.py` (hệ thống đầu cuối), `src/system/measure_
   → đọc, trộn mono, đổi về 16 kHz
   → Silero VAD: cắt đoạn có tiếng nói, gộp thành khối ≤ 25 giây (âm thanh dài)
   → PhoWhisper-small (ASR, FP16)          → chữ tiếng Việt + mốc thời gian từng khối
-  → VinAI Translate vi2en + LoRA (MT, FP16) → câu tiếng Anh
+  → chuẩn hóa số (V3) → VinAI Translate vi2en + LoRA (MT, FP16) → câu tiếng Anh
   → hiển thị song song Việt | Anh theo từng đoạn
 ```
 
@@ -17,7 +17,7 @@ Code: `src/system/cascade.py` (hệ thống đầu cuối), `src/system/measure_
 
 | Tiêu chí | Ngưỡng nhóm đặt ra | Lý do |
 |---|---|---|
-| Chất lượng dịch | Phiên bản cuối có BLEU cascade trên FLEURS test **cao hơn B0 (24,21)**, và BLEU PhoMT không giảm quá 1 điểm so với 40,25 | Cải tiến phải thật và không làm hỏng khả năng dịch văn bản sạch |
+| Chất lượng dịch | Phiên bản cuối có BLEU cascade trên FLEURS test **cao hơn B0** (chấm cùng cấu hình: 24,27), và BLEU PhoMT không giảm quá 1 điểm so với 40,25 | Cải tiến phải thật và không làm hỏng khả năng dịch văn bản sạch |
 | Tốc độ | RTF toàn hệ thống **< 1** trên RTX 4060 | Xử lý nhanh hơn thời gian thực, đủ cho chế độ micro hiển thị theo đoạn |
 | Độ trễ | Độ trễ trung vị một câu ngắn **< 3 giây** | Người dùng chờ chấp nhận được trong demo |
 | Bộ nhớ | VRAM đỉnh **< 8 GB** (vừa GPU laptop phổ biến) | Chạy được trên máy giảng viên hoặc máy cá nhân có GPU |
@@ -27,14 +27,14 @@ Code: `src/system/cascade.py` (hệ thống đầu cuối), `src/system/measure_
 
 100 bản thu FLEURS test (tổng 1.279,8 giây, trung bình 12,8 giây/câu), chạy từng câu một, không VAD:
 
-| | B0 | V2 (bản cuối) |
-|---|---|---|
-| RTF toàn hệ thống | 0,315 | 0,340 |
-| RTF khối nghe / khối dịch | 0,215 / 0,100 | 0,229 / 0,111 |
-| Độ trễ một câu: trung vị / p95 | 3,73 s / 6,67 s | 4,10 s / 7,06 s |
-| VRAM đỉnh | 1.791 MB | 1.777 MB |
-| Dung lượng trọng số | ASR 922 MB + MT 1.711 MB | như B0 + adapter LoRA 18 MB |
-| Số tham số | ASR 241,7 triệu + MT 448,4 triệu | như B0 (LoRA gộp vào trọng số khi chạy) |
+| | B0 | V2 | **V3 (bản cuối)** |
+|---|---|---|---|
+| RTF toàn hệ thống | 0,315 | 0,340 | **0,358** |
+| RTF khối nghe / khối dịch | 0,215 / 0,100 | 0,229 / 0,111 | 0,246 / 0,111 |
+| Độ trễ một câu: trung vị / p95 | 3,73 s / 6,67 s | 4,10 s / 7,06 s | 4,29 s / 6,99 s |
+| VRAM đỉnh | 1.791 MB | 1.777 MB | 1.775 MB |
+| Dung lượng trọng số | ASR 922 MB + MT 1.711 MB | như B0 + adapter 18 MB | như B0 + adapter 18 MB |
+| Số tham số | ASR 241,7 triệu + MT 448,4 triệu | như B0 (LoRA gộp vào trọng số) | như B0; thêm bước chuẩn hóa số (chạy trên CPU) |
 
 Âm thanh dài: ghép 20 bản thu thành 249 giây.
 
@@ -42,23 +42,24 @@ Code: `src/system/cascade.py` (hệ thống đầu cuối), `src/system/measure_
 |---|---|---|
 | B0 | 11 đoạn, 76,5 s, RTF 0,307 | 1 khối, 109,4 s, RTF 0,439 |
 | V2 | 11 đoạn, 71,5 s, RTF 0,287 | 1 khối, 100,7 s, RTF 0,404 |
+| V3 | 11 đoạn, 68,1 s, RTF 0,274 | 1 khối, 107,7 s, RTF 0,433 |
 
-V2 và B0 có cùng kiến trúc khi chạy (LoRA đã gộp vào trọng số), nên chênh lệch tốc độ giữa hai bản là dao động đo, không phải chi phí của LoRA.
+Ba bản có cùng kiến trúc khi chạy (LoRA gộp vào trọng số; chuẩn hóa số là xử lý chuỗi trên CPU), nên chênh lệch tốc độ giữa các bản
+là dao động đo (mỗi bản đo một lần, cùng máy, cùng 100 bản thu), không phải chi phí thêm của mô hình.
 
 ## Đối chiếu tiêu chí khả thi
 
-| Tiêu chí | Ngưỡng | V2 | Đạt? |
+| Tiêu chí | Ngưỡng | V3 (bản cuối) | Đạt? |
 |---|---|---|---|
-| Chất lượng dịch | Cao hơn B0 trên cascade, PhoMT giảm ≤ 1 | 27,57 so với 24,27; PhoMT −0,45 | ✅ |
-| Tốc độ | RTF < 1 | 0,340 (âm thanh dài có VAD: 0,287) | ✅ |
-| Độ trễ | Trung vị < 3 s/câu | 4,10 s cho câu trung bình 12,8 s | ❌ |
-| Bộ nhớ | VRAM < 8 GB | 1,78 GB | ✅ |
+| Chất lượng dịch | Cao hơn B0 trên cascade, PhoMT giảm ≤ 1 | 27,75 so với 24,27 (p < 0,001); PhoMT test 39,86 so với 40,27 (−0,41) | ✅ |
+| Tốc độ | RTF < 1 | 0,358 (âm thanh dài có VAD: 0,274) | ✅ |
+| Độ trễ | Trung vị < 3 s/câu | 4,29 s cho câu trung bình 12,8 s | ❌ |
+| Bộ nhớ | VRAM < 8 GB | 1.775 MB | ✅ |
 | Âm thanh dài | Có VAD, xử lý vài phút | 249 s, 11 đoạn | ✅ |
 
 **Kết luận: KHẢ THI** để làm demo ở Task 3 (web Gradio trên máy có GPU). Riêng độ trễ chưa đạt ngưỡng nhóm đặt ra;
 vì độ trễ tỉ lệ với độ dài câu, ở chế độ micro cần cắt đoạn ngắn hơn bằng VAD và hiển thị kết quả theo từng đoạn.
 Đây là việc cần giải quyết ở Task 3.
-
 ## Hạn chế đã biết
 
 - Chưa thử micro điện thoại thật và chưa có tập test giọng nữ (FLEURS test 100% nam, VIVOS thu sạch).

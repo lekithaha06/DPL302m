@@ -1,0 +1,46 @@
+{
+  "name": "V3",
+  "adapter": "checkpoints/v3/best_adapter",
+  "itn": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.6.0+cu124",
+  "python": "3.11.1",
+  "precision": "fp16",
+  "short_utterances": {
+    "n": 100,
+    "audio_seconds": 1279.8,
+    "rtf_total": 0.358,
+    "rtf_asr": 0.246,
+    "rtf_mt": 0.111,
+    "latency_median_s": 4.293,
+    "latency_p95_s": 6.994,
+    "mean_utt_seconds": 12.8
+  },
+  "long_audio": {
+    "audio_seconds": 249.0,
+    "vad": {
+      "segments": 11,
+      "seconds": 68.14,
+      "rtf": 0.274,
+      "vad_s": 7.49,
+      "asr_s": 57.03,
+      "mt_s": 3.61
+    },
+    "no_vad": {
+      "segments": 1,
+      "seconds": 107.74,
+      "rtf": 0.433,
+      "vad_s": 0.0,
+      "asr_s": 84.49,
+      "mt_s": 23.24
+    }
+  },
+  "size": {
+    "asr_params": 241734912,
+    "asr_weights_mb": 922.3,
+    "mt_params": 448425984,
+    "mt_weights_mb": 1711.1,
+    "adapter_mb": 18.0,
+    "gpu_peak_allocated_mb": 1775.2
+  }
+}

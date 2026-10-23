@@ -1,0 +1,321 @@
+{
+  "by_asr_wer": {
+    "WER 0": {
+      "n": 183,
+      "BLEU_B0": 30.1,
+      "BLEU_V3": 33.86,
+      "chrF++_B0": 55.54,
+      "chrF++_V3": 58.11
+    },
+    "WER 0–10": {
+      "n": 283,
+      "BLEU_B0": 26.8,
+      "BLEU_V3": 29.92,
+      "chrF++_B0": 52.97,
+      "chrF++_V3": 54.72
+    },
+    "WER 10–30": {
+      "n": 306,
+      "BLEU_B0": 21.53,
+      "BLEU_V3": 24.12,
+      "chrF++_B0": 47.8,
+      "chrF++_V3": 49.58
+    },
+    "WER >30": {
+      "n": 85,
+      "BLEU_B0": 10.55,
+      "BLEU_V3": 19.14,
+      "chrF++_B0": 37.87,
+      "chrF++_V3": 45.06
+    }
+  },
+  "by_digits": {
+    "có số": {
+      "n": 171,
+      "BLEU_B0": 17.98,
+      "BLEU_V3": 25.17,
+      "chrF++_B0": 46.36,
+      "chrF++_V3": 51.12
+    },
+    "không có số": {
+      "n": 686,
+      "BLEU_B0": 25.53,
+      "BLEU_V3": 28.45,
+      "chrF++_B0": 51.16,
+      "chrF++_V3": 52.96
+    }
+  },
+  "sentences_better": 451,
+  "sentences_worse": 245,
+  "sentences_same": 161,
+  "examples_most_improved": [
+    {
+      "id": "1811",
+      "vi_ref": "Chuẩn 802.11n hoạt động trên cả hai tần số 2.4 Ghz và 5.0 Ghz.",
+      "asr": "chuẩn tám không hai chấm một một n hoạt động trên cả hai tần số hai chấm bốn ghi ra hệt và năm chấm không ghi ra hệt.",
+      "en_ref": "The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies.",
+      "base": "standard eight zeros two dots one one one n works on both frequencies two dots four writes out exactly and five dots dots do not write out exactly.",
+      "new": "The 802.11 n standard operates on both 2.4 GHz and 5.0 GHz frequencies.",
+      "asr_wer": 111.8,
+      "chrf_base": 29.80733738710985,
+      "chrf_new": 72.38959292439559
+    },
+    {
+      "id": "1811",
+      "vi_ref": "Chuẩn 802.11n hoạt động trên cả hai tần số 2.4 Ghz và 5.0 Ghz.",
+      "asr": "chuẩn tám không hai chấm một một in lời hoạt động trên cả hai tần số hai chấm bốn đi ra hệ và năm chấm không đi ra hệ.",
+      "en_ref": "The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies.",
+      "base": "standard eight zero two dot one one print operation on both frequency two dot four output system and five dot zero output system.",
+      "new": "The 802.11 standard operates on both 2.4 GHz and 5.0 GHz frequencies.",
+      "asr_wer": 117.6,
+      "chrf_base": 28.717653077404343,
+      "chrf_new": 68.22903914233544
+    },
+    {
+      "id": "1772",
+      "vi_ref": "Vậy là, có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "asr": "vậy là có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "en_ref": "So, it is likely that the notation was added simply as a label.",
+      "base": "So there's a possibility that the footnotes are simply labels.",
+      "new": "Thus, it is possible that the annotation was added simply as a mark label.",
+      "asr_wer": 0.0,
+      "chrf_base": 30.563820584349937,
+      "chrf_new": 66.84437687314934
+    },
+    {
+      "id": "1772",
+      "vi_ref": "Vậy là, có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "asr": "vậy là có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "en_ref": "So, it is likely that the notation was added simply as a label.",
+      "base": "So there's a possibility that the footnotes are simply labels.",
+      "new": "Thus, it is possible that the annotation was added simply as a mark label.",
+      "asr_wer": 0.0,
+      "chrf_base": 30.563820584349937,
+      "chrf_new": 66.84437687314934
+    },
+    {
+      "id": "1772",
+      "vi_ref": "Vậy là, có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "asr": "vậy là có khả năng chú thích được thêm vào đơn giản chỉ là nhãn đánh dấu.",
+      "en_ref": "So, it is likely that the notation was added simply as a label.",
+      "base": "So there's a possibility that the footnotes are simply labels.",
+      "new": "Thus, it is possible that the annotation was added simply as a mark label.",
+      "asr_wer": 0.0,
+      "chrf_base": 30.563820584349937,
+      "chrf_new": 66.84437687314934
+    },
+    {
+      "id": "1759",
+      "vi_ref": "Bác sĩ Malar Balasubramanian, 29 tuổi, được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng nặc thuốc ở Blue Ash, một vùng ngoại ô cách Cincinnati 15 dặm về phía bắc.",
+      "asr": "bác sĩ ma la ba lát su ran mi anh hai mươi chín tuổi được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng nặc thuốc ở lúa ác một vùng ngoại ô cách shin shin natty mười lăm dậm về phía bắc.",
+      "en_ref": "Dr. Malar Balasubramanian, 29, was found in Blue Ash, Ohio, a suburb approximately 15 miles north of Cincinnati lying on the ground beside the road in a T-shirt and underwear in an apparently heavily medicated state.",
+      "base": "Dr. Ma la ba lát su ran mi anh hai mươi chín tuổi được phát hiện nằm trên mặt đất ven đường trong trang phục áo thun và đồ lót nồng ặc thuốc ở lúa ác... một vùng ngoại ô cách cách Shin Shin Natty mười fifteen dậm về phía Bắc.",
+      "new": "Dr. Ma-La-Pat Su-Ren-Mi-Anh, 29, was found lying on the roadside ground in a heavily drugged T-shirt and underwear in Wheatgrass, a suburb 15 miles north of Shin Shin Na-Ty.",
+      "asr_wer": 47.5,
+      "chrf_base": 11.538076946392964,
+      "chrf_new": 47.45582447864158
+    },
+    {
+      "id": "1811",
+      "vi_ref": "Chuẩn 802.11n hoạt động trên cả hai tần số 2.4 Ghz và 5.0 Ghz.",
+      "asr": "chuẩn tám không hai chấm một một n hoạt động trên cả hai tần số hai chấm bốn ghi ra hẹp và năm chấm không ghi ra hẹp.",
+      "en_ref": "The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies.",
+      "base": "standard eight zero two dots one one n works on both two dots four narrow write-out frequencies and five dots no narrow write-out.",
+      "new": "The 802.11 n standard operates on both narrowband 2.4 and narrowband 5.0 frequencies.",
+      "asr_wer": 111.8,
+      "chrf_base": 31.027211818033003,
+      "chrf_new": 65.15987576452667
+    },
+    {
+      "id": "1935",
+      "vi_ref": "Tuy nhiên, điều đó không đúng. Mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báu.",
+      "asr": "tuy nhiên điều đó không đúng mặc dù có thứ gì đó được viết ở mặt sau của tài liệu nhưng đó không phải là bản đồ kho báo.",
+      "en_ref": "However, that is not true. Although there is something written on the back of the document, it is not a treasure map.",
+      "base": "However that's not true even though there's something written on the back of the document but it's not a newspaper inventory map.",
+      "new": "However, that is not true. Although there is something written on the back of the document, it is not a map of the treasure.",
+      "asr_wer": 3.4,
+      "chrf_base": 61.68993224156001,
+      "chrf_new": 93.06759091284363
+    }
+  ],
+  "examples_most_worse": [
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gmt cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The vehicle was taken away from the scene of the accident at around twelve GMT that same day.",
+      "new": "The car was removed from the crash site around 12: 00 GMT on the same day.",
+      "asr_wer": 9.5,
+      "chrf_base": 66.09626776500951,
+      "chrf_new": 34.92169490343019
+    },
+    {
+      "id": "1854",
+      "vi_ref": "Chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng 12:00 giờ GMT cùng ngày hôm đó.",
+      "asr": "chiếc xe đã được đưa đi khỏi hiện trường tai nạn vào khoảng mười hai giờ gmt cùng ngày hôm đó.",
+      "en_ref": "The vehicle itself was taken away from the scene of the accident at approximately 1200 GMT on the same day.",
+      "base": "The vehicle was taken away from the scene of the accident at around twelve GMT that same day.",
+      "new": "The car was removed from the crash site around 12: 00 GMT on the same day.",
+      "asr_wer": 9.5,
+      "chrf_base": 66.09626776500951,
+      "chrf_new": 34.92169490343019
+    },
+    {
+      "id": "1731",
+      "vi_ref": "Trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền buồm.",
+      "asr": "trong quần đảo và hồ bạn không nhất thiết phải cần đến thuyền bùn.",
+      "en_ref": "In the archipelagos and lakes you do not necessarily need a yacht.",
+      "base": "in the archipelago and lakes you do not necessarily need mud boats.",
+      "new": "In the islands and lakes, you do not need a mud boat.",
+      "asr_wer": 7.1,
+      "chrf_base": 74.06304975799455,
+      "chrf_new": 44.92565545562855
+    },
+    {
+      "id": "1860",
+      "vi_ref": "Văn phòng của thống đốc cho biết mười chín người trong số những người bị thương là sĩ quan cảnh sát.",
+      "asr": "văn phòng của thống đốc cho biết mười chín người trong số những người bị thương là sĩ quan cảnh sát.",
+      "en_ref": "The governor's office said nineteen of the injured were police officers.",
+      "base": "The governor's office said nineteen of the injured were police officers.",
+      "new": "The governor's office said 19 of the wounded were police officers.",
+      "asr_wer": 0.0,
+      "chrf_base": 100.0,
+      "chrf_new": 72.04611643087307
+    },
+    {
+      "id": "1860",
+      "vi_ref": "Văn phòng của thống đốc cho biết mười chín người trong số những người bị thương là sĩ quan cảnh sát.",
+      "asr": "văn phòng của thống đốc cho biết mười chín người trong số những người bị thương là sĩ quan cảnh sát.",
+      "en_ref": "The governor's office said nineteen of the injured were police officers.",
+      "base": "The governor's office said nineteen of the injured were police officers.",
+      "new": "The governor's office said 19 of the wounded were police officers.",
+      "asr_wer": 0.0,
+      "chrf_base": 100.0,
+      "chrf_new": 72.04611643087307
+    },
+    {
+      "id": "1860",
+      "vi_ref": "Văn phòng của thống đốc cho biết mười chín người trong số những người bị thương là sĩ quan cảnh sát.",
+      "asr": "văn phòng có thống đốc cho biết mười chín người trong số những người bị thương là sĩ quan cảnh sát.",
+      "en_ref": "The governor's office said nineteen of the injured were police officers.",
+      "base": "The governor's office said nineteen of the injured were police officers.",
+      "new": "The governor's office said 19 of the wounded were police officers.",
+      "asr_wer": 4.8,
+      "chrf_base": 100.0,
+      "chrf_new": 72.04611643087307
+    },
+    {
+      "id": "1664",
+      "vi_ref": "Vặn hai cục bột khô với nhau, rồi bóp chúng thành một viên cầu bằng tay ướt, sạch.",
+      "asr": "vặn hai cụp bột khô với nhau rồi bóp chúng thành một viên cầu bằng tay ướt sạch.",
+      "en_ref": "Swirl the two dry powders together and then, with clean wet hands, squeeze them into a ball.",
+      "base": "twist the two clumps of dry powder together and then squeeze them into a ball with clean wet hands.",
+      "new": "Twist two clumps of dry dough together and squeeze them into a ball with your wet, clean hands.",
+      "asr_wer": 5.6,
+      "chrf_base": 72.4260642378992,
+      "chrf_new": 50.90772730288443
+    },
+    {
+      "id": "1700",
+      "vi_ref": "Nó mỏng hơn dưới vùng maria (biển) và dày hơn ở vùng cao.",
+      "asr": "nó mỏng hơn dưới vùng marina biển và dày hơn ở vùng cao.",
+      "en_ref": "It is thinner under the maria and thicker under the highlands.",
+      "base": "it is thinner under the marine marina and thicker in the highlands.",
+      "new": "It is thinner below the coast and thicker in the highlands.",
+      "asr_wer": 7.7,
+      "chrf_base": 73.84010469280557,
+      "chrf_new": 58.18179486079108
+    }
+  ],
+  "examples_both_bad": [
+    {
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lát kha xin cũng trình bày chắp ranh không hazard ca sĩ gây du khăn đeo góc hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "base": "He also performed \"Cắp ranh không hazard\" [\"No Hazard\"] with him.",
+      "new": "He also performed \"Crystals Without Hazard\", where singer Zhao Yuen sings alongside him.",
+      "asr_wer": 86.7,
+      "chrf_base": 10.382899196755396,
+      "chrf_new": 14.94204095345815
+    },
+    {
+      "id": "1891",
+      "vi_ref": "Lakkha Singh cũng trình bày chhappan bhog bhajan. Ca kĩ Raju Khandelwal hát cùng ông.",
+      "asr": "lắp ca xin cũng trình bày chắp banh bong ba han ca sĩ gây du khăn đeo bót hát cùng ông.",
+      "en_ref": "Lakkha Singh presented the chhappan bhog bhajan as well. Singer, Raju Khandelwal was accompanying him.",
+      "base": "The singer also performed \"Bang Ba Han\" (Bang Ba Han), singing along with him.",
+      "new": "Ephemeral also performed \"Chắp Banh Bong Ba Han\", singer Gêdu Tâyển, singing along with him.",
+      "asr_wer": 93.3,
+      "chrf_base": 14.906524943494533,
+      "chrf_new": 15.085056550280513
+    },
+    {
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cánh quang bằng cách viết vẽ khắc tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "base": "Do not damage the photosphere by writing, drawing, engraving, spray painting on the wall.",
+      "new": "Do n't ruin the wing by writing, painting, engraving, spray painting on the wall.",
+      "asr_wer": 13.3,
+      "chrf_base": 24.016135891197713,
+      "chrf_new": 17.373611790421435
+    },
+    {
+      "id": "1791",
+      "vi_ref": "Đừng phá hoại cảnh quan bằng cách viết vẽ, khắc tranh phun sơn lên tường.",
+      "asr": "đừng phá hoại cảnh quan bằng cách viết vẻ khách tranh phun sơn lên tường.",
+      "en_ref": "Do not deface the site by marking or scratching graffiti into structures.",
+      "base": "Don't ruin the scenery by writing guest murals on the walls.",
+      "new": "Do n't ruin the scenery by writing guest murals on the walls.",
+      "asr_wer": 13.3,
+      "chrf_base": 18.405936325689627,
+      "chrf_new": 19.336751972578323
+    },
+    {
+      "id": "1978",
+      "vi_ref": "Đối với Springboks, trận này đã giúp đội tuyển kết thúc chuỗi thua 5 trận liền.",
+      "asr": "đối với spurs chặng này đã giúp đội tuyển kết thúc chửi thương năm chặng liền.",
+      "en_ref": "For the Springboks, it ended a five-match losing streak.",
+      "base": "For the spurs this stage helped the team finish five consecutive stages.",
+      "new": "For Spurs, this leg helped the team finish five straight legs.",
+      "asr_wer": 37.5,
+      "chrf_base": 20.56266603062444,
+      "chrf_new": 19.660217447455782
+    },
+    {
+      "id": "1817",
+      "vi_ref": "Tuy nhiên, về khía cạnh này thì khu vực Schengen vận hành gần như một quốc gia duy nhất.",
+      "asr": "tuy nhiên giải phía cạnh này thì khu vực chelsea vận hành gần như một quốc gia duy nhất.",
+      "en_ref": "The Schengen zone, however, works somewhat like one country in this respect.",
+      "base": "However this side of the league, the Chelsea area operates almost as a single nation.",
+      "new": "However, this side of the league, the Chelsea area, operates almost as a single nation.",
+      "asr_wer": 15.8,
+      "chrf_base": 17.90176600519847,
+      "chrf_new": 19.71422781192497
+    },
+    {
+      "id": "1987",
+      "vi_ref": "Vụ rơi trực thăng diễn ra trên địa hình núi cao và được quy cho hỏa lực của quân địch gây ra.",
+      "asr": "vụ gây trực thăng diễn ra trên địa hình nước ao và được quy cho mã lực cổ quân định gây ra.",
+      "en_ref": "The crash occurred high up in mountainous terrain, and is believed to have been the result of hostile fire.",
+      "base": "The helicopter incident took place on the pond water terrain and was attributed to the horsepower ancient troops intended to cause.",
+      "new": "The helicopter incident took place over the Pond's terrain and was attributed to Ma Ying-min.",
+      "asr_wer": 27.3,
+      "chrf_base": 20.962686548837123,
+      "chrf_new": 20.742795253299263
+    },
+    {
+      "id": "1814",
+      "vi_ref": "Ion hydro là proton đã bị loại bỏ electron (vì nguyên tử hydro bao gồm một proton và một electron).",
+      "asr": "eo ông hai pờ rô là bầu tông đã bị loại bỏ electron vì nguyên tử hai pờ rô bao gồm một bầu tâm và một electron.",
+      "en_ref": "Hydrogen ions are protons that had their electrons stripped off them (since Hydrogen atoms consist of one proton and one electron).",
+      "base": "The two - pronged diamond is the diamond that has its electrons removed because the two - pronged atom consists of a center and an electron.",
+      "new": "The E atom, the particle, has its electrons removed because the particle is composed of a center and an electron.",
+      "asr_wer": 60.0,
+      "chrf_base": 27.740866794624225,
+      "chrf_new": 21.680584005381178
+    }
+  ]
+}

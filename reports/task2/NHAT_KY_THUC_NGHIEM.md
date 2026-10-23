@@ -56,6 +56,23 @@ Máy: xem `evidence/gpu.txt`; thư viện: `evidence/pip_freeze.txt`; mã hash m
 2026-10-23 10:21:16 V3 not adopted: ITN did not improve FLEURS dev
 2026-10-23 10:21:27 V3 QUEUE COMPLETE
 2026-10-23 10:27:20 ENV: kiểm tra pip freeze giống hệt evidence/pip_freeze.txt
+2026-10-23 12:44:34 START train V3
+2026-10-23 13:12:24 DONE train V3
+2026-10-23 13:12:24 START dev V3
+2026-10-23 13:13:08 DONE dev V3
+2026-10-23 13:13:08 START PhoMT dev V3
+2026-10-23 13:16:54 DONE PhoMT dev V3
+2026-10-23 13:16:54 V3 decision on dev: FLEURS dev V2 27.29 vs V3 27.56; PhoMT dev B0 40.96 vs V3 41.16 -> adopt=True
+2026-10-23 13:16:54 START eval V3
+2026-10-23 13:38:19 DONE eval V3
+2026-10-23 13:38:19 START eval B0 PhoMT rescore
+2026-10-23 14:06:26 DONE eval B0 PhoMT rescore
+2026-10-23 14:06:26 START baseline A on FLEURS
+2026-10-23 15:34:45 DONE baseline A on FLEURS
+2026-10-23 15:34:57 SESSION 3 QUEUE COMPLETE
+2026-10-23 15:35:17 START speed V3 (final, with number normalisation)
+2026-10-23 15:46:27 DONE speed V3 (exit 0)
+2026-10-23 15:49:49 DONE session 3: slides, report, docs updated
 ```
 
 ## Kết quả train từng phiên bản
@@ -85,3 +102,4 @@ Máy: xem `evidence/gpu.txt`; thư viện: `evidence/pip_freeze.txt`; mã hash m
 - `checkpoints/v1/best_adapter/adapter_model.safetensors`: `83ca179b1713ded2…` (18,915,448 byte)
 - `checkpoints/v2/best_adapter/adapter_model.safetensors`: `d7186a19355b1bc3…` (18,915,448 byte)
 - `checkpoints/v2b/best_adapter/adapter_model.safetensors`: `07199d4715a73b94…` (18,915,448 byte)
+- `checkpoints/v3/best_adapter/adapter_model.safetensors`: `4235dfa267f26ac4…` (18,915,448 byte)

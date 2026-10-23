@@ -101,7 +101,7 @@ python src/mt/download_models.py
 ## Tiến độ
 
 - [x] **Task 1** (nộp 13/10/2026): proposal, chạy lại 2 baseline, đo lỗi lan truyền, kiểm leakage
-- [ ] **Task 2** (đang làm): xử lý dữ liệu, chạy lại 2 baseline trên cùng máy, Proposed Method V1 → Vn
+- [x] **Task 2** (thực nghiệm xong 23/10/2026): dữ liệu, 2 baseline cùng máy, V1 → V3; bản cuối V3 cascade FLEURS 27,75 so với B0 24,27 (`reports/task2/`)
 - [ ] **Task 3:** demo Gradio, đóng gói, báo cáo cuối
 
 Checklist chi tiết và người phụ trách: [WORKFLOW.md](WORKFLOW.md).

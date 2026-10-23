@@ -1,0 +1,29 @@
+{
+  "train": [
+    "data/asr/fleurs_train_asr_itn.jsonl",
+    "data/mt/fleurs_train_clean.jsonl"
+  ],
+  "dev": "data/asr/fleurs_dev_asr_itn.jsonl",
+  "src_field": "asr",
+  "base": "checkpoints/pretrained/vinai-translate-vi2en",
+  "out": "checkpoints/v3",
+  "epochs": 3,
+  "lr": 0.0002,
+  "batch": 8,
+  "grad_accum": 2,
+  "warmup": 0.06,
+  "r": 16,
+  "alpha": 32,
+  "lora_dropout": 0.05,
+  "targets": "q_proj,k_proj,v_proj,out_proj",
+  "max_len": 256,
+  "seed": 42,
+  "extra_train": "data/mt/phomt_train_subset.jsonl",
+  "balance_sentence": false,
+  "trainable_params": 4718592,
+  "total_params": 453144576,
+  "train_pairs": 7376,
+  "dev_pairs": 361,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.6.0+cu124"
+}

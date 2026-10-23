@@ -37,9 +37,9 @@ Từ epoch 2, train loss giảm tiếp nhưng dev loss tăng: **overfit** vì d�
 | BLEU cascade FLEURS test (chỉ số chính) | 24,27 | **28,59** (+4,32) |
 | chrF++ cascade | 50,12 | 52,82 |
 | BLEU dịch chữ chuẩn FLEURS | 37,85 | 37,31 |
-| BLEU PhoMT test | 40,25 | 37,90 (−2,35) |
+| BLEU PhoMT test | 40,27 | 37,90 (−2,37) |
 
-Tín hiệu cải thiện: **có**, trên chỉ số chính. Mặt trái: quên một phần khả năng dịch văn bản sạch (PhoMT −2,35).
+Tín hiệu cải thiện: **có**, trên chỉ số chính. Mặt trái: quên một phần khả năng dịch văn bản sạch (PhoMT −2,37).
 
 ## 3.2. Failure cases của V1
 
@@ -59,7 +59,7 @@ So từng câu với B0 (chrF++ chênh trên 1 điểm): V1 tốt lên 444 câu,
 Nguyên nhân lỗi chính của V1:
 1. **Số đọc thành chữ gây sinh lặp:** câu "chuẩn tám không hai chấm một một … hai chấm bốn đi ra hệ" (đúng: *The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies*). V1 sinh lặp "one, one, two, one…" tới giới hạn độ dài. Đây là lý do thêm giới hạn độ dài ra khi chấm, áp dụng như nhau cho mọi phiên bản.
 2. **Bỏ sót, đơn giản hóa ý:** "không nhất thiết phải cần" → V1 bỏ *necessarily*; "quần đảo" → *islands* thay vì *archipelagos*.
-3. **Quên văn bản sạch:** BLEU PhoMT giảm 2,35 vì chỉ dạy trên FLEURS.
+3. **Quên văn bản sạch:** BLEU PhoMT giảm 2,37 vì chỉ dạy trên FLEURS.
 4. **Một phần cải thiện là thích nghi miền:** câu nghe đúng hoàn toàn cũng tăng 5,62 BLEU, tức V1 còn quen văn phong FLEURS và kiểu chữ PhoWhisper xuất ra, không chỉ chịu được lỗi nghe.
 
 ## 3.3. V2 và bảng tiến trình
@@ -75,19 +75,39 @@ Nguyên nhân lỗi chính của V1:
 
 | Phiên bản | Thay đổi so với bản trước | Lý do (từ phân tích lỗi) | BLEU cascade | BLEU PhoMT | Nhận xét |
 |---|---|---|---|---|---|
-| B0 | – | Baseline A → B | 24,27 | 40,25 | Mốc so sánh |
+| B0 | – | Baseline A → B | 24,27 | 40,27 | Mốc so sánh |
 | V1 | LoRA trên 2.927 cặp chữ máy nghe | Khối dịch chưa từng thấy lỗi nghe | **28,59** | 37,90 | Cải thiện mạnh nhất nhưng quên văn bản sạch |
-| V2 | + 1.449 cặp chữ chuẩn + 3.000 cặp PhoMT | V1 overfit và quên (PhoMT −2,35) | 27,57 | **39,80** | Giữ +3,30 BLEU, PhoMT chỉ −0,45 |
+| V2 | + 1.449 cặp chữ chuẩn + 3.000 cặp PhoMT | V1 overfit và quên (PhoMT −2,37) | 27,57 | 39,80 | Giữ +3,30 BLEU, PhoMT chỉ −0,47 |
 | V2b | V2 + lấy mẫu cân bằng theo câu (trọng số 1/k cho câu có k bản thu) | Mất cân bằng số bản thu mỗi câu (mục 1.3) | 26,85 | – (PhoMT dev 40,93) | Không hơn V2 trên dev (26,98 so với 27,17) nên không nhận |
-| V3 | V2 + chuẩn hóa số (`src/text/itn_vi.py`) ở đầu vào cascade, không train lại | Lỗi lặp và sai số ở câu nhiều số | không chấm test | – | Trên FLEURS dev giảm 27,29 → 27,17 nên không nhận |
+| V3a | V2 + chuẩn hóa số (`src/text/itn_vi.py`) chỉ ở lúc dịch, không train lại | Lỗi lặp và sai số ở câu nhiều số | không chấm test | – | FLEURS dev giảm 27,29 → 27,17 nên không nhận |
+| **V3** | Chuẩn hóa số **cả khi dạy lẫn khi dịch** (train lại với dữ liệu như V2) | V3a: đầu vào lúc dịch lệch so với lúc dạy | **27,75** | **39,86** (−0,41) | FLEURS dev 27,29 → 27,56, PhoMT dev 41,16: **nhận, bản cuối** |
 
-V3 thử trên dev cho kết quả âm: V2 được dạy trên chữ máy nghe, trong đó số vẫn viết bằng chữ, nên đổi sang chữ số chỉ ở lúc dịch
-làm đầu vào lệch so với lúc dạy. Hướng tiếp theo có căn cứ: áp dụng chuẩn hóa số **cả khi dạy lẫn khi dịch** (train lại).
-Bộ chuẩn hóa đổi 64/361 câu dev và 174/857 câu test, và không đổi nhầm từ thường ("một hệ thống", "năm nay", "hàng trăm người").
+**V3a thất bại cho ra hướng đúng.** V2 được dạy trên chữ máy nghe, trong đó số vẫn viết bằng chữ, nên đổi sang chữ số chỉ ở lúc dịch
+làm đầu vào lệch so với lúc dạy. V3 chuẩn hóa số cả dữ liệu dạy (622/2.927 câu train, 64/361 câu dev bị đổi) lẫn đầu vào lúc dịch
+(174/857 câu test). Bộ chuẩn hóa không đổi nhầm từ thường ("một hệ thống", "năm nay", "hàng trăm người").
+Ngay ở epoch 0 (chưa train), mô hình gốc đã dịch chữ đã chuẩn hóa tốt hơn (dev BLEU 25,55 so với 24,65).
+
+| Epoch V3 | Train loss | Dev loss | Dev BLEU |
+|---|---|---|---|
+| 0 | – | 1,695 | 25,55 |
+| **1 (chọn)** | 1,150 | **1,485** | **27,61** |
+| 2 | 0,980 | 1,520 | 26,98 |
+| 3 | 0,859 | 1,579 | 26,49 |
+
+**V3 cải thiện đúng chỗ nó nhắm tới** (FLEURS test, so với V2): câu có chữ số 24,11 → **25,17** (+1,06); câu không có chữ số
+28,39 → 28,45 (gần như không đổi); câu nghe sai nặng (WER >30%) 18,07 → 19,14. Từng câu: V3 tốt lên 249, kém đi 196, như cũ 412
+(`mt/mt_errors_V3_vs_V2.json`).
+
+**Failure case của V1 được V3 sửa** (chọn tự động trong `system/visual_results.md`):
+máy nghe "chuẩn tám không hai chấm một một n hoạt động trên cả hai tần số hai chấm bốn …";
+B0 "standard eight zeros two dots one one one n works on both frequencies two dots four …";
+V1 sinh lặp "one, one, two, one…"; **V3 "The 802.11 n standard operates on both 2.4 GHz and 5.0 GHz frequencies."**
+(tham chiếu: "The 802.11n standard operates on both the 2.4Ghz and 5.0Ghz frequencies.").
 
 **Chọn phiên bản cuối trên validation (không dùng test):** quy tắc đặt trước là BLEU dev FLEURS cao nhất trong các phiên bản
 có BLEU PhoMT dev không giảm quá 1 điểm so với B0. Trên 2.000 câu PhoMT dev (seed 42): B0 40,96; V1 38,98 (−1,98, loại);
-V2 40,80 (−0,16, đạt). **Phiên bản cuối: V2.** Kết luận này trùng với kết quả trên test.
+V2 40,80 (−0,16, đạt); V3 41,16 (+0,20, đạt). Trên FLEURS dev (cùng script `eval_dev.py`): V2 27,29, V3 27,56.
+**Phiên bản cuối: V3.** Kết luận này trùng với kết quả trên test.
 
 **Cải thiện có thật hay do may?** Paired bootstrap (Koehn, 2004), 1.000 lần lấy mẫu lại theo cụm câu gốc
 (857 bản thu thuộc 347 câu nên lấy cả cụm cho chặt), seed 42, trên cascade FLEURS test:
@@ -97,6 +117,7 @@ V2 40,80 (−0,16, đạt). **Phiên bản cuối: V2.** Kết luận này trùn
 | V1 so với B0 | +4,36 | [+3,19; +5,48] | < 0,001 | +2,71 | [+2,02; +3,43] | < 0,001 |
 | V2 so với B0 | +3,28 | [+2,11; +4,49] | < 0,001 | +2,33 | [+1,57; +3,04] | < 0,001 |
 | V2b so với B0 | +2,59 | [+1,61; +3,64] | < 0,001 | +2,01 | [+1,38; +2,68] | < 0,001 |
+| **V3 so với B0** | **+3,49** | **[+2,34; +4,70]** | < 0,001 | +2,47 | [+1,69; +3,22] | < 0,001 |
 
-Không lần lấy mẫu nào V1 hay V2 thua B0, nên cải thiện là có ý nghĩa thống kê.
+Không lần lấy mẫu nào V1, V2, V2b hay V3 thua B0, nên cải thiện là có ý nghĩa thống kê.
 File: `mt/significance_V1_vs_B0.json`, `mt/significance_V2_vs_B0.json`.

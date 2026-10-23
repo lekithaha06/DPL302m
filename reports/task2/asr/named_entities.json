@@ -1,0 +1,71 @@
+{
+  "named_entity_tokens": 1732,
+  "named_entity_recall_percent": 65.2,
+  "foreign_name_tokens": 952,
+  "foreign_name_recall_percent": 43.8,
+  "common_word_tokens": 23976,
+  "common_word_recall_percent": 95.2,
+  "most_missed_named_entities": [
+    [
+      "giza",
+      9
+    ],
+    [
+      "hồng",
+      8
+    ],
+    [
+      "kông",
+      8
+    ],
+    [
+      "schengen",
+      7
+    ],
+    [
+      "atlantic",
+      6
+    ],
+    [
+      "aristotle",
+      6
+    ],
+    [
+      "goma",
+      6
+    ],
+    [
+      "greenland",
+      6
+    ],
+    [
+      "super",
+      6
+    ],
+    [
+      "g",
+      6
+    ],
+    [
+      "dunlap",
+      6
+    ],
+    [
+      "kitô",
+      6
+    ],
+    [
+      "sintra",
+      6
+    ],
+    [
+      "nyiragongo",
+      6
+    ],
+    [
+      "ghz",
+      6
+    ]
+  ],
+  "note": "tên riêng = từ viết hoa không đầu câu trong vi_raw; nghe đúng = có trong chữ máy nghe của cùng bản thu"
+}

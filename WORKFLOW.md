@@ -1,12 +1,12 @@
 # WORKFLOW: tiến độ dự án
 
 **Đề tài 1:** nhận dạng giọng nói tiếng Việt và dịch sang tiếng Anh (cascade PhoWhisper-small → VinAI Translate vi2en).
-Cập nhật: 22/10/2026. Tick `[x]` khi xong và có file minh chứng trong repo.
+Cập nhật: 23/10/2026. Tick `[x]` khi xong và có file minh chứng trong repo.
 
 | Giai đoạn | Nội dung | Trạng thái |
 |---|---|---|
 | Task 1 | Proposal: bài toán, related work, 2 baseline, phương pháp đề xuất, dữ liệu, đánh giá | ✅ Đã nộp 13/10/2026 |
-| **Task 2** | Xử lý dữ liệu, chạy lại 2 baseline, Proposed Method V1 → Vn, kết luận khả thi | 🔄 **Đang làm** |
+| **Task 2** | Xử lý dữ liệu, chạy lại 2 baseline, Proposed Method V1 → V3, kết luận khả thi | ✅ Thực nghiệm xong · chờ Kappa, thuyết trình |
 | Task 3 | Demo Gradio, đóng gói (FastAPI, Docker: điểm cộng), báo cáo cuối | ⏳ |
 
 Phân công giữ theo vai trò Task 1: **TV1 Bảo** (ASR), **TV2 Kiệt** (MT, Proposed Method), **TV3 Đăng** (hệ thống, demo), **TV4 Uyên** (dữ liệu, đánh giá).
@@ -23,43 +23,42 @@ Phân công giữ theo vai trò Task 1: **TV1 Bảo** (ASR), **TV2 Kiệt** (MT,
 - [x] Bảng số liệu có nguồn: `reports/task1/so_lieu_chung.json`. Script tính lại không cần GPU: `src/eval/recompute_metrics.py`
 - [x] WER tách thay thế/xóa/chèn (FLEURS: S 2.058, D 112, I 1.007)
 
-**Còn tồn từ Task 1, xử lý đầu Task 2:**
-- [ ] Hai baseline chạy trên 2 máy khác nhau (RTX 3050 4 GB và RTX 4060 8 GB). Task 2 yêu cầu môi trường đồng nhất, nên chạy lại cả hai trên **RTX 4060**.
-- [ ] Mời Bảo, Đăng, Uyên làm collaborator. Từ Task 2 mỗi người tự commit phần mình.
+**Tồn từ Task 1:** [x] chạy lại hai baseline trên cùng RTX 4060 · [ ] mời Bảo, Đăng, Uyên làm collaborator
 
 ---
 
-## Task 2: đang làm
+## Task 2: thực nghiệm xong (23/10/2026), chờ gán nhãn Kappa và thuyết trình
 
-### Giai đoạn 1: dữ liệu (TV4 chính, TV3 hỗ trợ)
-- [ ] Tải **FLEURS vi_vn + en_us train/dev** (hiện mới có test). Chia theo ID câu, kiểm không trùng câu với test. TV4
-- [ ] 1.1 Bảng nguồn dữ liệu online/offline: URL, số mẫu, định dạng, dung lượng, các trường. TV4
-- [ ] **Dữ liệu offline:** tự thu âm một tập test nhỏ (giọng nữ, micro điện thoại, nhiều miền), có phiếu đồng ý của người được thu. Đây cũng là điểm cộng "tự build". TV3 + TV4
-- [ ] 1.2 Flowchart làm sạch, có số mẫu bị loại ở mỗi bước (trùng, lỗi, thiếu, đổi về 16 kHz, chuẩn hóa chữ). TV4
-- [ ] 1.2 Gán nhãn tập tự thu bằng Label Studio. Hai người gán chung một phần để tính Cohen's Kappa. TV3 + TV4
-- [ ] 1.3 Biểu đồ mất cân bằng **có %**: theo người nói, giới tính, độ dài âm thanh, miền văn bản PhoMT. Bảng tỉ lệ train/val/test. TV4
-- [ ] 1.4 Xử lý mất cân bằng (augmentation nhiễu/tốc độ, cân bằng miền khi trộn PhoMT), có biểu đồ trước/sau. TV4
+Kết quả chính (FLEURS test, cascade, cùng script và cấu hình): B0 24,27 → V1 28,59 → V2 27,57 → **V3 27,75 (bản cuối, chọn trên dev)**;
+PhoMT test B0 40,27 → V3 39,86; V3 so với B0 +3,49 BLEU, khoảng tin cậy 95% [+2,34; +4,70], p < 0,001. Chi tiết: `reports/task2/`.
 
-### Giai đoạn 2: hai baseline trên cùng môi trường (TV1, TV2)
-- [ ] Chạy lại Baseline A trên RTX 4060, cùng seed 42 và cùng chuẩn hóa. Báo WER, CER, S/D/I trên VIVOS, FLEURS và tập tự thu. TV1
-- [ ] Chạy lại Baseline B và cascade trên cùng máy. TV2
-- [ ] **PhoWhisper nghe FLEURS train/dev/test, xuất chữ kèm ID câu, giao cho TV2.** Việc này chặn V1, nên làm sớm nhất. TV1
-- [ ] 2.2 Bảng Paper và Nhóm cho từng baseline. 2.3 Gap Analysis: cùng miền (VIVOS) và ngoài miền (FLEURS), giải mã, chuẩn hóa. TV1 + TV2
-- [ ] Ghi rõ: baseline là suy luận zero-shot nên learning rate/optimizer/epoch không áp dụng.
+### Giai đoạn 1: dữ liệu
+- [x] Tải FLEURS train/dev/test; ghép theo ID câu; 0 câu trùng giữa các tập (`data/download_fleurs.py`, `data/build_fleurs_eval.py`)
+- [x] 1.1 Bảng nguồn online/offline (offline: không thu thập, có lý do)
+- [x] 1.2 Làm sạch có số mẫu từng bước: train loại 67 bản thu thiếu câu Anh (`src/data/clean_eda.py`)
+- [ ] 1.2 Gán nhãn loại lỗi 100 câu dev và Cohen's Kappa: **cần 2 người gán độc lập (Đăng, Uyên)**
+- [x] 1.3 Thống kê và mất cân bằng có %: train 74,3% giọng nữ, dev/test 100% nam; tỉ lệ 70,6/8,7/20,7
+- [x] 1.4 Xử lý mất cân bằng (cân bằng theo câu, V2b) có biểu đồ trước/sau và kết quả đo: không cải thiện
 
-### Giai đoạn 3: Proposed Method (TV2 chính)
-- [ ] **V1:** LoRA cho VinAI Translate trên cặp (chữ do PhoWhisper nghe ra từ FLEURS train → câu Anh). Chọn cấu hình trên dev, test chỉ để chấm. TV2
-- [ ] Log loss/BLEU theo epoch, bảng siêu tham số, thời gian train, lưu checkpoint (không commit). TV2
-- [ ] So V1 với cả 2 baseline: BLEU, chrF++ của cascade trên FLEURS test. Kiểm PhoMT test để chắc khối dịch không kém đi. TV2
-- [ ] 3.2 Failure cases của V1: ma trận nhầm dấu thanh (TV1), câu dịch sai phân theo nguyên nhân (TV2)
-- [ ] 3.3 V2, V3 dựa trên lỗi của V1, ví dụ trộn câu PhoMT sạch hoặc tạo lỗi nghe giả. Bảng tiến trình và ablation. TV2 + TV4
-- [ ] 3.4 Khả thi: VAD cho âm thanh dài, RTF/latency cả hệ thống, dung lượng mô hình, thử gần real-time. Kết luận có hay không đủ điều kiện làm Task 3. TV3
+### Giai đoạn 2: hai baseline cùng môi trường
+- [x] Baseline A trên RTX 4060: PhoWhisper VIVOS 6,25 (760/760 câu giống Task 1), FLEURS 12,29; Whisper-small 22,26 / 21,42
+- [x] Baseline B và cascade cùng máy: PhoMT 40,27, FLEURS chữ chuẩn 37,85, cascade 24,27
+- [x] PhoWhisper nghe FLEURS train/dev (WER 11,35 / 11,32) làm dữ liệu dạy
+- [x] Paper và Nhóm, Gap Analysis (domain gap, cách viết số, môi trường, gom câu)
 
-### Slide Task 2 (18–25 slide)
-- [ ] Slide 3–6: TV4 · 7–9: TV1 + TV2 · 10–14: TV2 (+ TV1 slide 12) · 15–17: TV3 · ghép deck, slide 1–2, 18: TV3
+### Giai đoạn 3: Proposed Method
+- [x] V1 (LoRA): cascade 28,59; overfit từ epoch 2; PhoMT −2,37
+- [x] Failure cases: ma trận nhầm dấu thanh, tên riêng (65,2% nghe đúng; tên nước ngoài 43,8%), số đọc thành chữ, lỗi dịch
+- [x] V2 (thêm dữ liệu sạch): 27,57, PhoMT −0,47 · V2b (cân bằng theo câu): không nhận · V3a (chuẩn hóa số khi dịch): không nhận
+- [x] V3 (chuẩn hóa số cả khi dạy và khi dịch): 27,75; câu có chữ số +1,06 so với V2; chọn trên FLEURS dev và PhoMT dev
+- [x] Ablation, kiểm định bootstrap cho V1, V2, V2b, V3
+- [x] 3.4 Khả thi: RTF 0,358, VRAM 1.775 MB, âm thanh dài có VAD RTF 0,274; độ trễ trung vị 4,29 s chưa đạt ngưỡng 3 s → KHẢ THI
+
+### Slide và báo cáo
+- [x] 23 slide `reports/task2/slides/` (dựng từ file kết quả) · báo cáo `reports/task2/BaoCao_Task2_DeTai1.pdf`
+- [ ] Điền mã nhóm, GVHD (slide 1) và Kappa (slide 5)
 
 ---
-
 ## Task 3: sau Task 2
 - [ ] Demo Gradio: tab upload file và tab micro, hiện song song chữ Việt và câu Anh kèm mốc thời gian. TV3
 - [ ] Video demo dự phòng 2–5 phút

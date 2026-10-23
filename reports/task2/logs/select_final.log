@@ -35,3 +35,20 @@ Loading weights:  94%|█████████▍| 490/519 [00:01<00:00, 354.
 Loading weights: 100%|██████████| 519/519 [00:01<00:00, 364.07it/s]
 V2b {'BLEU': 40.93, 'chrF++': 60.69}
 FINAL V2b
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  23%|██▎       | 120/519 [00:00<00:00, 1166.35it/s]
+Loading weights:  50%|█████     | 262/519 [00:00<00:00, 1300.92it/s]
+Loading weights:  76%|███████▌  | 393/519 [00:00<00:00, 1295.63it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1284.02it/s]
+B0 {'BLEU': 40.96, 'chrF++': 60.96}
+
+Loading weights:   0%|          | 0/519 [00:00<?, ?it/s]
+Loading weights:  24%|██▎       | 122/519 [00:00<00:00, 1196.33it/s]
+Loading weights:  51%|█████     | 264/519 [00:00<00:00, 1322.69it/s]
+Loading weights:  76%|███████▋  | 397/519 [00:00<00:00, 1178.63it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1103.24it/s]
+Loading weights: 100%|██████████| 519/519 [00:00<00:00, 1146.94it/s]
+V3 {'BLEU': 41.16, 'chrF++': 60.83}
+FINAL V3

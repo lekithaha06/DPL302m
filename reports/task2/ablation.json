@@ -4,8 +4,8 @@
     "fleurs_cascade_BLEU": 24.27,
     "fleurs_cascade_chrF++": 50.12,
     "fleurs_clean_BLEU": 37.85,
-    "phomt_BLEU": 40.25,
-    "phomt_note": "B0 PhoMT from the run with batch 32 / max_length 512",
+    "phomt_BLEU": 40.27,
+    "phomt_note": "B0 PhoMT rescored with the same decoding config",
     "train_pairs": null,
     "delta_vs_B0": 0.0
   },
@@ -38,5 +38,15 @@
     "phomt_note": null,
     "train_pairs": 7376,
     "delta_vs_B0": 2.58
+  },
+  {
+    "version": "V3",
+    "fleurs_cascade_BLEU": 27.75,
+    "fleurs_cascade_chrF++": 52.57,
+    "fleurs_clean_BLEU": 37.51,
+    "phomt_BLEU": 39.86,
+    "phomt_note": null,
+    "train_pairs": 7376,
+    "delta_vs_B0": 3.48
   }
 ]
