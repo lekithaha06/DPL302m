@@ -1,0 +1,22 @@
+10:10:32 BAT_DAU
+V2 wsp {"BLEU": 19.68, "chrF++": 45.09, "n": 857}
+B0→V2 wsp "delta": 1.1, "ci95": [0.43, 1.78], "p_one_sided_delta_le_0": 0.002
+10:15:47 toc do lan 1 B0
+"RTF_total": 0.115, "RTF_asr": 0.081, "RTF_mt": 0.034, "latency_p50_s": 1.39, "latency_p95_s": 2.24
+10:18:32 toc do lan 1 V2
+"RTF_total": 0.114, "RTF_asr": 0.082, "RTF_mt": 0.032, "latency_p50_s": 1.31, "latency_p95_s": 2.48
+10:21:12 toc do lan 1 V4
+"RTF_total": 0.106, "RTF_asr": 0.076, "RTF_mt": 0.03, "latency_p50_s": 1.27, "latency_p95_s": 2.04
+10:23:40 toc do lan 2 B0
+"RTF_total": 0.116, "RTF_asr": 0.081, "RTF_mt": 0.035, "latency_p50_s": 1.41, "latency_p95_s": 2.31
+10:26:21 toc do lan 2 V2
+"RTF_total": 0.105, "RTF_asr": 0.076, "RTF_mt": 0.03, "latency_p50_s": 1.25, "latency_p95_s": 2.0
+10:28:49 toc do lan 2 V4
+"RTF_total": 0.116, "RTF_asr": 0.083, "RTF_mt": 0.033, "latency_p50_s": 1.33, "latency_p95_s": 2.54
+10:31:31 toc do lan 3 B0
+"RTF_total": 0.107, "RTF_asr": 0.075, "RTF_mt": 0.032, "latency_p50_s": 1.27, "latency_p95_s": 2.13
+10:34:00 toc do lan 3 V2
+"RTF_total": 0.113, "RTF_asr": 0.081, "RTF_mt": 0.032, "latency_p50_s": 1.33, "latency_p95_s": 2.24
+10:36:38 toc do lan 3 V4
+"RTF_total": 0.11, "RTF_asr": 0.079, "RTF_mt": 0.031, "latency_p50_s": 1.31, "latency_p95_s": 2.14
+10:39:12 DO_V2_XONG

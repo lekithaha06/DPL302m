@@ -1,0 +1,48 @@
+[Đọc] FLEURS ...
+[Đọc] VIVOS ...
+[B1] kiểm thiếu audio / nhãn trên 16632 mẫu ...
+[B2] kiểm trùng ID và trùng nội dung audio ...
+[B3] kiểm audio hỏng / quá ngắn / im lặng / bất thường ...
+[B4] đổi về 16 kHz mono PCM 16-bit ...
+[B5] chuẩn hoá chữ ...
+[PhoMT] làm sạch train cho V2 ...
+
+bộ     tập   bước                       trước    bỏ     sau  chi tiết
+fleurs train B0_ghep_chong_leakage       2994     0    2994  {}
+fleurs train B1_thieu                    2994    67    2927  {"thieu_cau_en": 67}
+fleurs train B2_trung                    2927     0    2927  {}
+fleurs train B3_hong_nhieu               2927     1    2926  {"im_lang_<-60.0dBFS": 1}
+fleurs train B4_16khz                    2926     0    2926  {"FLOAT->PCM_16": 2926, "so_file_doi": 2926}
+fleurs train B5_chuan_hoa_chu            2926     0    2926  {"so_cau_doi_chu": 2926}
+fleurs train KET_QUA                     2926     0    2926  {"gan_co": {"bi_cat_dinh_clipping": 404, "dai_>30.0s": 4}}
+fleurs dev   B0_ghep_chong_leakage        361     0     361  {}
+fleurs dev   B1_thieu                     361     0     361  {}
+fleurs dev   B2_trung                     361     0     361  {}
+fleurs dev   B3_hong_nhieu                361     0     361  {}
+fleurs dev   B4_16khz                     361     0     361  {"FLOAT->PCM_16": 361, "so_file_doi": 361}
+fleurs dev   B5_chuan_hoa_chu             361     0     361  {"so_cau_doi_chu": 361}
+fleurs dev   KET_QUA                      361     0     361  {"gan_co": {"dai_>30.0s": 2}}
+fleurs test  B0_ghep_chong_leakage        857     0     857  {}
+fleurs test  B1_thieu                     857     0     857  {}
+fleurs test  B2_trung                     857     0     857  {}
+fleurs test  B3_hong_nhieu                857     0     857  {}
+fleurs test  B4_16khz                     857     0     857  {"FLOAT->PCM_16": 857, "so_file_doi": 857}
+fleurs test  B5_chuan_hoa_chu             857     0     857  {"so_cau_doi_chu": 857}
+fleurs test  KET_QUA                      857     0     857  {"gan_co": {"dai_>30.0s": 7}}
+vivos  train B1_thieu                   11660     0   11660  {}
+vivos  train B2_trung                   11660     0   11660  {}
+vivos  train B3_hong_nhieu              11660     4   11656  {"im_lang_<-60.0dBFS": 4}
+vivos  train B4_16khz                   11656     0   11656  {"so_file_doi": 0}
+vivos  train B5_chuan_hoa_chu           11656     0   11656  {"so_cau_doi_chu": 11656}
+vivos  train KET_QUA                    11656     0   11656  {"gan_co": {"bi_cat_dinh_clipping": 300, "toc_do_noi_bat_thuong": 2}}
+vivos  test  B1_thieu                     760     0     760  {}
+vivos  test  B2_trung                     760     0     760  {}
+vivos  test  B3_hong_nhieu                760     0     760  {}
+vivos  test  B4_16khz                     760     0     760  {"so_file_doi": 0}
+vivos  test  B5_chuan_hoa_chu             760     0     760  {"so_cau_doi_chu": 760}
+vivos  test  KET_QUA                      760     0     760  {"gan_co": {"bi_cat_dinh_clipping": 21}}
+PhoMT train: {'truoc': 2977999, 'sau': 2977170, 'B2_cap_trung': 829, 'exclude_list_found': True}
+VIVOS kiểm leakage: {'nguoi_noi_o_ca_train_va_test': 0, 'cau_test_trung_chu_train': 178}
+
+Báo cáo (commit được): reports\data/lam_sach_*
+Dữ liệu sạch (không commit): data\clean/

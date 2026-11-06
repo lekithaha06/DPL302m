@@ -1,0 +1,7 @@
+{
+  "version": "V3",
+  "change_vs_V2": "Phần FLEURS của dữ liệu dạy thay bằng bản cân bằng của Uyên (can_bang_v1_so_lan.csv: lặp mẫu theo câu + nhóm độ dài, 2926 → 4468 mẫu lời ASR); giữ 4468 cặp PhoMT (tỉ lệ 1:1 đúng thiết kế V2 của Uyên). Siêu tham số giữ nguyên V2.",
+  "reason": "Mục 1.4 cần đo hiệu quả xử lý mất cân bằng (script của Uyên: phải train có/không cân bằng trên cùng dev/test). Phân tích lỗi dev: nhóm câu dài và tên riêng vẫn thấp hơn nhóm còn lại; cân bằng tăng tỉ trọng câu dài/ngắn hiếm và câu chỉ có 1 bản thu.",
+  "train": ["runs/mt_data/fleurs_train_asr_pho_canbang.jsonl", "runs/mt_data/phomt_train_mix.jsonl"],
+  "lr": 0.0002, "epochs": 5, "batch_size": 4, "grad_accum": 4, "seed": 42, "selection": "BLEU dev qua translate.py"
+}

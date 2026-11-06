@@ -1,0 +1,613 @@
+{
+  "ti_le_tap": [
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "so_mau": 2926,
+      "pct_mau": 70.61,
+      "gio": 8.856,
+      "pct_gio": 67.84,
+      "so_cau_goc": 1449,
+      "so_nguoi_noi": null
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "so_mau": 361,
+      "pct_mau": 8.71,
+      "gio": 1.194,
+      "pct_gio": 9.15,
+      "so_cau_goc": 149,
+      "so_nguoi_noi": null
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "so_mau": 857,
+      "pct_mau": 20.68,
+      "gio": 3.004,
+      "pct_gio": 23.01,
+      "so_cau_goc": 347,
+      "so_nguoi_noi": null
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "so_mau": 11656,
+      "pct_mau": 93.88,
+      "gio": 14.918,
+      "pct_gio": 95.24,
+      "so_cau_goc": 11656,
+      "so_nguoi_noi": 46
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "so_mau": 760,
+      "pct_mau": 6.12,
+      "gio": 0.746,
+      "pct_gio": 4.76,
+      "so_cau_goc": 760,
+      "so_nguoi_noi": 19
+    },
+    {
+      "dataset": "phomt",
+      "split": "train",
+      "so_mau": 2977170,
+      "pct_mau": 98.74,
+      "gio": null,
+      "pct_gio": null,
+      "so_cau_goc": 2977170,
+      "so_nguoi_noi": null
+    },
+    {
+      "dataset": "phomt",
+      "split": "dev",
+      "so_mau": 18719,
+      "pct_mau": 0.62,
+      "gio": null,
+      "pct_gio": null,
+      "so_cau_goc": 18719,
+      "so_nguoi_noi": null
+    },
+    {
+      "dataset": "phomt",
+      "split": "test",
+      "so_mau": 19151,
+      "pct_mau": 0.64,
+      "gio": null,
+      "pct_gio": null,
+      "so_cau_goc": 19151,
+      "so_nguoi_noi": null
+    }
+  ],
+  "nguoi_noi": {
+    "train": {
+      "so_nguoi_noi": 46,
+      "cau_moi_nguoi": {
+        "n": 46,
+        "mean": 253.39,
+        "median": 250.0,
+        "min": 100,
+        "p5": 117.35,
+        "p95": 300.0,
+        "max": 300
+      },
+      "ti_le_max_min": 3.0,
+      "pct_cau_cua_5_nguoi_nhieu_nhat": 12.87,
+      "dem": {
+        "VIVOSSPK13": 300,
+        "VIVOSSPK14": 300,
+        "VIVOSSPK15": 300,
+        "VIVOSSPK16": 300,
+        "VIVOSSPK17": 300,
+        "VIVOSSPK18": 300,
+        "VIVOSSPK19": 300,
+        "VIVOSSPK20": 300,
+        "VIVOSSPK21": 300,
+        "VIVOSSPK34": 300,
+        "VIVOSSPK40": 300,
+        "VIVOSSPK41": 300,
+        "VIVOSSPK42": 300,
+        "VIVOSSPK43": 300,
+        "VIVOSSPK44": 300,
+        "VIVOSSPK45": 300,
+        "VIVOSSPK46": 300,
+        "VIVOSSPK26": 299,
+        "VIVOSSPK22": 298,
+        "VIVOSSPK38": 292,
+        "VIVOSSPK31": 275,
+        "VIVOSSPK35": 261,
+        "VIVOSSPK01": 250,
+        "VIVOSSPK02": 250,
+        "VIVOSSPK03": 250,
+        "VIVOSSPK04": 250,
+        "VIVOSSPK05": 250,
+        "VIVOSSPK06": 250,
+        "VIVOSSPK07": 250,
+        "VIVOSSPK08": 250,
+        "VIVOSSPK09": 250,
+        "VIVOSSPK10": 250,
+        "VIVOSSPK11": 250,
+        "VIVOSSPK12": 250,
+        "VIVOSSPK27": 244,
+        "VIVOSSPK36": 225,
+        "VIVOSSPK33": 220,
+        "VIVOSSPK32": 214,
+        "VIVOSSPK29": 200,
+        "VIVOSSPK39": 184,
+        "VIVOSSPK25": 180,
+        "VIVOSSPK28": 170,
+        "VIVOSSPK30": 153,
+        "VIVOSSPK37": 131,
+        "VIVOSSPK23": 110,
+        "VIVOSSPK24": 100
+      }
+    },
+    "test": {
+      "so_nguoi_noi": 19,
+      "cau_moi_nguoi": {
+        "n": 19,
+        "mean": 40,
+        "median": 40,
+        "min": 40,
+        "p5": 40.0,
+        "p95": 40.0,
+        "max": 40
+      },
+      "ti_le_max_min": 1.0,
+      "pct_cau_cua_5_nguoi_nhieu_nhat": 26.32,
+      "dem": {
+        "VIVOSDEV02": 40,
+        "VIVOSDEV03": 40,
+        "VIVOSDEV01": 40,
+        "VIVOSDEV04": 40,
+        "VIVOSDEV05": 40,
+        "VIVOSDEV06": 40,
+        "VIVOSDEV07": 40,
+        "VIVOSDEV08": 40,
+        "VIVOSDEV09": 40,
+        "VIVOSDEV10": 40,
+        "VIVOSDEV11": 40,
+        "VIVOSDEV12": 40,
+        "VIVOSDEV13": 40,
+        "VIVOSDEV14": 40,
+        "VIVOSDEV15": 40,
+        "VIVOSDEV16": 40,
+        "VIVOSDEV17": 40,
+        "VIVOSDEV18": 40,
+        "VIVOSDEV19": 40
+      }
+    }
+  },
+  "gioi_tinh": [
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "don_vi": "mẫu",
+      "Nam": 752,
+      "Nữ": 2174,
+      "Không rõ": 0,
+      "pct_Nam": 25.7,
+      "pct_Nữ": 74.3,
+      "pct_Không rõ": 0.0
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "don_vi": "mẫu",
+      "Nam": 361,
+      "Nữ": 0,
+      "Không rõ": 0,
+      "pct_Nam": 100.0,
+      "pct_Nữ": 0.0,
+      "pct_Không rõ": 0.0
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "don_vi": "mẫu",
+      "Nam": 857,
+      "Nữ": 0,
+      "Không rõ": 0,
+      "pct_Nam": 100.0,
+      "pct_Nữ": 0.0,
+      "pct_Không rõ": 0.0
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "don_vi": "mẫu",
+      "Nam": 4999,
+      "Nữ": 6657,
+      "Không rõ": 0,
+      "pct_Nam": 42.89,
+      "pct_Nữ": 57.11,
+      "pct_Không rõ": 0.0
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "don_vi": "người nói",
+      "Nam": 22,
+      "Nữ": 24,
+      "Không rõ": 0,
+      "pct_Nam": 47.83,
+      "pct_Nữ": 52.17,
+      "pct_Không rõ": 0.0
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "don_vi": "mẫu",
+      "Nam": 480,
+      "Nữ": 280,
+      "Không rõ": 0,
+      "pct_Nam": 63.16,
+      "pct_Nữ": 36.84,
+      "pct_Không rõ": 0.0
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "don_vi": "người nói",
+      "Nam": 12,
+      "Nữ": 7,
+      "Không rõ": 0,
+      "pct_Nam": 63.16,
+      "pct_Nữ": 36.84,
+      "pct_Không rõ": 0.0
+    }
+  ],
+  "thoi_luong": {
+    "fleurs_train": {
+      "n": 2926,
+      "mean": 10.9,
+      "median": 10.38,
+      "min": 2.52,
+      "p5": 5.88,
+      "p95": 17.62,
+      "max": 42.18,
+      "pct_tren_30s": 0.14,
+      "so_tren_30s": 4
+    },
+    "fleurs_dev": {
+      "n": 361,
+      "mean": 11.91,
+      "median": 11.16,
+      "min": 4.32,
+      "p5": 6.0,
+      "p95": 21.32,
+      "max": 31.98,
+      "pct_tren_30s": 0.55,
+      "so_tren_30s": 2
+    },
+    "fleurs_test": {
+      "n": 857,
+      "mean": 12.62,
+      "median": 11.64,
+      "min": 4.98,
+      "p5": 6.96,
+      "p95": 21.38,
+      "max": 38.1,
+      "pct_tren_30s": 0.82,
+      "so_tren_30s": 7
+    },
+    "vivos_train": {
+      "n": 11656,
+      "mean": 4.61,
+      "median": 3.88,
+      "min": 0.81,
+      "p5": 2.06,
+      "p95": 9.34,
+      "max": 17.12,
+      "pct_tren_30s": 0.0,
+      "so_tren_30s": 0
+    },
+    "vivos_test": {
+      "n": 760,
+      "mean": 3.53,
+      "median": 3.47,
+      "min": 1.38,
+      "p5": 2.0,
+      "p95": 5.25,
+      "max": 7.84,
+      "pct_tren_30s": 0.0,
+      "so_tren_30s": 0
+    }
+  },
+  "ban_thu_moi_cau": {
+    "train": {
+      "so_cau": 1449,
+      "phan_bo": {
+        "1": 286,
+        "2": 849,
+        "3": 314
+      },
+      "pct": {
+        "1": 19.74,
+        "2": 58.59,
+        "3": 21.67
+      },
+      "trung_binh": 2.02
+    },
+    "dev": {
+      "so_cau": 149,
+      "phan_bo": {
+        "1": 13,
+        "2": 60,
+        "3": 76
+      },
+      "pct": {
+        "1": 8.72,
+        "2": 40.27,
+        "3": 51.01
+      },
+      "trung_binh": 2.42
+    },
+    "test": {
+      "so_cau": 347,
+      "phan_bo": {
+        "1": 34,
+        "2": 116,
+        "3": 197
+      },
+      "pct": {
+        "1": 9.8,
+        "2": 33.43,
+        "3": 56.77
+      },
+      "trung_binh": 2.47
+    }
+  },
+  "do_dai_cau": {
+    "fleurs_train_vi": {
+      "n": 2926,
+      "mean": 28.94,
+      "median": 28.0,
+      "min": 7,
+      "p5": 15.0,
+      "p95": 47.0,
+      "max": 75
+    },
+    "fleurs_train_en": {
+      "n": 2926,
+      "mean": 20.73,
+      "median": 20.0,
+      "min": 6,
+      "p5": 11.0,
+      "p95": 33.0,
+      "max": 60
+    },
+    "fleurs_dev_vi": {
+      "n": 361,
+      "mean": 28.87,
+      "median": 29,
+      "min": 9,
+      "p5": 14.0,
+      "p95": 50.0,
+      "max": 66
+    },
+    "fleurs_dev_en": {
+      "n": 361,
+      "mean": 20.2,
+      "median": 19,
+      "min": 8,
+      "p5": 10.0,
+      "p95": 32.0,
+      "max": 46
+    },
+    "fleurs_test_vi": {
+      "n": 857,
+      "mean": 30.36,
+      "median": 28,
+      "min": 12,
+      "p5": 15.0,
+      "p95": 52.0,
+      "max": 74
+    },
+    "fleurs_test_en": {
+      "n": 857,
+      "mean": 21.78,
+      "median": 21,
+      "min": 7,
+      "p5": 11.0,
+      "p95": 35.0,
+      "max": 52
+    },
+    "vivos_train_vi": {
+      "n": 11656,
+      "mean": 13.23,
+      "median": 12.0,
+      "min": 2,
+      "p5": 5.0,
+      "p95": 27.0,
+      "max": 30
+    },
+    "vivos_test_vi": {
+      "n": 760,
+      "mean": 10.16,
+      "median": 11.0,
+      "min": 2,
+      "p5": 5.0,
+      "p95": 15.0,
+      "max": 18
+    },
+    "phomt_train_vi": {
+      "n": 2977170,
+      "mean": 16.92,
+      "median": 12,
+      "min": 1,
+      "p5": 5,
+      "p95": 43,
+      "max": 1827
+    },
+    "phomt_train_en": {
+      "n": 2977170,
+      "mean": 13.26,
+      "median": 10,
+      "min": 1,
+      "p5": 4,
+      "p95": 33,
+      "max": 1346
+    },
+    "phomt_dev_vi": {
+      "n": 18719,
+      "mean": 16.77,
+      "median": 12,
+      "min": 1,
+      "p5": 5,
+      "p95": 43,
+      "max": 247
+    },
+    "phomt_dev_en": {
+      "n": 18719,
+      "mean": 13.08,
+      "median": 10,
+      "min": 1,
+      "p5": 4,
+      "p95": 32,
+      "max": 200
+    },
+    "phomt_test_vi": {
+      "n": 19151,
+      "mean": 17.84,
+      "median": 13,
+      "min": 2,
+      "p5": 5,
+      "p95": 45,
+      "max": 193
+    },
+    "phomt_test_en": {
+      "n": 19151,
+      "mean": 13.84,
+      "median": 10,
+      "min": 1,
+      "p5": 4,
+      "p95": 34,
+      "max": 122
+    }
+  },
+  "mien_phomt": [
+    {
+      "split": "train",
+      "mien": "OpenSubtitles",
+      "so_cap": 1529772,
+      "pct": 51.37
+    },
+    {
+      "split": "train",
+      "mien": "WikiHow",
+      "so_cap": 507379,
+      "pct": 17.04
+    },
+    {
+      "split": "train",
+      "mien": "MediaWiki",
+      "so_cap": 490505,
+      "pct": 16.47
+    },
+    {
+      "split": "train",
+      "mien": "TED-Talks",
+      "so_cap": 316808,
+      "pct": 10.64
+    },
+    {
+      "split": "train",
+      "mien": "Blogspot",
+      "so_cap": 92545,
+      "pct": 3.11
+    },
+    {
+      "split": "train",
+      "mien": "News",
+      "so_cap": 40990,
+      "pct": 1.38
+    },
+    {
+      "split": "dev",
+      "mien": "OpenSubtitles",
+      "so_cap": 9635,
+      "pct": 51.47
+    },
+    {
+      "split": "dev",
+      "mien": "WikiHow",
+      "so_cap": 3212,
+      "pct": 17.16
+    },
+    {
+      "split": "dev",
+      "mien": "MediaWiki",
+      "so_cap": 3024,
+      "pct": 16.15
+    },
+    {
+      "split": "dev",
+      "mien": "TED-Talks",
+      "so_cap": 1994,
+      "pct": 10.65
+    },
+    {
+      "split": "dev",
+      "mien": "Blogspot",
+      "so_cap": 597,
+      "pct": 3.19
+    },
+    {
+      "split": "dev",
+      "mien": "News",
+      "so_cap": 257,
+      "pct": 1.37
+    },
+    {
+      "split": "test",
+      "mien": "OpenSubtitles",
+      "so_cap": 9564,
+      "pct": 49.94
+    },
+    {
+      "split": "test",
+      "mien": "WikiHow",
+      "so_cap": 3246,
+      "pct": 16.95
+    },
+    {
+      "split": "test",
+      "mien": "MediaWiki",
+      "so_cap": 3270,
+      "pct": 17.07
+    },
+    {
+      "split": "test",
+      "mien": "TED-Talks",
+      "so_cap": 2000,
+      "pct": 10.44
+    },
+    {
+      "split": "test",
+      "mien": "Blogspot",
+      "so_cap": 814,
+      "pct": 4.25
+    },
+    {
+      "split": "test",
+      "mien": "News",
+      "so_cap": 257,
+      "pct": 1.34
+    }
+  ],
+  "mien_phomt_ti_le_max_min_train": 37.3,
+  "meta": {
+    "script": "viec3_eda.py",
+    "time_utc": "2026-10-29T19:28:39+00:00",
+    "versions": {
+      "python": "3.11.1",
+      "huggingface_hub": "0.24.6",
+      "requests": "2.34.2",
+      "matplotlib": "3.9.2"
+    },
+    "platform": "Windows-10-10.0.26200-SP0"
+  }
+}

@@ -1,0 +1,12 @@
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+13:14:58 Ô 2 'import os, sys, subprocess, glob\nfrom pathlib import Path\n\nG'
+13:14:59 Ô 4 'import hashlib, json\nc = json.loads((GOC / "configs/ban_chot'
+13:14:59 Ô 6 'chay("-m", "pytest", "-p", "no:cacheprovider", "-q", env=dic'
+13:15:05 Ô 8 'chay("tests/danh_gia_proposed.py", "--tap", "test", "--n", "'
+13:17:58 Ô 10 'chay("tests/danh_gia_proposed.py", "--tap", "test")'
+14:02:41 Ô 12 'from IPython.display import Markdown, display\nds = sorted(gl'
+14:02:41 Ô 14 'AUDIO = [r"D:\\CAIDCM\\teamwork\\kiem_repo_asr2\\audio_thay_the\\'
+14:04:29 Ô 16 'demo = subprocess.Popen([sys.executable, "app/gradio_app.py"'
+14:04:41 Ô 17 'dong = [l.strip() for l in (GOC / "demo.log").read_text(enco'
+14:04:41 Ô 19 'try:\n    demo.terminate(); demo.wait(10); print("Đã dừng dem'
+NB07_XONG

@@ -1,0 +1,12 @@
+04:44:25 START S8 V2
+{"epoch": 1, "dev_loss": 1.394544851416696, "dev_BLEU": 26.04, "dev_chrF++": 52.56, "minutes": 3.94, "peak_vram_bytes": 9295205888}
+{"epoch": 2, "dev_loss": 1.4733885800739404, "dev_BLEU": 25.62, "dev_chrF++": 52.03, "minutes": 3.74, "peak_vram_bytes": 9295205888}
+{"epoch": 3, "dev_loss": 1.6240766916909046, "dev_BLEU": 23.11, "dev_chrF++": 50.99, "minutes": 3.77, "peak_vram_bytes": 9295205888}
+{"epoch": 4, "dev_loss": 1.7980583777388046, "dev_BLEU": 21.34, "dev_chrF++": 50.07, "minutes": 3.91, "peak_vram_bytes": 9295205888}
+{"epoch": 5, "dev_loss": 1.9414868103830438, "dev_BLEU": 21.79, "dev_chrF++": 49.28, "minutes": 3.72, "peak_vram_bytes": 9295205888}
+best {'epoch': 1, 'dev_loss': 1.394544851416696, 'dev_BLEU': 26.04, 'dev_chrF++': 52.56, 'minutes': 3.94, 'peak_vram_bytes': 9295205888}
+05:03:39 END S8 V2 train
+{"BLEU": 26.25, "chrF++": 52.66, "n": 361}
+{"BLEU": 27.59, "chrF++": 53.07, "n": 857}
+{"BLEU": 38.1, "chrF++": 61.37, "n": 857}
+05:06:20 V2_DONE

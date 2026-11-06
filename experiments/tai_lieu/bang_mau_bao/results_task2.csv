@@ -1,0 +1,5 @@
+﻿run_id,model,dataset,split,n_expected,n_scored,WER_percent,CER_percent,S,D,I,N,Sc,Dc,Ic,Nc,rtf,latency_p50_s,latency_p95_s,gpu_peak_allocated_bytes,checkpoint_bytes,config_sha256,manifest_sha256,status
+,PhoWhisper-small,VIVOS,test,760,,,,,,,,,,,,,,,,,,,CHO_KIET
+,PhoWhisper-small,FLEURS_vi_vn,test,857,,,,,,,,,,,,,,,,,,,CHO_KIET
+,whisper-small,VIVOS,test,760,,,,,,,,,,,,,,,,,,,CHO_KIET
+,whisper-small,FLEURS_vi_vn,test,857,,,,,,,,,,,,,,,,,,,CHO_KIET

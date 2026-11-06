@@ -1,0 +1,30 @@
+{
+  "run_id": "kiet_t2_phowhisper-small_vivos_test",
+  "n": 760,
+  "status": "SCORED_PREDICTIONS_ONLY",
+  "normalizer_id": "vi_nfc_ps_space_v1",
+  "alignment_tie_order": "H S D I",
+  "WER_percent": 6.241906241906242,
+  "CER_percent": 3.254678600488202,
+  "word_counts": {
+    "S": 448,
+    "D": 21,
+    "I": 13,
+    "H": 7253,
+    "N": 7722
+  },
+  "char_counts": {
+    "S": 544,
+    "D": 167,
+    "I": 129,
+    "H": 25098,
+    "N": 25809
+  },
+  "predictions_sha256": "4208210cd8cf872b08ebcf9da078b641ac401a00482f1b248cbb9789512c9158",
+  "manifest_sha256": "b8f03af27b4d2cd3e36c29ba83a84c4880d16fb3aac481049ba92f69d97b21ac",
+  "scorer_sha256": "db74bc5e66c2a88b181a5ec062f5c01fe1478822dc43b60c74509f314c47f24a",
+  "run_fingerprints": [
+    "7f92e94d87586b1480ed147168b4ab60c7a45b4f861b28613485359df7518896"
+  ],
+  "note": "Không chứng nhận chất lượng audio, checkpoint hoặc timing; cần run metadata riêng."
+}

@@ -1,0 +1,24 @@
+{
+  "BLEU": 27.26,
+  "chrF++": 52.82,
+  "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3",
+  "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.4.3",
+  "n": 857,
+  "input": "runs\\mt_data\\fleurs_test_asr_pho.jsonl",
+  "input_sha256": "5a030810a3b6015f29da7b59c8e4d20c8ac87f9a87cfab246e0ac74f9aa4999e",
+  "model": "vinai/vinai-translate-vi2en-v2",
+  "revision": "ae7baa85da07dbe8e23ac26a9f5ef560c17e2138",
+  "adapter": "checkpoints/A_r8/best",
+  "decode": {
+    "num_beams": 5,
+    "max_new_tokens": 256,
+    "early_stopping": true,
+    "do_sample": false
+  },
+  "dtype": "float16 (adapter merge ở fp32)",
+  "batch_size": 16,
+  "n_oom_split": 0,
+  "elapsed_s_this_session": 173.1,
+  "n_new_this_session": 857,
+  "finished": "2026-11-04 02:57:18"
+}

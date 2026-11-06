@@ -1,0 +1,14 @@
+START 02:23:50
+
+FLEURS revision: 70bb2e84b976b7e960aa89f1c648e09c59f894dd
+tập       TSV    giữ   câu     giờ  bị bỏ
+train    2994   2994  1482   9.076  -
+dev       361    361   149   1.194  -
+test      857    857   347   3.004  -
+ID câu nằm ở nhiều tập: 0
+FLEURS test trùng PhoMT test: 0 câu; PhoMT train trùng FLEURS test: 0 dòng (ghi ở phomt_train_exclude_idx.txt)
+
+Manifest (có chữ, không commit): data\fleurs\manifest/
+Báo cáo (commit được): reports\data/
+EXIT 0
+END 02:24:33

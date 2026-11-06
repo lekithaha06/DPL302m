@@ -1,0 +1,37 @@
+{
+  "ban_chot": "V2",
+  "adapter": "checkpoints/V2/best",
+  "nguoi_quyet": "nhóm (04/11/2026), áp quy tắc DEV chốt trước khi chạy ablation",
+  "quy_tac": "experiments/reports/ablation/QUY_TAC_CHON.md: M = BLEU dev cascade cao nhất; nhóm hoà = các bản ≥ M − 0,5; trong nhóm hoà chọn BLEU dev dịch sạch cao nhất",
+  "ap_dung": {
+    "M": 26.71,
+    "nhom_hoa": [
+      "V2",
+      "V4",
+      "V3",
+      "V1"
+    ],
+    "dev_cascade": {
+      "V1": 26.47,
+      "V2": 26.45,
+      "V3": 26.71,
+      "V4": 26.33,
+      "A_r8": 25.97,
+      "A_r32": 25.88,
+      "A_aug": 24.6
+    },
+    "dev_sach": {
+      "V1": 35.97,
+      "V2": 36.93,
+      "V3": 36.37,
+      "V4": 36.75,
+      "A_r8": 36.74,
+      "A_r32": 36.44,
+      "A_aug": 37.3
+    }
+  },
+  "ket_qua": "V2: dev sạch 36.93 cao nhất trong nhóm hoà; ablation A_r8/A_r32/A_aug đều < M − 0,5 trên dev cascade",
+  "lich_su": "03/11 nhóm tạm chốt V4 (lý do dev sạch so với V3); 04/11 áp quy tắc đầy đủ cho V1–V4 + ablation → V2",
+  "khong_dung_diem_test_de_chon": true,
+  "nguon_so": "experiments/reports/ablation/chon_ban_cuoi.json; checkpoints/<bản>/best/dev_*/score.json"
+}

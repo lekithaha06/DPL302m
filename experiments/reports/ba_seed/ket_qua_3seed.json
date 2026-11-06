@@ -1,0 +1,41 @@
+{
+ "M_dev_cascade_tb": 26.64,
+ "nhom_hoa": [
+  "V1",
+  "V2"
+ ],
+ "quy_tac_tren_trung_binh_ra": "V2",
+ "ban_cuoi_giu_nguyen": "V2",
+ "doi_chung_phan_cung_V2_s42": {
+  "dev cascade": {
+   "seed 42 máy nhóm (torch 2.0.1)": 26.45,
+   "seed 42 Modal (train torch 2.7.1)": 25.66
+  },
+  "dev sạch": {
+   "seed 42 máy nhóm (torch 2.0.1)": 36.93,
+   "seed 42 Modal (train torch 2.7.1)": 36.87
+  },
+  "test cascade": {
+   "seed 42 máy nhóm (torch 2.0.1)": 27.47,
+   "seed 42 Modal (train torch 2.7.1)": 27.32
+  },
+  "test sạch": {
+   "seed 42 máy nhóm (torch 2.0.1)": 38.09,
+   "seed 42 Modal (train torch 2.7.1)": 37.91
+  },
+  "Whisper → dịch": {
+   "seed 42 máy nhóm (torch 2.0.1)": 19.68,
+   "seed 42 Modal (train torch 2.7.1)": 19.66
+  }
+ },
+ "epoch_tot_nhat": {
+  "V1_s1": 1,
+  "V1_s2": 1,
+  "V2_s1": 1,
+  "V2_s2": 1,
+  "V3_s1": 1,
+  "V3_s2": 1,
+  "V4_s1": 1,
+  "V4_s2": 4
+ }
+}

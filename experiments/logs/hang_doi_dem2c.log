@@ -1,0 +1,18 @@
+23:30:34 START train V3 (lr 2e-4)
+best {'epoch': 1, 'dev_loss': 1.4211246191299522, 'dev_BLEU': 26.59, 'dev_chrF++': 52.49, 'minutes': 13.39, 'peak_vram_bytes': 5994292736, 'ram_rss_bytes': 2151329792, 'dev_BLEU_translate': 26.71, 'de
+23:34:15 END train V3
+V3 fleurs_dev_asr_pho {"BLEU": 26.71, "chrF++": 52.5, "n": 361}
+V3 fleurs_test_asr_pho {"BLEU": 27.33, "chrF++": 52.25, "n": 857}
+V3 fleurs_test_clean {"BLEU": 36.76, "chrF++": 60.37, "n": 857}
+V3 fleurs_dev_clean {"BLEU": 36.37, "chrF++": 60.48, "n": 361}
+V3 phomt_test {"BLEU": 39.58, "chrF++": 59.8, "n": 19151}
+00:10:15 V4 base = V3 (dev V2 26.45, V3 26.71)
+00:10:15 START train V4 (lr 5e-5)
+best {'epoch': 1, 'dev_loss': 1.391740925424317, 'dev_BLEU': 26.2, 'dev_chrF++': 51.95, 'minutes': 9.87, 'peak_vram_bytes': 5994292736, 'ram_rss_bytes': 3140681728, 'dev_BLEU_translate': 26.33, 'dev_c
+01:09:05 END train V4
+V4 fleurs_dev_asr_pho {"BLEU": 26.33, "chrF++": 52.03, "n": 361}
+V4 fleurs_test_asr_pho {"BLEU": 27.37, "chrF++": 52.51, "n": 857}
+V4 fleurs_test_clean {"BLEU": 38.11, "chrF++": 61.07, "n": 857}
+V4 fleurs_dev_clean {"BLEU": 36.75, "chrF++": 60.75, "n": 361}
+V4 phomt_test {"BLEU": 40.08, "chrF++": 60.21, "n": 19151}
+01:31:58 DEM2C_DONE

@@ -1,0 +1,53 @@
+[
+  {
+    "repo": "vinai/PhoWhisper-small",
+    "revision_requested": "a86b604c346caf7148c37512eafe783a16420adb",
+    "sha": "a86b604c346caf7148c37512eafe783a16420adb",
+    "path": "D:/CAIDCM/teamwork/task3/hf_home/hub\\models--vinai--PhoWhisper-small\\snapshots\\a86b604c346caf7148c37512eafe783a16420adb",
+    "files": {
+      "added_tokens.json": 2082,
+      "config.json": 1329,
+      "generation_config.json": 3832,
+      "merges.txt": 493864,
+      "normalizer.json": 52666,
+      "preprocessor_config.json": 339,
+      "pytorch_model.bin": 967102729,
+      "special_tokens_map.json": 2077,
+      "tokenizer.json": 2204003,
+      "tokenizer_config.json": 805,
+      "vocab.json": 835550
+    }
+  },
+  {
+    "repo": "openai/whisper-small",
+    "revision_requested": "973afd24965f72e36ca33b3055d56a652f456b4d",
+    "sha": "973afd24965f72e36ca33b3055d56a652f456b4d",
+    "path": "D:/CAIDCM/teamwork/task3/hf_home/hub\\models--openai--whisper-small\\snapshots\\973afd24965f72e36ca33b3055d56a652f456b4d",
+    "files": {
+      "added_tokens.json": 34604,
+      "config.json": 1967,
+      "generation_config.json": 3868,
+      "merges.txt": 493869,
+      "model.safetensors": 966995080,
+      "normalizer.json": 52666,
+      "preprocessor_config.json": 184990,
+      "pytorch_model.bin": 967092419,
+      "special_tokens_map.json": 2194,
+      "tokenizer.json": 2480466,
+      "tokenizer_config.json": 282683,
+      "vocab.json": 835550
+    }
+  },
+  {
+    "repo": "vinai/vinai-translate-vi2en-v2",
+    "revision_requested": "main",
+    "sha": "ae7baa85da07dbe8e23ac26a9f5ef560c17e2138",
+    "path": "D:/CAIDCM/teamwork/task3/hf_home/hub\\models--vinai--vinai-translate-vi2en-v2\\snapshots\\ae7baa85da07dbe8e23ac26a9f5ef560c17e2138",
+    "files": {
+      "config.json": 1411,
+      "generation_config.json": 200,
+      "pytorch_model.bin": 1693231033,
+      "sentencepiece.bpe.model": 1411795
+    }
+  }
+]

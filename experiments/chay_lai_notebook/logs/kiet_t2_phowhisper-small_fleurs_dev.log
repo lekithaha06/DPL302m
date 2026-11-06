@@ -1,0 +1,12 @@
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+You have passed task=transcribe, but also have set `forced_decoder_ids` to [[1, None], [2, 50359]] which creates a conflict. `forced_decoder_ids` will be ignored in favor of task=transcribe.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[kiet_t2_phowhisper-small_fleurs_dev] 50/361
+[kiet_t2_phowhisper-small_fleurs_dev] 100/361
+[kiet_t2_phowhisper-small_fleurs_dev] 150/361
+[kiet_t2_phowhisper-small_fleurs_dev] 200/361
+[kiet_t2_phowhisper-small_fleurs_dev] 250/361
+[kiet_t2_phowhisper-small_fleurs_dev] 300/361
+[kiet_t2_phowhisper-small_fleurs_dev] 350/361
+[kiet_t2_phowhisper-small_fleurs_dev] xong: 361/361 (mới 361)

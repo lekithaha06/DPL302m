@@ -1,0 +1,10 @@
+12:08:00 BẮT ĐẦU 03_B1_whisper_translate.ipynb
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+12:08:37 XONG 03_B1_whisper_translate.ipynb (0.6 phút)
+12:08:37 BẮT ĐẦU 04_ablation_proposed.ipynb
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+12:08:42 XONG 04_ablation_proposed.ipynb (0.1 phút)
+12:08:42 BẮT ĐẦU 05_danh_gia_tong_hop.ipynb
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+12:08:46 XONG 05_danh_gia_tong_hop.ipynb (0.1 phút)
+TAT_CA_XONG

@@ -1,0 +1,13 @@
+NGHE KIỂM AUDIO (khoảng 15–20 phút)
+
+1. Mở nghe_kiem.html bằng trình duyệt (Chrome/Edge): mỗi mục có nút phát, câu gốc và câu 2 model nhận ra.
+   Hoặc mở thẳng file trong thư mục audio/ bằng trình phát nhạc.
+2. Mở danh_sach_nghe_kiem.csv bằng Excel, mỗi dòng điền:
+   - NGUOI_NGHE_dien: tên người nghe
+   - nghe_ro_khong: ro / kho_nghe / nhieu
+   - cau_goc_dung_voi_audio: dung, hoặc ghi chỗ người nói đọc khác câu gốc
+   - nguoi_noi_noi_den_giay_may: với 7 bản dài, người nói dừng ở khoảng giây thứ mấy
+   - loi_la_do: model_nghe_sai / nhan_sai / audio_kem / ao_giac (có thể ghi nhiều)
+   - nhan_xet: tự do
+3. Lưu lại (giữ định dạng CSV UTF-8). Kiệt/Claude sẽ đọc file này để điền ô 'đã nghe audio' trong slide/báo cáo của Bảo.
+Lưu ý: chỉ ghi điều nghe thấy thật; chỗ nào không chắc ghi 'khong_chac'.

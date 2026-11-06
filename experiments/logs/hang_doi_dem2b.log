@@ -1,0 +1,13 @@
+21:33:39 START H4 kiet_t2_whisper-small_fleurs_dev
+[kiet_t2_whisper-small_fleurs_dev] xong: 361/361 (mới 361)
+  "WER_percent": 20.044137401650357,
+  "CER_percent": 11.79055087455855,
+21:44:36 START H4 kiet_t2_whisper-small_fleurs_dev_beam1
+[kiet_t2_whisper-small_fleurs_dev_beam1] xong: 361/361 (mới 361)
+  "WER_percent": 27.88332373824602,
+  "CER_percent": 16.237034565223436,
+21:55:34 START S9 toc do B0
+{"n": 100, "audio_s": 1254.8, "RTF_total": 0.244, "RTF_asr": 0.168, "RTF_mt": 0.076, "latency_p50_s": 2.93, "latency_p95_s": 5.38, "latency_mean_s": 3.07, "asr_mean_s": 2.11, "mt_mean_s": 0.96, "gpu_peak_allocated_bytes": 1682551808, "ram_rss_peak_bytes": 2810961920, "ram_sampling": "RSS ti\u1ebfn tr\u00ecnh Python, l\u1ea5y m\u1eabu m\u1ed7i 0,5 s trong l\u00fac \u0111o", "asr_checkpoint_bytes": 
+22:01:12 START S9 toc do V2
+{"n": 100, "audio_s": 1254.8, "RTF_total": 0.211, "RTF_asr": 0.147, "RTF_mt": 0.064, "latency_p50_s": 2.43, "latency_p95_s": 4.47, "latency_mean_s": 2.64, "asr_mean_s": 1.85, "mt_mean_s": 0.8, "gpu_peak_allocated_bytes": 1682551808, "ram_rss_peak_bytes": 2833797120, "ram_sampling": "RSS ti\u1ebfn tr\u00ecnh Python, l\u1ea5y m\u1eabu m\u1ed7i 0,5 s trong l\u00fac \u0111o", "asr_checkpoint_bytes": 9
+22:06:04 DEM2B_DONE

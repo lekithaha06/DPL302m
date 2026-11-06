@@ -1,0 +1,24 @@
+{
+  "BLEU": 40.27,
+  "chrF++": 60.26,
+  "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3",
+  "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.4.3",
+  "n": 19151,
+  "input": "runs\\mt_data\\phomt_test.jsonl",
+  "input_sha256": "3a95cf917ad4e8a588ab073f776cd0622a19ea5b3f8c8630d1815a1e8a41850b",
+  "model": "vinai/vinai-translate-vi2en-v2",
+  "revision": "ae7baa85da07dbe8e23ac26a9f5ef560c17e2138",
+  "adapter": "checkpoints/A_r32/best",
+  "decode": {
+    "num_beams": 5,
+    "max_new_tokens": 256,
+    "early_stopping": true,
+    "do_sample": false
+  },
+  "dtype": "float16 (adapter merge ở fp32)",
+  "batch_size": 16,
+  "n_oom_split": 0,
+  "elapsed_s_this_session": 816.8,
+  "n_new_this_session": 19151,
+  "finished": "2026-11-04 03:29:07"
+}

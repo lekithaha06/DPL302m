@@ -1,0 +1,40 @@
+{
+ "mo_hinh": "vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best",
+ "tap": "fleurs_test",
+ "cau_hinh": {
+  "truoc_0411": {
+   "cat_tai_lang": false,
+   "bo_lap": false,
+   "doi_so": false
+  },
+  "proposed": {
+   "cat_tai_lang": true,
+   "bo_lap": true,
+   "doi_so": true
+  }
+ },
+ "truoc_0411": {
+  "tat_ca": {
+   "n": 50,
+   "WER_asr": 8.98,
+   "CER_asr": 6.69,
+   "WER_sau_doi_so": 8.98,
+   "RTF": 0.1258,
+   "BLEU": 28.15,
+   "chrF++": 54.25,
+   "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3"
+  }
+ },
+ "proposed": {
+  "tat_ca": {
+   "n": 50,
+   "WER_asr": 8.98,
+   "CER_asr": 6.69,
+   "WER_sau_doi_so": 7.71,
+   "RTF": 0.1332,
+   "BLEU": 28.08,
+   "chrF++": 54.25,
+   "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3"
+  }
+ }
+}

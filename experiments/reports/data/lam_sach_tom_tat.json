@@ -1,0 +1,378 @@
+{
+  "script": "viec2_lam_sach_du_lieu.py",
+  "time_utc": "2026-10-29T19:28:11+00:00",
+  "args": {
+    "data_dir": "data",
+    "report_dir": "reports\\data",
+    "phomt_dir": "data\\phomt",
+    "bo_vivos": "False",
+    "bo_phomt": "False",
+    "limit": "0",
+    "min_dur": "0.3",
+    "silence_dbfs": "-60.0",
+    "max_dur_flag": "30.0",
+    "mismatch_tol": "0.01"
+  },
+  "versions": {
+    "python": "3.11.1",
+    "huggingface_hub": "0.24.6",
+    "requests": "2.34.2",
+    "numpy": "1.26.4",
+    "soundfile": "0.12.1",
+    "scipy": "1.13.1"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "nhom_audio_trung_noi_dung": 0,
+  "vivos_kiem_leakage": {
+    "nguoi_noi_o_ca_train_va_test": 0,
+    "cau_test_trung_chu_train": 178
+  },
+  "nguong_toc_do_noi_ky_tu_moi_giay": {
+    "fleurs": [
+      1.03,
+      16.88
+    ],
+    "vivos": [
+      -3.33,
+      22.65
+    ]
+  },
+  "phomt_train": {
+    "truoc": 2977999,
+    "sau": 2977170,
+    "B2_cap_trung": 829,
+    "exclude_list_found": true
+  },
+  "bang": [
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "B0_ghep_chong_leakage",
+      "ten_buoc": "Ghép vi-en + chống leakage (viec2_ghep)",
+      "truoc": 2994,
+      "bi_loai": 0,
+      "sau": 2994,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "B1_thieu",
+      "ten_buoc": "Thiếu audio / nhãn",
+      "truoc": 2994,
+      "bi_loai": 67,
+      "sau": 2927,
+      "chi_tiet": "{\"thieu_cau_en\": 67}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "B2_trung",
+      "ten_buoc": "Trùng lặp",
+      "truoc": 2927,
+      "bi_loai": 0,
+      "sau": 2927,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "B3_hong_nhieu",
+      "ten_buoc": "Audio hỏng / nhiễu",
+      "truoc": 2927,
+      "bi_loai": 1,
+      "sau": 2926,
+      "chi_tiet": "{\"im_lang_<-60.0dBFS\": 1}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "B4_16khz",
+      "ten_buoc": "Đổi về 16 kHz mono",
+      "truoc": 2926,
+      "bi_loai": 0,
+      "sau": 2926,
+      "chi_tiet": "{\"FLOAT->PCM_16\": 2926, \"so_file_doi\": 2926}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "B5_chuan_hoa_chu",
+      "ten_buoc": "Chuẩn hoá chữ",
+      "truoc": 2926,
+      "bi_loai": 0,
+      "sau": 2926,
+      "chi_tiet": "{\"so_cau_doi_chu\": 2926}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "train",
+      "buoc": "KET_QUA",
+      "ten_buoc": "Sạch (giữ lại)",
+      "truoc": 2926,
+      "bi_loai": 0,
+      "sau": 2926,
+      "chi_tiet": "{\"gan_co\": {\"bi_cat_dinh_clipping\": 404, \"dai_>30.0s\": 4}}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "B0_ghep_chong_leakage",
+      "ten_buoc": "Ghép vi-en + chống leakage (viec2_ghep)",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "B1_thieu",
+      "ten_buoc": "Thiếu audio / nhãn",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "B2_trung",
+      "ten_buoc": "Trùng lặp",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "B3_hong_nhieu",
+      "ten_buoc": "Audio hỏng / nhiễu",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "B4_16khz",
+      "ten_buoc": "Đổi về 16 kHz mono",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{\"FLOAT->PCM_16\": 361, \"so_file_doi\": 361}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "B5_chuan_hoa_chu",
+      "ten_buoc": "Chuẩn hoá chữ",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{\"so_cau_doi_chu\": 361}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "dev",
+      "buoc": "KET_QUA",
+      "ten_buoc": "Sạch (giữ lại)",
+      "truoc": 361,
+      "bi_loai": 0,
+      "sau": 361,
+      "chi_tiet": "{\"gan_co\": {\"dai_>30.0s\": 2}}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "B0_ghep_chong_leakage",
+      "ten_buoc": "Ghép vi-en + chống leakage (viec2_ghep)",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "B1_thieu",
+      "ten_buoc": "Thiếu audio / nhãn",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "B2_trung",
+      "ten_buoc": "Trùng lặp",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "B3_hong_nhieu",
+      "ten_buoc": "Audio hỏng / nhiễu",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "B4_16khz",
+      "ten_buoc": "Đổi về 16 kHz mono",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{\"FLOAT->PCM_16\": 857, \"so_file_doi\": 857}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "B5_chuan_hoa_chu",
+      "ten_buoc": "Chuẩn hoá chữ",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{\"so_cau_doi_chu\": 857}"
+    },
+    {
+      "dataset": "fleurs",
+      "split": "test",
+      "buoc": "KET_QUA",
+      "ten_buoc": "Sạch (giữ lại)",
+      "truoc": 857,
+      "bi_loai": 0,
+      "sau": 857,
+      "chi_tiet": "{\"gan_co\": {\"dai_>30.0s\": 7}}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "buoc": "B1_thieu",
+      "ten_buoc": "Thiếu audio / nhãn",
+      "truoc": 11660,
+      "bi_loai": 0,
+      "sau": 11660,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "buoc": "B2_trung",
+      "ten_buoc": "Trùng lặp",
+      "truoc": 11660,
+      "bi_loai": 0,
+      "sau": 11660,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "buoc": "B3_hong_nhieu",
+      "ten_buoc": "Audio hỏng / nhiễu",
+      "truoc": 11660,
+      "bi_loai": 4,
+      "sau": 11656,
+      "chi_tiet": "{\"im_lang_<-60.0dBFS\": 4}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "buoc": "B4_16khz",
+      "ten_buoc": "Đổi về 16 kHz mono",
+      "truoc": 11656,
+      "bi_loai": 0,
+      "sau": 11656,
+      "chi_tiet": "{\"so_file_doi\": 0}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "buoc": "B5_chuan_hoa_chu",
+      "ten_buoc": "Chuẩn hoá chữ",
+      "truoc": 11656,
+      "bi_loai": 0,
+      "sau": 11656,
+      "chi_tiet": "{\"so_cau_doi_chu\": 11656}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "train",
+      "buoc": "KET_QUA",
+      "ten_buoc": "Sạch (giữ lại)",
+      "truoc": 11656,
+      "bi_loai": 0,
+      "sau": 11656,
+      "chi_tiet": "{\"gan_co\": {\"bi_cat_dinh_clipping\": 300, \"toc_do_noi_bat_thuong\": 2}}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "buoc": "B1_thieu",
+      "ten_buoc": "Thiếu audio / nhãn",
+      "truoc": 760,
+      "bi_loai": 0,
+      "sau": 760,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "buoc": "B2_trung",
+      "ten_buoc": "Trùng lặp",
+      "truoc": 760,
+      "bi_loai": 0,
+      "sau": 760,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "buoc": "B3_hong_nhieu",
+      "ten_buoc": "Audio hỏng / nhiễu",
+      "truoc": 760,
+      "bi_loai": 0,
+      "sau": 760,
+      "chi_tiet": "{}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "buoc": "B4_16khz",
+      "ten_buoc": "Đổi về 16 kHz mono",
+      "truoc": 760,
+      "bi_loai": 0,
+      "sau": 760,
+      "chi_tiet": "{\"so_file_doi\": 0}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "buoc": "B5_chuan_hoa_chu",
+      "ten_buoc": "Chuẩn hoá chữ",
+      "truoc": 760,
+      "bi_loai": 0,
+      "sau": 760,
+      "chi_tiet": "{\"so_cau_doi_chu\": 760}"
+    },
+    {
+      "dataset": "vivos",
+      "split": "test",
+      "buoc": "KET_QUA",
+      "ten_buoc": "Sạch (giữ lại)",
+      "truoc": 760,
+      "bi_loai": 0,
+      "sau": 760,
+      "chi_tiet": "{\"gan_co\": {\"bi_cat_dinh_clipping\": 21}}"
+    }
+  ]
+}

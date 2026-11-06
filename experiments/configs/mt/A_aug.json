@@ -1,0 +1,22 @@
+{
+ "version": "A_aug",
+ "base": "V2",
+ "change_vs_V2": "+ 2.926 cặp transcript sạch FLEURS train dạng ASR (augmentation)",
+ "train": [
+  "runs/mt_data/fleurs_train_asr_pho.jsonl",
+  "runs/mt_data/phomt_train_mix.jsonl",
+  "runs/mt_data/fleurs_train_clean_asrstyle.jsonl"
+ ],
+ "lora_r": 16,
+ "lora_alpha": 32,
+ "epochs": 5,
+ "lr": 0.0002,
+ "batch_size": 4,
+ "grad_accum": 4,
+ "warmup_ratio": 0.06,
+ "lora_dropout": 0.05,
+ "targets": "q_proj,k_proj,v_proj,out_proj,fc1,fc2",
+ "max_len": 256,
+ "seed": 42,
+ "selection": "epoch: BLEU dev cascade qua translate.py; bản cuối: reports/ablation/QUY_TAC_CHON.md"
+}

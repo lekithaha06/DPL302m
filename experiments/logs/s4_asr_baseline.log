@@ -1,0 +1,91 @@
+02:30:08 START kiet_t2_phowhisper-small_vivos_test
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+[kiet_t2_phowhisper-small_vivos_test] 50/760
+[kiet_t2_phowhisper-small_vivos_test] 100/760
+[kiet_t2_phowhisper-small_vivos_test] 150/760
+[kiet_t2_phowhisper-small_vivos_test] 200/760
+[kiet_t2_phowhisper-small_vivos_test] 250/760
+[kiet_t2_phowhisper-small_vivos_test] 300/760
+[kiet_t2_phowhisper-small_vivos_test] 350/760
+[kiet_t2_phowhisper-small_vivos_test] 400/760
+[kiet_t2_phowhisper-small_vivos_test] 450/760
+[kiet_t2_phowhisper-small_vivos_test] 500/760
+[kiet_t2_phowhisper-small_vivos_test] 550/760
+[kiet_t2_phowhisper-small_vivos_test] 600/760
+[kiet_t2_phowhisper-small_vivos_test] 650/760
+[kiet_t2_phowhisper-small_vivos_test] 700/760
+[kiet_t2_phowhisper-small_vivos_test] 750/760
+[kiet_t2_phowhisper-small_vivos_test] xong: 760/760 (mới 760)
+  "n": 760,
+  "WER_percent": 6.241906241906242,
+  "CER_percent": 3.254678600488202,
+02:35:47 END kiet_t2_phowhisper-small_vivos_test
+02:35:47 START kiet_t2_phowhisper-small_fleurs_test
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+[kiet_t2_phowhisper-small_fleurs_test] 50/857
+[kiet_t2_phowhisper-small_fleurs_test] 100/857
+[kiet_t2_phowhisper-small_fleurs_test] 150/857
+[kiet_t2_phowhisper-small_fleurs_test] 200/857
+[kiet_t2_phowhisper-small_fleurs_test] 250/857
+[kiet_t2_phowhisper-small_fleurs_test] 300/857
+[kiet_t2_phowhisper-small_fleurs_test] 350/857
+[kiet_t2_phowhisper-small_fleurs_test] 400/857
+[kiet_t2_phowhisper-small_fleurs_test] 450/857
+[kiet_t2_phowhisper-small_fleurs_test] 500/857
+[kiet_t2_phowhisper-small_fleurs_test] 550/857
+[kiet_t2_phowhisper-small_fleurs_test] 600/857
+[kiet_t2_phowhisper-small_fleurs_test] 650/857
+[kiet_t2_phowhisper-small_fleurs_test] 700/857
+[kiet_t2_phowhisper-small_fleurs_test] 750/857
+[kiet_t2_phowhisper-small_fleurs_test] 800/857
+[kiet_t2_phowhisper-small_fleurs_test] 850/857
+[kiet_t2_phowhisper-small_fleurs_test] xong: 857/857 (mới 857)
+  "n": 857,
+  "WER_percent": 13.677414396064718,
+  "CER_percent": 9.876474329647277,
+02:52:29 END kiet_t2_phowhisper-small_fleurs_test
+02:52:29 START kiet_t2_whisper-small_vivos_test
+[kiet_t2_whisper-small_vivos_test] 50/760
+[kiet_t2_whisper-small_vivos_test] 100/760
+[kiet_t2_whisper-small_vivos_test] 150/760
+[kiet_t2_whisper-small_vivos_test] 200/760
+[kiet_t2_whisper-small_vivos_test] 250/760
+[kiet_t2_whisper-small_vivos_test] 300/760
+[kiet_t2_whisper-small_vivos_test] 350/760
+[kiet_t2_whisper-small_vivos_test] 400/760
+[kiet_t2_whisper-small_vivos_test] 450/760
+[kiet_t2_whisper-small_vivos_test] 500/760
+[kiet_t2_whisper-small_vivos_test] 550/760
+[kiet_t2_whisper-small_vivos_test] 600/760
+[kiet_t2_whisper-small_vivos_test] 650/760
+[kiet_t2_whisper-small_vivos_test] 700/760
+[kiet_t2_whisper-small_vivos_test] 750/760
+[kiet_t2_whisper-small_vivos_test] xong: 760/760 (mới 760)
+  "n": 760,
+  "WER_percent": 25.990675990675992,
+  "CER_percent": 16.494246193188424,
+02:57:33 END kiet_t2_whisper-small_vivos_test
+02:57:33 START kiet_t2_whisper-small_fleurs_test
+[kiet_t2_whisper-small_fleurs_test] 50/857
+[kiet_t2_whisper-small_fleurs_test] 100/857
+[kiet_t2_whisper-small_fleurs_test] 150/857
+[kiet_t2_whisper-small_fleurs_test] 200/857
+[kiet_t2_whisper-small_fleurs_test] 250/857
+[kiet_t2_whisper-small_fleurs_test] 300/857
+[kiet_t2_whisper-small_fleurs_test] 350/857
+[kiet_t2_whisper-small_fleurs_test] 400/857
+[kiet_t2_whisper-small_fleurs_test] 450/857
+[kiet_t2_whisper-small_fleurs_test] 500/857
+[kiet_t2_whisper-small_fleurs_test] 550/857
+[kiet_t2_whisper-small_fleurs_test] 600/857
+[kiet_t2_whisper-small_fleurs_test] 650/857
+[kiet_t2_whisper-small_fleurs_test] 700/857
+[kiet_t2_whisper-small_fleurs_test] 750/857
+[kiet_t2_whisper-small_fleurs_test] 800/857
+[kiet_t2_whisper-small_fleurs_test] 850/857
+[kiet_t2_whisper-small_fleurs_test] xong: 857/857 (mới 857)
+  "n": 857,
+  "WER_percent": 21.236693439913914,
+  "CER_percent": 12.256603099858285,
+03:12:01 END kiet_t2_whisper-small_fleurs_test
+ALL_DONE

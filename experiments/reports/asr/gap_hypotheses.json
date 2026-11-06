@@ -1,0 +1,27 @@
+{
+  "H1": {
+    "status": "CO_BANG_CHUNG",
+    "ket_qua": "PhoWhisper VIVOS 6,24% vs FLEURS 13,68%; FLEURS chỉ tính ≤ 30 s vẫn 12,18%. WER FLEURS tăng theo độ dài: 5–15 s 10,58 → 15–30 s 15,24 → > 30 s 94,70. Quan sát trên hai corpus, không xác lập nhân quả.",
+    "nguon": "reports/asr/strata.csv"
+  },
+  "H2": {
+    "status": "MOT_PHAN",
+    "ket_qua": "Câu có chữ số: WER 27,43% (chèn 759) vs câu không tên/số 5,89%. Nghe kiểm mục 10: người đọc nói 'tám không hai' cho '802', model ghi đúng âm → lỗi do cách viết. Chưa chạy chấm lại bằng mapping số khoá từ dev.",
+    "nguon": "reports/asr/strata.csv; nghe_kiem/danh_sach_nghe_kiem.csv"
+  },
+  "H3": {
+    "status": "CO_BANG_CHUNG",
+    "ket_qua": "Ghép cặp cùng ID, bootstrap cụm 1000 lần: Whisper − PhoWhisper = +19,75 [15,00; 28,06] (VIVOS), +7,56 [5,26; 9,83] (FLEURS). Thay thế chỉ sai dấu: PhoWhisper 53/118 vs Whisper 217/419 (VIVOS/FLEURS). Câu có tên riêng (heuristic): 16,52 vs 21,71. PhoWhisper đã thấy VIVOS train → không tách được kiến trúc với dữ liệu.",
+    "nguon": "reports/asr/bootstrap_wer_H3.json; tone_confusion_*.csv"
+  },
+  "H4": {
+    "status": "DA_KIEM",
+    "ket_qua": "FLEURS dev, chỉ đổi num_beams: bản thu ≤ 30 s PhoWhisper beam 5/1 = 10,70/10,91; Whisper 19,90/27,82 (beam 1 có 2 bản chạm cap 440). Beam 1 không nhanh hơn rõ (Whisper RTF 0,147 vs 0,144). → Giữ beam 5.",
+    "nguon": "runs/asr/kiet_t2_*_fleurs_dev*, NHAT_KY.md"
+  },
+  "H5": {
+    "status": "KHONG_UNG_HO",
+    "ket_qua": "7/7 bản > 30 s có output, coverage phủ hết audio, không cắt 30 s; nhóm > 30 s: D = 2, I = 401 / N = 472 → lỗi là CHÈN (lặp/sai đoạn sau 30 s), không phải thiếu từ. 3/7 chạm cap 440. Nghe kiểm: nói đến gần hết file (dừng khi còn khoảng 1 s) hoặc nói đến hết (người nghe nhận xét chung cho mục 1–7).",
+    "nguon": "reports/asr/long_form_audit.csv; nghe_kiem/"
+  }
+}

@@ -1,46 +1,53 @@
-# Dữ liệu và trọng số: tải bằng script, không đẩy lên Git
+# Du lieu va trong so: khong day len Git (data/ khoang 12 GB, model 2,69 GB)
 data/*
 !data/README.md
 !data/*.py
-checkpoints/*
-!checkpoints/.gitkeep
-.work/
-runs/
-outputs/
-*.bin
+!data/*.sh
+# Giu adapter LoRA cua moi ban: ket qua chinh cua de tai (ban cuoi V2)
+hf_home/
 *.safetensors
-*.h5
+!checkpoints/**/adapter_model.safetensors
+*.bin
 *.pt
-*.pth
 *.ckpt
 
-# Âm thanh và file nén
+# Audio va ket qua chay
 *.wav
 *.mp3
 *.flac
-*.zip
-*.tar
-*.tar.gz
-
-# Checkpoint tạm khi chạy ASR trong cascade
-reports/**/asr_checkpoint.json
+*.m4a
+/runs/
 
 # Python
 __pycache__/
 *.py[cod]
 .venv/
 venv/
-.ipynb_checkpoints/
+*.egg-info/
 .pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
 
-# Tài liệu môn học (giữ ở máy)
-*.docx
-*.pptx
-~$*
+# Gradio
+.gradio/
+flagged/
 
-# OS / IDE
+# He thong
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
+.vscode/
+*.swp
+
+# Bi mat
 .env
+.env.*
+!.env.example
+
+# Ket qua nghiem thu (tests/nghiem_thu_that.py)
+/nghiem_thu/
+/danh_gia/
+mic_luu/
+tests/bo_cau_tu_thu/*.wav

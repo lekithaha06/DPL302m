@@ -1,0 +1,30 @@
+{
+  "run_id": "robust_pho_noise_snr10",
+  "n": 857,
+  "status": "SCORED_PREDICTIONS_ONLY",
+  "normalizer_id": "vi_nfc_ps_space_v1",
+  "alignment_tie_order": "H S D I",
+  "WER_percent": 17.0170247108105,
+  "CER_percent": 12.110425477308993,
+  "word_counts": {
+    "S": 2796,
+    "D": 131,
+    "I": 1501,
+    "H": 23094,
+    "N": 26021
+  },
+  "char_counts": {
+    "S": 5414,
+    "D": 1240,
+    "I": 4199,
+    "H": 82963,
+    "N": 89617
+  },
+  "predictions_sha256": "daeb53977913a12c4a28b5b06bb0e9858570cc51f20d9e8029df43b9cc75fed3",
+  "manifest_sha256": "d210565c3da870cee775c54c01416786abb593c060fd51083dfa7dba6464a44e",
+  "scorer_sha256": "db74bc5e66c2a88b181a5ec062f5c01fe1478822dc43b60c74509f314c47f24a",
+  "run_fingerprints": [
+    "b6882abce161aa7f04f42df09c5f011459a8295cb56882f9e51ce002fd33e566"
+  ],
+  "note": "Không chứng nhận chất lượng audio, checkpoint hoặc timing; cần run metadata riêng."
+}

@@ -1,0 +1,6 @@
+﻿id,hypothesis,test,support_if,limit,status
+H1,Miền và độ dài góp phần làm WER khác giữa VIVOS và FLEURS,Cùng model protocol; phân tầng độ dài và tên số; đối chiếu deletion rate,Chênh tồn tại sau phân tầng; >30s có D cao hơn,Quan sát hai corpus không xác lập nhân quả; kiểm xử lý dài trước,CHUA_KIEM_CHUNG
+H2,Sai khác chuẩn hóa số gây phần đáng kể gap,Chấm cùng raw predictions bằng strict và mapping số đã khóa từ dev,WER đổi tập trung ở span số; transcript raw không đổi,Không thay metric chính bằng metric thuận lợi; cần audit nghĩa,CHUA_KIEM_CHUNG
+H3,Checkpoint chuyên tiếng Việt giảm lỗi dấu và tên riêng,Paired same IDs; tone-only substitution; entity span error; cluster CI,Giảm WER và lỗi nhóm tương ứng trên test,Không tách được tác động kiến trúc khỏi dữ liệu fine-tune; VIVOS seen-domain,CHUA_KIEM_CHUNG
+H4,Beam 5 và greedy có khác biệt chất lượng tốc độ,Đổi riêng num_beams 5->1 trên dev cùng máy; khóa test sau chọn,Đo được delta WER và RTF,Không gán gap cho beam khi chưa đo; không tuning test,CHUA_KIEM_CHUNG
+H5,Cắt audio hoặc giới hạn token làm tăng thiếu từ,Audit 7 test >30s; log audio coverage; token cap; kiểm lỗi đuôi câu,Các mẫu coverage thiếu có D tập trung cuối câu,"Nếu phát hiện truncation, sửa protocol và chạy lại toàn bộ cặp model",CHUA_KIEM_CHUNG

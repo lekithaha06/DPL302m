@@ -1,0 +1,8 @@
+﻿dataset,split,don_vi,Nam,Nữ,Không rõ,pct_Nam,pct_Nữ,pct_Không rõ
+fleurs,train,mẫu,752,2174,0,25.7,74.3,0.0
+fleurs,dev,mẫu,361,0,0,100.0,0.0,0.0
+fleurs,test,mẫu,857,0,0,100.0,0.0,0.0
+vivos,train,mẫu,4999,6657,0,42.89,57.11,0.0
+vivos,train,người nói,22,24,0,47.83,52.17,0.0
+vivos,test,mẫu,480,280,0,63.16,36.84,0.0
+vivos,test,người nói,12,7,0,63.16,36.84,0.0

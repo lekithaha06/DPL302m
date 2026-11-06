@@ -1,0 +1,17 @@
+{
+  "A": "runs/mt/B0/fleurs_test_asr_wsp/hyp.jsonl",
+  "B": "runs/mt/V2/fleurs_test_asr_wsp/hyp.jsonl",
+  "BLEU_A": 18.58,
+  "BLEU_B": 19.68,
+  "delta": 1.1,
+  "ci95": [
+    0.43,
+    1.78
+  ],
+  "p_one_sided_delta_le_0": 0.002,
+  "n_resamples": 1000,
+  "n_clusters": 347,
+  "n_items": 857,
+  "cluster": "sent_id",
+  "seed": 42
+}

@@ -1,0 +1,24 @@
+01:31:58 BAN_CUOI theo dev = V3
+{"n": 100, "audio_s": 1254.8, "RTF_total": 0.129, "RTF_asr": 0.093, "RTF_mt": 0.037, "latency_p50_s": 1.57, "latency_p95_s": 2.61, "latency_mean_s": 1.62, "asr_mean_s": 1.16, "mt_mean_s": 0.46, "gpu_peak_allocated_bytes": 1682551808, "ram_rss_peak_bytes": 2829885440, "ram_sampling": "RSS ti\u1ebfn t
+B0→V1 "delta": 4.81, "ci95": [3.75, 5.92], "p_one_sided_delta_le_0": 0.0
+B0→V1 "delta": 4.81, "ci95": [3.75, 5.92], "p_one_sided_delta_le_0": 0.0
+B0→V2 "delta": 4.78, "ci95": [3.78, 5.83], "p_one_sided_delta_le_0": 0.0
+V1→V2 "delta": -0.02, "ci95": [-0.66, 0.67], "p_one_sided_delta_le_0": 0.51
+B0→V3 "delta": 4.64, "ci95": [3.32, 5.9], "p_one_sided_delta_le_0": 0.0
+V2→V3 "delta": -0.14, "ci95": [-1.05, 0.68], "p_one_sided_delta_le_0": 0.683
+B0→V4 "delta": 4.68, "ci95": [3.36, 6.09], "p_one_sided_delta_le_0": 0.0
+V3→V4 "delta": 0.04, "ci95": [-0.92, 0.93], "p_one_sided_delta_le_0": 0.408
+cham theo mien xong
+kiet_t2_phowhisper-small_vivos_test 760 6.24 3.25 RTF 0.122
+kiet_t2_phowhisper-small_fleurs_test 857 13.68 9.88 RTF 0.0904
+kiet_t2_whisper-small_vivos_test 760 25.99 16.49 RTF 0.1087
+kiet_t2_whisper-small_fleurs_test 857 21.24 12.26 RTF 0.0783
+D:\CAIDCM\teamwork\task3\reports\asr\error_audit.csv 116
+| Phiên bản | epoch | dev cascade | test cascade | test sạch | dev sạch | PhoMT test |
+|---|---|---|---|---|---|---|
+| B0 |  | 22.96 | 22.69 | 38.27 | 37.57 | 40.79 |
+| V1 | 1 | 26.47 | 27.49 | 36.21 | 35.97 | 36.96 |
+| V2 | 1 | 26.45 | 27.47 | 38.09 | 36.93 | 40.41 |
+| V3 | 1 | 26.71 | 27.33 | 36.76 | 36.37 | 39.58 |
+| V4 | 1 | 26.33 | 27.37 | 38.11 | 36.75 | 40.08 |
+01:48:19 CHAY_MAY_XONG

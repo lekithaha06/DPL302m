@@ -1,0 +1,38 @@
+10:39:22 BAT_DAU danh_gia_proposed (V2 mặc định)
+proposed: 0/857
+proposed: 100/857
+proposed: 200/857
+proposed: 300/857
+proposed: 400/857
+proposed: 500/857
+proposed: 600/857
+proposed: 700/857
+proposed: 800/857
+# Danh gia Proposed Method · fleurs_test
+
+`vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best`
+
+| Cau hinh | Nhom | n | WER_asr | CER_asr | WER_sau_doi_so | BLEU | chrF++ | RTF |
+|---|---|---|---|---|---|---|---|---|
+| truoc_0411 | tat_ca | 857 | 12.27 | 8.6 | 12.27 | 28.01 | 53.03 | 0.1141 |
+| truoc_0411 | dai | 10 | 16.03 | 12.04 | 16.03 | 15.51 | 49.61 | 0.1008 |
+| proposed | tat_ca | 857 | 12.26 | 8.57 | 10.12 | 28.15 | 53.1 | 0.1136 |
+| proposed | dai | 10 | 15.59 | 10.99 | 12.94 | 18.74 | 51.34 | 0.1038 |
+
+WER_asr: loi PhoWhisper nguyen ban (so voi Task 2: FLEURS test 13,68 khi chay tung file).
+WER_sau_doi_so: tham khao, tham chieu FLEURS viet chu so nen doi so lam WER giam.
+BLEU/chrF++: sacreBLEU 2.4.3, cuoi pipeline (cascade).
+
+Da ghi D:\CAIDCM\teamwork\repo_cuoi\danh_gia\20261104_103932
+thư mục: danh_gia/20261104_103932/
+{"A": "truoc_0411", "B": "proposed", "BLEU_A": 28.01, "BLEU_B": 28.15, "delta": 0.14, "ci95": [-0.2, 0.51], "p_one_sided_delta_le_0": 0.217, "n_resamples": 1000, "n_clusters": 347, "n_items": 857, "cluster": "sent_id", "seed": 42, "so_ban_dich_khac": 155, "so_loi_asr_khac": 10, "cau_co_chu_so": {"n": 171, "BLEU_A": 23.94, "BLEU_B": 25.04}}
+11:23:23 BAT_DAU nghiem_thu_that (V2)
+[DAT ] T07 Nap loi: FileNotFoundError: khong thay adapter khong_ton_tai\V9
+[DAT ] T01/F01 Audio that: vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best
+[DAT ] T03/F03 Audio dai: 1 phut: 3 doan, dai nhat 20.8 s, lien nhau=True, phu het=True, doan rong=0, xu ly 6.3 s
+[DAT ] T04/F05 Im lang / giong nho: im lang 3 s -> 0 doan, ''; giong nho -50 dBFS -> 'các ví dụ về hoạt động tại chỗ lao gầm săn bắn câu cá chụp ảnh ngắm chim và tham'
+[TRUOT] T05/F08 Dinh dang: khong co ffmpeg trong PATH: m4a/webm se khong doc duoc
+[DAT ] T09/F10 10 luot: 3 file x 10 luot, ket qua lap lai giong lan dau = True
+[DAT ] T08/F06 Doi phien ban: V2 mac dinh: vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best
+6/7 muc DAT. Bang: D:\CAIDCM\teamwork\repo_cuoi\nghiem_thu\20261104_112323\bang.md
+11:25:17 HE_THONG_V2_XONG

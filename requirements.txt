@@ -1,14 +1,37 @@
-# DPL302m Đề tài 1 — môi trường MT/cascade (TV2), đúng phiên bản đã chạy Task 1 trên RTX 4060 Laptop 8 GB.
-# Python 3.11. Cài torch riêng cho CUDA 12.4 trước:
-#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
-# Khối ASR (TV1) dùng môi trường riêng: src/asr/requirements-asr-gpu.txt (scripts/run_asr_baseline.ps1 tự tạo).
-transformers==5.17.0
-sacrebleu==2.6.0
-jiwer==4.0.0
+# Cai:  pip install -r requirements.txt
+# Dong duoi bat pip lay torch ban CUDA 11.7. Thieu dong nay thi tren Windows pip cai
+# ban CPU, chay cham va khong dat so toc do da bao cao.
+--extra-index-url https://download.pytorch.org/whl/cu117
+
+# Phien ban lay theo moi truong Kiet da chay that voi model ngay 01/11/2026
+# (RTX 4060, Windows, Python 3.11). Can Python 3.11.
+
+# Loi he thong
+numpy==1.26.4
 soundfile==0.14.0
-librosa==0.11.0
+scipy==1.13.1             # ban Kiet da chay that (pip_freeze.txt), ho tro numpy 1.26 + Python 3.10/3.11
+
+# Khoi nghe va khoi dich
+torch==2.0.1
+transformers==4.44.2
+peft==0.12.0
 sentencepiece==0.2.2
-accelerate==1.15.0
-huggingface_hub==1.31.0
-datasets==5.1.0
-pytest
+protobuf==4.25.3          # tokenizer MBart cua VinAI Translate can; thieu thi khong nap duoc model
+
+# Danh gia
+sacrebleu==2.4.3
+jiwer==4.0.0
+
+# Demo va API. Gradio 5/6 lam app crash, Gradio 4.44.1 lai loi voi pydantic >= 2.11
+# va FastAPI moi, nen phai khoa ca ba.
+gradio==4.44.1
+fastapi==0.115.6
+pydantic==2.10.6
+huggingface_hub==0.36.2   # gradio 4.44.1 can HfFolder, ban 1.x da bo -> crash
+# gradio 4.44.1 -> gradio_client 1.3.0 can websockets<13. uvicorn[standard] ban moi keo websockets
+# moi hon (venv cua Kiet co websockets 17.4) -> conflict. Khoa websockets 12 va uvicorn cung thoi
+# voi fastapi 0.115.6.
+uvicorn[standard]==0.32.1
+websockets==12.0
+python-multipart==0.0.33
+httpx==0.28.1

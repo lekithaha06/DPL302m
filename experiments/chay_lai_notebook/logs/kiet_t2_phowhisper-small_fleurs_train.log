@@ -1,0 +1,63 @@
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+You have passed task=transcribe, but also have set `forced_decoder_ids` to [[1, None], [2, 50359]] which creates a conflict. `forced_decoder_ids` will be ignored in favor of task=transcribe.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[kiet_t2_phowhisper-small_fleurs_train] 50/2926
+[kiet_t2_phowhisper-small_fleurs_train] 100/2926
+[kiet_t2_phowhisper-small_fleurs_train] 150/2926
+[kiet_t2_phowhisper-small_fleurs_train] 200/2926
+[kiet_t2_phowhisper-small_fleurs_train] 250/2926
+[kiet_t2_phowhisper-small_fleurs_train] 300/2926
+[kiet_t2_phowhisper-small_fleurs_train] 350/2926
+[kiet_t2_phowhisper-small_fleurs_train] 400/2926
+[kiet_t2_phowhisper-small_fleurs_train] 450/2926
+[kiet_t2_phowhisper-small_fleurs_train] 500/2926
+[kiet_t2_phowhisper-small_fleurs_train] 550/2926
+[kiet_t2_phowhisper-small_fleurs_train] 600/2926
+[kiet_t2_phowhisper-small_fleurs_train] 650/2926
+[kiet_t2_phowhisper-small_fleurs_train] 700/2926
+[kiet_t2_phowhisper-small_fleurs_train] 750/2926
+[kiet_t2_phowhisper-small_fleurs_train] 800/2926
+[kiet_t2_phowhisper-small_fleurs_train] 850/2926
+[kiet_t2_phowhisper-small_fleurs_train] 900/2926
+[kiet_t2_phowhisper-small_fleurs_train] 950/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1000/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1050/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1100/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1150/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1200/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1250/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1300/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1350/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1400/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1450/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1500/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1550/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1600/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1650/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1700/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1750/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1800/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1850/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1900/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1950/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2000/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2050/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2100/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2150/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2200/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2250/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2300/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2350/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2400/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2450/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2500/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2550/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2600/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2650/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2700/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2750/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2800/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2850/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2900/2926
+[kiet_t2_phowhisper-small_fleurs_train] xong: 2926/2926 (mới 2926)

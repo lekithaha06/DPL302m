@@ -1,0 +1,55 @@
+{
+  "moi_truong": {
+    "python": "3.11.1",
+    "may": "Windows-10-10.0.26200-SP0",
+    "torch": "2.0.1+cu117",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "transformers": "4.44.2",
+    "gradio": "4.44.1"
+  },
+  "ket_qua": [
+    {
+      "ma": "T07",
+      "ten": "Nap loi",
+      "dat": true,
+      "chi_tiet": "FileNotFoundError: khong thay adapter khong_ton_tai\\V9"
+    },
+    {
+      "ma": "T01/F01",
+      "ten": "Audio that",
+      "dat": true,
+      "chi_tiet": "vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best\n    dev1_16525570830762756295.wav: VI='các ví dụ về hoạt động tại chỗ lao gầm săn bắn câu cá chụp ảnh ngắm chim và tham' | EN='Examples of on-site activities include roaring, hunting, fishing, photography, b' | RTF 0.216\n    dev2_13754775770768255557.wav: VI='nghiên cứu trí tuệ nhân tạo bao gồm tạo ra những cỗ máy tự động hóa các tác dụ đ' | EN='The study of artificial intelligence involves creating machines that automate ar' | RTF 0.136\n    dev3_15730294784062856962.wav: VI='chi phí chiến tranh của chủ nghĩa đế quốc hoa kỳ trong cuộc trình phạt philippin' | EN='The cost of American imperialism in the war against the Philippines was paid by ' | RTF 0.128\n    -> NGUOI KIEM phai doc lai: noi dung VI/EN co dung voi audio khong"
+    },
+    {
+      "ma": "T03/F03",
+      "ten": "Audio dai",
+      "dat": true,
+      "chi_tiet": "1 phut: 3 doan, dai nhat 20.8 s, lien nhau=True, phu het=True, doan rong=0, xu ly 6.4 s\n    3 phut: 7 doan, dai nhat 26.0 s, lien nhau=True, phu het=True, doan rong=0, xu ly 18.7 s\n    5 phut: 12 doan, dai nhat 27.8 s, lien nhau=True, phu het=True, doan rong=0, xu ly 28.6 s\n    -> NGUOI KIEM nghe cho noi 2 doan: co lap/mat chu khong"
+    },
+    {
+      "ma": "T04/F05",
+      "ten": "Im lang / giong nho",
+      "dat": true,
+      "chi_tiet": "im lang 3 s -> 0 doan, ''; giong nho -50 dBFS -> 'các ví dụ về hoạt động tại chỗ lao gầm săn bắn câu cá chụp ảnh ngắm chim và tham'"
+    },
+    {
+      "ma": "T05/F08",
+      "ten": "Dinh dang",
+      "dat": false,
+      "chi_tiet": "khong co ffmpeg trong PATH: m4a/webm se khong doc duoc"
+    },
+    {
+      "ma": "T09/F10",
+      "ten": "10 luot",
+      "dat": true,
+      "chi_tiet": "3 file x 10 luot, ket qua lap lai giong lan dau = True"
+    },
+    {
+      "ma": "T08/F06",
+      "ten": "Doi phien ban",
+      "dat": true,
+      "chi_tiet": "V2 mac dinh: vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best\n      EN='Examples of on-site activities include roaring, hunting, fishing, photography, bird watchi'\n    V4: vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V4/best\n      EN='Examples of on-site activities: roaring, hunting, fishing, photography, bird watching and '\n    B0: vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA khong (B0)\n      EN='examples of on-site activities roaring hunting fishing birdwatching photography and park t'\n    ban dich 3 ban giong nhau het: False (giong het thi nghi adapter khong duoc nap)"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+V1: 2926 mẫu -> 4468 mẫu, 1449 câu gốc, K = 3
+  % mẫu theo số bản thu của câu: trước {'1': 9.77, '2': 58.03, '3': 32.19} -> sau {'1': 19.81, '2': 55.48, '3': 24.71} (mức đều: {'1': 19.74, '2': 58.59, '3': 21.67})
+  chênh lệch số lần dạy giữa các câu cùng nhóm độ dài (max/min): trước 3.0× -> sau 1.5×
+  % mẫu theo độ dài: trước {'≤15': 6.56, '16–25': 34.35, '26–35': 36.67, '36–45': 16.27, '>45': 6.15} -> sau {'≤15': 10.9, '16–25': 27.57, '26–35': 30.01, '36–45': 19.45, '>45': 12.06}
+  bản thu không được dùng: 0; một bản thu lặp tối đa 6 lần
+V2: FLEURS chiếm 0.15% nếu gộp nguyên PhoMT -> 50.0% sau khi lấy 4468 cặp PhoMT
+
+Biểu đồ + bảng (commit được): reports\data\can_bang/  |  Dữ liệu dạy V1 (không commit): data\can_bang/

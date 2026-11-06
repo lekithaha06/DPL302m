@@ -1,0 +1,1 @@
+04/11/2026 BAN_CUOI theo quy tac DEV (reports/ablation/QUY_TAC_CHON.md, chon_ban_cuoi.json) = V2

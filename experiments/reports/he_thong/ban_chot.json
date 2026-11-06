@@ -1,0 +1,16 @@
+{
+  "ban_chot": "V4",
+  "adapter": "checkpoints/V4/best",
+  "nguoi_quyet": "nhom (Dang chot ngay 03/11/2026)",
+  "quy_tac_cu": "BLEU dev cascade cao nhat -> V3 (26,71 so voi V4 26,33)",
+  "ly_do_doi": [
+    "Tieu chi Task 1: khong lam giam BLEU khi dich van ban chuan. Tren dev sach, V4 giam 0,82 so voi B0 (36,75 so voi 37,57), V3 giam 1,20 (36,37).",
+    "Chenh lech dev cascade V3-V4 chi 0,38 BLEU; tren test cascade V3 vs V4 chenh 0,04, KTC 95% [-0,92; 0,93], p = 0,41: khong phan biet duoc.",
+    "Nhom nghe/doc thu ket qua demo thay V3 sai nhieu hon (nhan xet dinh tinh, chua dinh luong)."
+  ],
+  "khong_dung_diem_test_de_chon": true,
+  "nguon_so": {
+    "dev_cascade": "checkpoints/{B0,V3,V4}/.../dev_translate/score.json",
+    "dev_sach": "checkpoints/{B0,V3,V4}/.../dev_clean/score.json"
+  }
+}

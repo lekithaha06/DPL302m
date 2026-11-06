@@ -1,0 +1,56 @@
+# Hai service tach roi: suy luan (api) va giao dien (app).
+# Chay:  docker compose -f docker/docker-compose.yml up --build
+#
+# Vi sao tach: service suy luan can GPU va 2,69 GB trong so, con giao dien thi khong.
+# Tach ra thi scale duoc rieng va anh giao dien khong phai keo theo torch.
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    image: asr-vi-en-api:latest
+    container_name: asr-vi-en-api
+    environment:
+      ASR_BACKEND: ${ASR_BACKEND:-that}
+      ADAPTER_PATH: ${ADAPTER_PATH:-/models/checkpoints/V2/best}   # V3/V4: /models/checkpoints/V3|V4/best, B0: none
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-50}
+      API_KEY: ${API_KEY:-}               # dat truoc khi mo cong ra ngoai
+      HF_HOME: /models
+    volumes:
+      # cache trong so giua cac lan chay, khong tai lai 2,69 GB moi lan
+      - model-cache:/models
+      # mount checkpoint LoRA tu may that: sua duong dan ben trai cho dung
+      - ../checkpoints:/models/checkpoints:ro
+    ports:
+      - "${API_PORT:-8000}:8000"
+    restart: unless-stopped
+    # Bo comment khoi duoi khi chay tren may co GPU NVIDIA
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.app
+    image: asr-vi-en-app:latest
+    container_name: asr-vi-en-app
+    environment:
+      CHE_DO: api                 # goi API, khong tu nap model
+      API_URL: http://api:8000
+      API_KEY: ${API_KEY:-}
+      PORT: 7860
+      GRADIO_SHARE: ${GRADIO_SHARE:-0}
+    ports:
+      - "${APP_PORT:-7860}:7860"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  model-cache:

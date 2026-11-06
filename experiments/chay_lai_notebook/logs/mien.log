@@ -1,0 +1,17 @@
+{
+ "train": {
+  "wikinews": 507,
+  "wikibooks": 452,
+  "wikivoyage": 490
+ },
+ "dev": {
+  "wikinews": 54,
+  "wikibooks": 44,
+  "wikivoyage": 51
+ },
+ "test": {
+  "wikibooks": 137,
+  "wikinews": 106,
+  "wikivoyage": 104
+ }
+}

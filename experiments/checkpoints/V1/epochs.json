@@ -1,0 +1,57 @@
+[
+  {
+    "epoch": 1,
+    "dev_loss": 1.3865886444530329,
+    "dev_BLEU": 26.43,
+    "dev_chrF++": 52.4,
+    "minutes": 3.4,
+    "peak_vram_bytes": 4286369792,
+    "ram_rss_bytes": 2265833472,
+    "dev_BLEU_translate": 26.47,
+    "dev_chrF++_translate": 52.48
+  },
+  {
+    "epoch": 2,
+    "dev_loss": 1.438524057330187,
+    "dev_BLEU": 25.62,
+    "dev_chrF++": 52.52,
+    "minutes": 3.36,
+    "peak_vram_bytes": 4320972800,
+    "ram_rss_bytes": 2282418176,
+    "dev_BLEU_translate": 25.61,
+    "dev_chrF++_translate": 52.51
+  },
+  {
+    "epoch": 3,
+    "dev_loss": 1.61243904891767,
+    "dev_BLEU": 25.42,
+    "dev_chrF++": 51.79,
+    "minutes": 3.21,
+    "peak_vram_bytes": 4320972800,
+    "ram_rss_bytes": 2289418240,
+    "dev_BLEU_translate": 25.41,
+    "dev_chrF++_translate": 51.72
+  },
+  {
+    "epoch": 4,
+    "dev_loss": 1.7337316885549277,
+    "dev_BLEU": 24.42,
+    "dev_chrF++": 50.85,
+    "minutes": 3.32,
+    "peak_vram_bytes": 4320972800,
+    "ram_rss_bytes": 2159321088,
+    "dev_BLEU_translate": 24.74,
+    "dev_chrF++_translate": 51.0
+  },
+  {
+    "epoch": 5,
+    "dev_loss": 1.8250725493866982,
+    "dev_BLEU": 23.66,
+    "dev_chrF++": 49.96,
+    "minutes": 3.15,
+    "peak_vram_bytes": 4320972800,
+    "ram_rss_bytes": 2160873472,
+    "dev_BLEU_translate": 23.64,
+    "dev_chrF++_translate": 49.86
+  }
+]

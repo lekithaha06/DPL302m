@@ -1,0 +1,22 @@
+{
+  "vivos": {
+    "WER_pho": 6.24,
+    "WER_whisper": 25.99,
+    "delta_whisper_minus_pho": 19.75,
+    "ci95": [
+      15.0,
+      28.06
+    ],
+    "n_clusters": 760
+  },
+  "fleurs": {
+    "WER_pho": 13.68,
+    "WER_whisper": 21.24,
+    "delta_whisper_minus_pho": 7.56,
+    "ci95": [
+      5.26,
+      9.83
+    ],
+    "n_clusters": 347
+  }
+}

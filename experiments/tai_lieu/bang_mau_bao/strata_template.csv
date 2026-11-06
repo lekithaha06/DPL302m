@@ -1,0 +1,10 @@
+﻿run_id,dataset,group_type,group_value,n_recordings,n_reference_units,S,D,I,WER_percent,CER_percent,status
+,FLEURS_vi_vn,duration_s,<=5,,,,,,,,CHO_KIET
+,FLEURS_vi_vn,duration_s,>5_to_15,,,,,,,,CHO_KIET
+,FLEURS_vi_vn,duration_s,>15_to_30,,,,,,,,CHO_KIET
+,FLEURS_vi_vn,duration_s,>30,,,,,,,,CHO_KIET
+,VIVOS,train_text_overlap,yes_178,,,,,,,,CHO_KIET
+,VIVOS,train_text_overlap,no_582,,,,,,,,CHO_KIET
+,FLEURS_vi_vn,name_or_number,name,,,,,,,,CHO_KIET
+,FLEURS_vi_vn,name_or_number,number,,,,,,,,CHO_KIET
+,FLEURS_vi_vn,name_or_number,neither,,,,,,,,CHO_KIET

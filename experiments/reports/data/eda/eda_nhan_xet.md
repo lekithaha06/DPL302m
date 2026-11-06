@@ -1,0 +1,25 @@
+# Nhận xét định lượng (tự sinh từ số đếm, mục 1.3 / slide 6)
+
+- **Tỉ lệ tập VIVOS** (theo số mẫu): Train 93.88% (11.656 mẫu), Test 6.12% (760 mẫu). Giữ split gốc, không chia lại 80/10/10.
+- **Tỉ lệ tập FLEURS** (theo số mẫu): Train 70.61% (2.926 mẫu), Val (dev) 8.71% (361 mẫu), Test 20.68% (857 mẫu). Giữ split gốc, không chia lại 80/10/10.
+- **Tỉ lệ tập PHOMT** (theo số mẫu): Train 98.74% (2.977.170 mẫu), Val (dev) 0.62% (18.719 mẫu), Test 0.64% (19.151 mẫu). Giữ split gốc, không chia lại 80/10/10.
+- **VIVOS Train**: 46 người nói, mỗi người 100–300 câu (TB 253.39); người nhiều nhất gấp 3.0 lần người ít nhất; 5 người nhiều nhất chiếm 12.87% số câu.
+- **VIVOS Test**: 19 người nói, mỗi người 40–40 câu (TB 40); người nhiều nhất gấp 1.0 lần người ít nhất; 5 người nhiều nhất chiếm 26.32% số câu.
+- **Giới tính FLEURS Train** (theo mẫu): Nam 25.7%, Nữ 74.3%.
+- **Giới tính FLEURS Val (dev)** (theo mẫu): Nam 100.0%, Nữ 0.0%.
+- **Giới tính FLEURS Test** (theo mẫu): Nam 100.0%, Nữ 0.0%.
+- **Giới tính VIVOS Train** (theo mẫu): Nam 42.89%, Nữ 57.11%.
+- **Giới tính VIVOS Train** (theo người nói): Nam 47.83%, Nữ 52.17%.
+- **Giới tính VIVOS Test** (theo mẫu): Nam 63.16%, Nữ 36.84%.
+- **Giới tính VIVOS Test** (theo người nói): Nam 63.16%, Nữ 36.84%.
+- **Độ dài audio FLEURS Train**: TB 10.9 s, trung vị 10.38 s, 5%–95% trong khoảng 5.88–17.62 s; 4 bản thu (0.14%) dài hơn 30 s.
+- **Độ dài audio FLEURS Val (dev)**: TB 11.91 s, trung vị 11.16 s, 5%–95% trong khoảng 6.0–21.32 s; 2 bản thu (0.55%) dài hơn 30 s.
+- **Độ dài audio FLEURS Test**: TB 12.62 s, trung vị 11.64 s, 5%–95% trong khoảng 6.96–21.38 s; 7 bản thu (0.82%) dài hơn 30 s.
+- **Độ dài audio VIVOS Train**: TB 4.61 s, trung vị 3.88 s, 5%–95% trong khoảng 2.06–9.34 s; 0 bản thu (0.0%) dài hơn 30 s.
+- **Độ dài audio VIVOS Test**: TB 3.53 s, trung vị 3.47 s, 5%–95% trong khoảng 2.0–5.25 s; 0 bản thu (0.0%) dài hơn 30 s.
+- Bản thu FLEURS test dài gấp 3.6 lần VIVOS test (TB 12.62 s so với 3.53 s) → kết quả trên VIVOS không đại diện audio dài.
+- **FLEURS Train**: 1449 câu gốc, TB 2.02 bản thu/câu; phân bố 1 bản thu: 19.74%, 2 bản thu: 58.59%, 3 bản thu: 21.67%.
+- **FLEURS Val (dev)**: 149 câu gốc, TB 2.42 bản thu/câu; phân bố 1 bản thu: 8.72%, 2 bản thu: 40.27%, 3 bản thu: 51.01%.
+- **FLEURS Test**: 347 câu gốc, TB 2.47 bản thu/câu; phân bố 1 bản thu: 9.8%, 2 bản thu: 33.43%, 3 bản thu: 56.77%.
+- **Miền PhoMT train** (theo paper): OpenSubtitles 51.37%, nhỏ nhất News 1.38% (chênh 37.3 lần); ở test, OpenSubtitles chiếm 49.94%. → Mô hình dịch nghiêng về văn nói kiểu phụ đề; FLEURS là câu kiểu Wikipedia (khác miền).
+- **Độ dài câu**: FLEURS test TB 30.36 âm tiết/câu, VIVOS test 10.16, PhoMT test 17.84.

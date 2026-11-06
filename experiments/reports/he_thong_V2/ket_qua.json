@@ -1,0 +1,60 @@
+{
+ "mo_hinh": "vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best",
+ "tap": "fleurs_test",
+ "cau_hinh": {
+  "truoc_0411": {
+   "cat_tai_lang": false,
+   "bo_lap": false,
+   "doi_so": false
+  },
+  "proposed": {
+   "cat_tai_lang": true,
+   "bo_lap": true,
+   "doi_so": true
+  }
+ },
+ "truoc_0411": {
+  "tat_ca": {
+   "n": 857,
+   "WER_asr": 12.27,
+   "CER_asr": 8.6,
+   "WER_sau_doi_so": 12.27,
+   "RTF": 0.1141,
+   "BLEU": 28.01,
+   "chrF++": 53.03,
+   "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3"
+  },
+  "dai": {
+   "n": 10,
+   "WER_asr": 16.03,
+   "CER_asr": 12.04,
+   "WER_sau_doi_so": 16.03,
+   "RTF": 0.1008,
+   "BLEU": 15.51,
+   "chrF++": 49.61,
+   "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3"
+  }
+ },
+ "proposed": {
+  "tat_ca": {
+   "n": 857,
+   "WER_asr": 12.26,
+   "CER_asr": 8.57,
+   "WER_sau_doi_so": 10.12,
+   "RTF": 0.1136,
+   "BLEU": 28.15,
+   "chrF++": 53.1,
+   "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3"
+  },
+  "dai": {
+   "n": 10,
+   "WER_asr": 15.59,
+   "CER_asr": 10.99,
+   "WER_sau_doi_so": 12.94,
+   "RTF": 0.1038,
+   "BLEU": 18.74,
+   "chrF++": 51.34,
+   "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3"
+  }
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "file_dai": [
+  {
+   "file": "06_fleurs_5732900245807707573.wav",
+   "giay": 12.3,
+   "vi": "đặc tính nhiệt của chúng không ổn định như các hang động lớn trên trái đất vốn thường duy trì nhiệt độ khá ổn định nhưng điều này phù hợp với các hố sâu trong l",
+   "en": "Their thermal properties are not as stable as large caves on Earth, which normally maintain fairly constant temperatures, but this is consistent with the deep u",
+   "so_doan": 2,
+   "tom_tat": "✅ Thời lượng audio **36.4 s**  ·  chia thành **2 đoạn**  ·  nghe **6.64 s** + dịch **1.22 s** = **7.85 s**  ·  RTF **0.216**  ·  vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best"
+  },
+  {
+   "file": "dai_3phut.wav",
+   "giay": 31.4,
+   "vi": "người bệnh cũng đã từng tới nigeria nơi một số ca mắc bệnh ebola xảy ra người bệnh cũng đã từng tới nigeria nơi một số ca mắc bệnh ebola xảy ra các ví dụ về hoạ",
+   "en": "Patients have also been to Nigeria, where some cases of Ebola have occurred. Patients have also been to Nigeria, where some cases of Ebola have occurred. Exampl",
+   "so_doan": 7,
+   "tom_tat": "✅ Thời lượng audio **180.0 s**  ·  chia thành **7 đoạn**  ·  nghe **19.71 s** + dịch **7.29 s** = **27.00 s**  ·  RTF **0.150**  ·  vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best"
+  }
+ ],
+ "file_hong": [
+  {
+   "file": "im_lang_3s.wav",
+   "giay": 6.2,
+   "vi": "",
+   "en": "",
+   "so_doan": 1,
+   "tom_tat": "Không tìm thấy tiếng nói trong audio (có thể toàn khoảng lặng)."
+  },
+  {
+   "file": "rong.wav",
+   "giay": 6.2,
+   "vi": "",
+   "en": "",
+   "so_doan": 1,
+   "tom_tat": "❌ Tệp rỗng (0 byte)."
+  },
+  {
+   "file": "hong.wav",
+   "giay": 6.2,
+   "vi": "",
+   "en": "",
+   "so_doan": 1,
+   "tom_tat": "❌ Không đọc được tệp .wav: tệp hỏng hoặc không phải audio (wav, mp3, flac, m4a, ogg, webm)."
+  },
+  {
+   "file": "van_ban.wav",
+   "giay": 6.2,
+   "vi": "",
+   "en": "",
+   "so_doan": 1,
+   "tom_tat": "❌ Không đọc được tệp .wav: tệp hỏng hoặc không phải audio (wav, mp3, flac, m4a, ogg, webm)."
+  },
+  {
+   "file": "cat_ngang.wav",
+   "giay": 6.2,
+   "vi": "đặc tính nhiệt của chúng không ổn định như các hang động lớn trên trái đất vốn thường duy trì nhiệt độ khá ổn định.",
+   "en": "Their thermal properties are not as stable as the large caves on Earth, which usually maintain fairly constant temperatures.",
+   "so_doan": 1,
+   "tom_tat": "✅ Thời lượng audio **12.1 s**  ·  chia thành **1 đoạn**  ·  nghe **1.35 s** + dịch **0.62 s** = **1.97 s**  ·  RTF **0.162**  ·  vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best"
+  }
+ ],
+ "5_luot_lien_tiep": {
+  "giong_nhau": true,
+  "giay": [
+   6.2,
+   6.2,
+   6.2,
+   6.6,
+   6.2
+  ]
+ },
+ "3_nguoi_cung_luc": {
+  "ket_qua": [
+   [
+    "09_fleurs_15207612342643622159.wav",
+    10.9,
+    "lắp ca xin cũng trình bày chắp banh bong ba han ca sĩ gây du"
+   ],
+   [
+    "10_fleurs_6107287179341969730.wav",
+    6.2,
+    "chuẩn tám không hai chấm một một in lời hoạt động trên cả ha"
+   ],
+   [
+    "06_fleurs_5732900245807707573.wav",
+    9.7,
+    "đặc tính nhiệt của chúng không ổn định như các hang động lớn"
+   ]
+  ],
+  "khop_chay_rieng": true
+ }
+}

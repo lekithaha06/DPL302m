@@ -1,0 +1,36 @@
+# Service suy luan (FastAPI). Build tu thu muc goc cua repo:
+#   docker build -f docker/Dockerfile.api -t asr-vi-en-api .
+FROM python:3.11-slim AS base
+
+# ffmpeg de doc mp3/m4a/webm; libsndfile cho soundfile
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        ffmpeg libsndfile1 curl \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    HF_HOME=/models
+
+WORKDIR /app
+
+# Cai thu vien truoc, copy code sau: doi code thi khong phai cai lai
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/ ./src/
+COPY api/ ./api/
+COPY configs/ ./configs/
+
+# Chay bang user thuong, khong phai root
+RUN useradd --create-home --uid 10001 ungdung \
+    && mkdir -p /models && chown -R ungdung:ungdung /app /models
+USER ungdung
+
+EXPOSE 8000
+
+# Trong so nap luc khoi dong nen can start-period dai; model 2,69 GB
+HEALTHCHECK --interval=30s --timeout=5s --start-period=180s --retries=3 \
+    CMD curl -fsS http://localhost:8000/health || exit 1
+
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]

@@ -1,0 +1,13 @@
+{
+  "best_epoch": 1,
+  "rule": "BLEU dev cao nh\u1ea5t qua translate.py (ho\u00e0 th\u00ec l\u1ea5y epoch s\u1edbm h\u01a1n)",
+  "epoch": 1,
+  "dev_loss": 1.402741243304308,
+  "dev_BLEU": 26.62,
+  "dev_chrF++": 52.82,
+  "minutes": 2.6,
+  "peak_vram_bytes": 6156101120,
+  "ram_rss_bytes": 6336380928,
+  "dev_BLEU_translate": 26.5,
+  "dev_chrF++_translate": 52.76
+}

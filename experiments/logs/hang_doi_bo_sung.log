@@ -1,0 +1,5 @@
+fleurs_test_asr_wsp.jsonl 857 95064c66664d3cb7
+B0 wsp {"BLEU": 18.58, "chrF++": 44.62, "n": 857}
+V3 wsp {"BLEU": 19.86, "chrF++": 44.79, "n": 857}
+"delta": 1.29, "ci95": [0.56, 2.0], "p_one_sided_delta_le_0": 0.001
+01:54:10 BO_SUNG_XONG

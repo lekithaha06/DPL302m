@@ -1,0 +1,141 @@
+{
+  "tham_so": {
+    "alpha": 0.5,
+    "bins": [
+      15,
+      25,
+      35,
+      45
+    ],
+    "ti_le_phomt": 1.0,
+    "seed": 42,
+    "phomt_mien": null,
+    "nhiet_do": 5.0,
+    "muc_tieu": "max"
+  },
+  "v1": {
+    "so_mau_truoc": 2926,
+    "so_mau_sau": 4468,
+    "so_cau": 1449,
+    "K": 3,
+    "he_so_nhom": {
+      "26–35": 0.782,
+      "16–25": 0.83,
+      "36–45": 1.138,
+      "≤15": 2.014,
+      ">45": 1.822
+    },
+    "ti_le_cau_theo_nhom": {
+      "1": 19.74,
+      "2": 58.59,
+      "3": 21.67
+    },
+    "theo_cau_truoc": {
+      "1": 9.77,
+      "2": 58.03,
+      "3": 32.19
+    },
+    "theo_cau_sau": {
+      "1": 19.81,
+      "2": 55.48,
+      "3": 24.71
+    },
+    "do_dai_truoc": {
+      "≤15": 6.56,
+      "16–25": 34.35,
+      "26–35": 36.67,
+      "36–45": 16.27,
+      ">45": 6.15
+    },
+    "do_dai_sau": {
+      "≤15": 10.9,
+      "16–25": 27.57,
+      "26–35": 30.01,
+      "36–45": 19.45,
+      ">45": 12.06
+    },
+    "ti_le_cau_theo_do_dai": {
+      "26–35": 37.13,
+      "16–25": 32.92,
+      "36–45": 17.53,
+      "≤15": 5.59,
+      ">45": 6.83
+    },
+    "so_ban_thu_khong_dung": 0,
+    "so_lan_lap_toi_da_1_ban_thu": 6,
+    "lan_day_moi_cau_truoc": {
+      "26–35": {
+        "min": 1,
+        "max": 3,
+        "tb": 1.99
+      },
+      "16–25": {
+        "min": 1,
+        "max": 3,
+        "tb": 2.11
+      },
+      "36–45": {
+        "min": 1,
+        "max": 3,
+        "tb": 1.87
+      },
+      "≤15": {
+        "min": 1,
+        "max": 3,
+        "tb": 2.37
+      },
+      ">45": {
+        "min": 1,
+        "max": 3,
+        "tb": 1.82
+      }
+    },
+    "ti_le_max_min_trong_nhom_truoc": 3.0,
+    "lan_day_moi_cau_sau": {
+      "36–45": {
+        "min": 3,
+        "max": 4,
+        "tb": 3.42
+      },
+      ">45": {
+        "min": 5,
+        "max": 6,
+        "tb": 5.44
+      },
+      "16–25": {
+        "min": 2,
+        "max": 3,
+        "tb": 2.58
+      },
+      "26–35": {
+        "min": 2,
+        "max": 3,
+        "tb": 2.49
+      },
+      "≤15": {
+        "min": 6,
+        "max": 7,
+        "tb": 6.01
+      }
+    },
+    "ti_le_max_min_trong_nhom_sau": 1.5
+  },
+  "v2": {
+    "phomt_train_sach": 2977170,
+    "fleurs_train_v1": 4468,
+    "phomt_lay": 4468,
+    "truoc_pct_fleurs": 0.15,
+    "sau_pct_fleurs": 50.0,
+    "mien_ghi_chu": "Không có nhãn miền từng dòng -> lấy ngẫu nhiên đều, tỉ lệ miền giữ như PhoMT gốc (OpenSubtitles ~51,4% theo paper). Có nhãn thì thêm --phomt_mien để cân bằng theo miền."
+  },
+  "meta": {
+    "script": "viec4_can_bang_du_lieu.py",
+    "time_utc": "2026-10-29T19:28:42+00:00",
+    "versions": {
+      "python": "3.11.1",
+      "huggingface_hub": "0.24.6",
+      "requests": "2.34.2"
+    },
+    "platform": "Windows-10-10.0.26200-SP0"
+  }
+}

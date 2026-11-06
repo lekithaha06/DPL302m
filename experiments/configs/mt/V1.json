@@ -1,0 +1,10 @@
+{
+  "version": "V1",
+  "change_vs_B0": "LoRA trên VinAI Translate vi2en, dạy bằng lời ASR (PhoWhisper-small, protocol bao_asr_v1) của FLEURS train → câu Anh FLEURS",
+  "reason": "Task 1: BLEU cascade tụt mạnh so với dịch transcript sạch; khối dịch chưa từng thấy lời ASR (chữ thường, không dấu câu, số đọc thành chữ, lỗi nghe)",
+  "train": ["runs/mt_data/fleurs_train_asr_pho.jsonl"],
+  "dev": "runs/mt_data/fleurs_dev_asr_pho.jsonl",
+  "epochs": 5, "lr": 0.0002, "batch_size": 8, "grad_accum": 2, "warmup_ratio": 0.06, "weight_decay": 0.0,
+  "optimizer": "AdamW", "scheduler": "linear", "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.05,
+  "targets": "q_proj,k_proj,v_proj,out_proj,fc1,fc2", "seed": 42, "selection": "BLEU dev cao nhất"
+}

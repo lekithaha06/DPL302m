@@ -1,0 +1,6 @@
+{
+  "version": "V4",
+  "change_vs_base": "lr 2e-4 → 5e-5 (giảm 4 lần); dữ liệu = dữ liệu của bản gốc. Bản gốc = bản có BLEU dev (translate.py) cao hơn giữa V2 và V3 (quy tắc định trước, không xem test).",
+  "reason": "V1 và V2 (cả đêm 1 và buổi 2) đều đạt BLEU dev cao nhất ở epoch 1 rồi giảm, dev loss tăng từ epoch 2 trong khi train loss giảm → học quá nhanh/overfit; giảm lr để mô hình hội tụ chậm và có thể vượt đỉnh epoch 1.",
+  "lr": 5e-05, "epochs": 5, "batch_size": 4, "grad_accum": 4, "seed": 42, "selection": "BLEU dev qua translate.py"
+}

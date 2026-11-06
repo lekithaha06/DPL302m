@@ -1,0 +1,509 @@
+{
+  "script": "viec1_tai_3_bo_du_lieu.py",
+  "time_utc": "2026-10-29T19:06:00+00:00",
+  "args": {
+    "data_dir": "data",
+    "report_dir": "reports\\data",
+    "phomt_dir": "data\\phomt",
+    "fleurs_revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+    "vivos_revision": "3cbfb2502e5e84776b4b778b020a09759f723f52",
+    "audio_stats": "True",
+    "skip_phomt": "False"
+  },
+  "versions": {
+    "python": "3.11.1",
+    "huggingface_hub": "0.24.6",
+    "requests": "2.34.2"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "vivos": {
+    "meta": {
+      "repo": "AILAB-VNUHCM/vivos",
+      "url": "https://huggingface.co/datasets/AILAB-VNUHCM/vivos",
+      "revision_requested": "3cbfb2502e5e84776b4b778b020a09759f723f52",
+      "sha": "3cbfb2502e5e84776b4b778b020a09759f723f52",
+      "gated": false,
+      "license_card": [
+        "cc-by-nc-sa-4.0"
+      ],
+      "files": {
+        ".gitattributes": 1174,
+        "README.md": 6998,
+        "data/prompts-test.txt.gz": 19684,
+        "data/prompts-train.txt.gz": 344941,
+        "data/vivos.tar.gz": 1474408300,
+        "vivos.py": 6358
+      }
+    },
+    "fields": [
+      "speaker_id",
+      "path",
+      "audio (wav)",
+      "sentence"
+    ],
+    "note_loading": "repo dùng loading script vivos.py; datasets>=4 không chạy script nên đọc thẳng file gốc",
+    "train": {
+      "utterances": 11660,
+      "speakers": 46,
+      "duplicate_ids": 0,
+      "unique_sentences": 10335,
+      "utts_per_speaker_min": 100,
+      "utts_per_speaker_max": 300,
+      "label": {
+        "pct_has_upper": 100.0,
+        "pct_all_upper": 100.0,
+        "pct_has_punct": 0.01,
+        "n_empty": 0,
+        "mean_words": 13.23
+      },
+      "audio": {
+        "n_files": 11660,
+        "n_unreadable": 0,
+        "sample_rates": {
+          "16000": 11660
+        },
+        "channels": {
+          "1": 11660
+        },
+        "formats": {
+          "PCM 16-bit": 11660
+        }
+      },
+      "duration": {
+        "n": 11660,
+        "hours": 14.921,
+        "mean_s": 4.61,
+        "median_s": 3.88,
+        "min_s": 0.81,
+        "max_s": 17.12
+      },
+      "speaker_gender": {
+        "f": 24,
+        "m": 22
+      }
+    },
+    "test": {
+      "utterances": 760,
+      "speakers": 19,
+      "duplicate_ids": 0,
+      "unique_sentences": 740,
+      "utts_per_speaker_min": 40,
+      "utts_per_speaker_max": 40,
+      "label": {
+        "pct_has_upper": 100.0,
+        "pct_all_upper": 100.0,
+        "pct_has_punct": 0.0,
+        "n_empty": 0,
+        "mean_words": 10.16
+      },
+      "audio": {
+        "n_files": 760,
+        "n_unreadable": 0,
+        "sample_rates": {
+          "16000": 760
+        },
+        "channels": {
+          "1": 760
+        },
+        "formats": {
+          "PCM 16-bit": 760
+        }
+      },
+      "duration": {
+        "n": 760,
+        "hours": 0.746,
+        "mean_s": 3.53,
+        "median_s": 3.47,
+        "min_s": 1.38,
+        "max_s": 7.84
+      },
+      "speaker_gender": {
+        "m": 12,
+        "f": 7
+      }
+    },
+    "archive_non_wav_files": [
+      "vivos/COPYING",
+      "vivos/README",
+      "vivos/test/prompts.txt",
+      "vivos/test/genders.txt",
+      "vivos/train/prompts.txt",
+      "vivos/train/genders.txt"
+    ]
+  },
+  "fleurs": {
+    "meta": {
+      "repo": "google/fleurs",
+      "url": "https://huggingface.co/datasets/google/fleurs",
+      "revision_requested": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "sha": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "gated": false,
+      "license_card": [
+        "cc-by-4.0"
+      ],
+      "files": {
+        "data/vi_vn/audio/dev.tar.gz": 214500592,
+        "data/vi_vn/audio/test.tar.gz": 544139865,
+        "data/vi_vn/audio/train.tar.gz": 1607278457,
+        "data/vi_vn/dev.tsv": 247001,
+        "data/vi_vn/test.tsv": 613728,
+        "data/vi_vn/train.tsv": 2056005,
+        "data/en_us/dev.tsv": 213065,
+        "data/en_us/test.tsv": 367864,
+        "data/en_us/train.tsv": 1414907
+      }
+    },
+    "fields": [
+      "id (ID câu FLoRes)",
+      "file_name",
+      "raw_transcription",
+      "transcription",
+      "phonemes (trống)",
+      "num_samples",
+      "gender"
+    ],
+    "note_speaker": "TSV không có trường người nói; dataset card: người nói train khác dev/test",
+    "en_us": {
+      "train": {
+        "recordings": 2602,
+        "sentences": 1476,
+        "bad_tsv_lines": 0
+      },
+      "dev": {
+        "recordings": 394,
+        "sentences": 150,
+        "bad_tsv_lines": 0
+      },
+      "test": {
+        "recordings": 647,
+        "sentences": 350,
+        "bad_tsv_lines": 0
+      }
+    },
+    "train": {
+      "recordings": 2994,
+      "sentences": 1482,
+      "bad_tsv_lines": 0,
+      "duplicate_file_names": 0,
+      "recordings_per_sentence": {
+        "1": 292,
+        "2": 868,
+        "3": 322
+      },
+      "gender": {
+        "FEMALE": 2228,
+        "MALE": 766
+      },
+      "duration_from_num_samples": {
+        "n": 2994,
+        "hours": 9.076,
+        "mean_s": 10.91,
+        "median_s": 10.38,
+        "min_s": 2.52,
+        "max_s": 42.18
+      },
+      "n_over_30s": 4,
+      "sentences_with_en": 1449,
+      "label_raw_transcription": {
+        "pct_has_upper": 99.87,
+        "pct_all_upper": 0.0,
+        "pct_has_punct": 99.7,
+        "n_empty": 0,
+        "mean_words": 28.85
+      },
+      "label_transcription": {
+        "pct_has_upper": 0.0,
+        "pct_all_upper": 0.0,
+        "pct_has_punct": 12.93,
+        "n_empty": 0,
+        "mean_words": 28.83
+      },
+      "audio": {
+        "n_files": 2994,
+        "n_unreadable": 0,
+        "sample_rates": {
+          "16000": 2994
+        },
+        "channels": {
+          "1": 2994
+        },
+        "formats": {
+          "float 32-bit": 2994
+        },
+        "tsv_rows_without_audio": 0,
+        "audio_without_tsv_row": 0,
+        "frames_differ_from_num_samples": 0
+      }
+    },
+    "dev": {
+      "recordings": 361,
+      "sentences": 149,
+      "bad_tsv_lines": 0,
+      "duplicate_file_names": 0,
+      "recordings_per_sentence": {
+        "1": 13,
+        "2": 60,
+        "3": 76
+      },
+      "gender": {
+        "MALE": 361
+      },
+      "duration_from_num_samples": {
+        "n": 361,
+        "hours": 1.194,
+        "mean_s": 11.91,
+        "median_s": 11.16,
+        "min_s": 4.32,
+        "max_s": 31.98
+      },
+      "n_over_30s": 2,
+      "sentences_with_en": 149,
+      "label_raw_transcription": {
+        "pct_has_upper": 100.0,
+        "pct_all_upper": 0.0,
+        "pct_has_punct": 100.0,
+        "n_empty": 0,
+        "mean_words": 28.73
+      },
+      "label_transcription": {
+        "pct_has_upper": 0.0,
+        "pct_all_upper": 0.0,
+        "pct_has_punct": 14.68,
+        "n_empty": 0,
+        "mean_words": 28.73
+      },
+      "audio": {
+        "n_files": 361,
+        "n_unreadable": 0,
+        "sample_rates": {
+          "16000": 361
+        },
+        "channels": {
+          "1": 361
+        },
+        "formats": {
+          "float 32-bit": 361
+        },
+        "tsv_rows_without_audio": 0,
+        "audio_without_tsv_row": 0,
+        "frames_differ_from_num_samples": 0
+      }
+    },
+    "test": {
+      "recordings": 857,
+      "sentences": 347,
+      "bad_tsv_lines": 0,
+      "duplicate_file_names": 0,
+      "recordings_per_sentence": {
+        "1": 34,
+        "2": 116,
+        "3": 197
+      },
+      "gender": {
+        "MALE": 857
+      },
+      "duration_from_num_samples": {
+        "n": 857,
+        "hours": 3.004,
+        "mean_s": 12.62,
+        "median_s": 11.64,
+        "min_s": 4.98,
+        "max_s": 38.1
+      },
+      "n_over_30s": 7,
+      "sentences_with_en": 347,
+      "label_raw_transcription": {
+        "pct_has_upper": 100.0,
+        "pct_all_upper": 0.0,
+        "pct_has_punct": 100.0,
+        "n_empty": 0,
+        "mean_words": 30.24
+      },
+      "label_transcription": {
+        "pct_has_upper": 0.0,
+        "pct_all_upper": 0.0,
+        "pct_has_punct": 13.19,
+        "n_empty": 0,
+        "mean_words": 30.22
+      },
+      "audio": {
+        "n_files": 857,
+        "n_unreadable": 0,
+        "sample_rates": {
+          "16000": 857
+        },
+        "channels": {
+          "1": 857
+        },
+        "formats": {
+          "float 32-bit": 857
+        },
+        "tsv_rows_without_audio": 0,
+        "audio_without_tsv_row": 0,
+        "frames_differ_from_num_samples": 0
+      }
+    },
+    "id_overlap_between_splits": {
+      "train&dev": 0,
+      "train&test": 0,
+      "dev&test": 0
+    }
+  },
+  "phomt": {
+    "meta": {
+      "repo": "vinai/PhoMT",
+      "url": "https://huggingface.co/datasets/vinai/PhoMT",
+      "revision_requested": "main",
+      "sha": "d4b9bf14888b40a88ec332cbab6bab97cf6a68a7",
+      "gated": "auto",
+      "license_card": null,
+      "files": {
+        ".gitattributes": 2461,
+        "PhoMT.zip": 355890192,
+        "README.md": 2094
+      }
+    },
+    "fields": [
+      "câu tiếng Việt (.vi)",
+      "câu tiếng Anh (.en)",
+      "song song theo số dòng"
+    ],
+    "files_used": {
+      "train.vi": "PhoMT\\detokenization\\train\\train.vi",
+      "train.en": "PhoMT\\detokenization\\train\\train.en",
+      "dev.vi": "PhoMT\\detokenization\\dev\\dev.vi",
+      "dev.en": "PhoMT\\detokenization\\dev\\dev.en",
+      "test.vi": "PhoMT\\detokenization\\test\\test.vi",
+      "test.en": "PhoMT\\detokenization\\test\\test.en"
+    },
+    "has_tokenization_folder": true,
+    "domain_note": "PhoMT không kèm nhãn miền từng câu; tỉ lệ miền lấy từ Table 1 của paper PhoMT",
+    "train": {
+      "pairs_vi_lines": 2977999,
+      "pairs_en_lines": 2977999,
+      "line_counts_match": true,
+      "empty_vi": 0,
+      "empty_en": 0
+    },
+    "dev": {
+      "pairs_vi_lines": 18719,
+      "pairs_en_lines": 18719,
+      "line_counts_match": true,
+      "empty_vi": 0,
+      "empty_en": 0
+    },
+    "test": {
+      "pairs_vi_lines": 19151,
+      "pairs_en_lines": 19151,
+      "line_counts_match": true,
+      "empty_vi": 0,
+      "empty_en": 0
+    }
+  },
+  "kiem_chung": [
+    {
+      "muc": "VIVOS train: số câu",
+      "task1": 11660,
+      "dem_lai": 11660,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "VIVOS train: số người nói",
+      "task1": 46,
+      "dem_lai": 46,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "VIVOS test: số câu",
+      "task1": 760,
+      "dem_lai": 760,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "VIVOS test: số người nói",
+      "task1": 19,
+      "dem_lai": 19,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "VIVOS train: số giờ (14:55)",
+      "task1": 14.92,
+      "dem_lai": 14.921,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "VIVOS test: số phút",
+      "task1": 44.76,
+      "dem_lai": 44.76,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: số bản thu",
+      "task1": 857,
+      "dem_lai": 857,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: số câu gốc",
+      "task1": 347,
+      "dem_lai": 347,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: số giờ",
+      "task1": 3.0,
+      "dem_lai": 3.0,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: thời lượng TB (s)",
+      "task1": 12.62,
+      "dem_lai": 12.62,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: dài nhất (s)",
+      "task1": 38.1,
+      "dem_lai": 38.1,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: số bản thu nhãn MALE",
+      "task1": 857,
+      "dem_lai": 857,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "FLEURS vi_vn test: số câu có câu Anh",
+      "task1": 347,
+      "dem_lai": 347,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "PhoMT train: số cặp",
+      "task1": 2977999,
+      "dem_lai": 2977999,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "PhoMT dev: số cặp",
+      "task1": 18719,
+      "dem_lai": 18719,
+      "ket_qua": "khớp"
+    },
+    {
+      "muc": "PhoMT test: số cặp",
+      "task1": 19151,
+      "dem_lai": 19151,
+      "ket_qua": "khớp"
+    }
+  ],
+  "canh_bao": [
+    "FLEURS vi_vn train: 4 bản thu dài hơn 30 giây (Whisper cắt 30 s)",
+    "FLEURS vi_vn train: 33 câu không có câu Anh trong en_us",
+    "FLEURS vi_vn dev: 2 bản thu dài hơn 30 giây (Whisper cắt 30 s)",
+    "FLEURS vi_vn dev: 100% bản thu cùng nhãn giới tính MALE",
+    "FLEURS vi_vn test: 7 bản thu dài hơn 30 giây (Whisper cắt 30 s)",
+    "FLEURS vi_vn test: 100% bản thu cùng nhãn giới tính MALE"
+  ]
+}

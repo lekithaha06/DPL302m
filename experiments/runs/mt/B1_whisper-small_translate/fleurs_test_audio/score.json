@@ -1,0 +1,13 @@
+{
+  "BLEU": 3.8,
+  "chrF++": 25.45,
+  "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3",
+  "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.4.3",
+  "n": 857,
+  "he": "B1 end-to-end Whisper-small translate",
+  "model_id": "B1_whisper-small_translate@973afd24",
+  "RTF_tong": 0.137,
+  "latency_p50_s": 0.734,
+  "latency_p95_s": 8.196,
+  "ghi_chu_RTF": "latency mỗi mẫu = chỉ bước generate (đồng bộ CUDA, đã khởi động GPU), batch 1; khác cách đo do_toc_do.py (100 mẫu, 3 lần xen kẽ)"
+}

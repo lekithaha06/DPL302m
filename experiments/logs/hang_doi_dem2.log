@@ -1,0 +1,35 @@
+14:57:26 START kiem B0 voi translate.py moi (dev cascade)
+B0_kiemtra fleurs_dev_asr_pho {"BLEU": 22.96, "chrF++": 50.4, "n": 361}
+B0 cu vs moi: giong 361 / 361
+14:58:15 START train V1
+best {'epoch': 1, 'dev_loss': 1.3865886444530329, 'dev_BLEU': 26.43, 'dev_chrF++': 52.4, 'minutes': 3.4, 'peak_vram_bytes': 4286369792, 'ram_rss_bytes': 2265833472, 'dev_BLEU_translate': 26.47, 'dev_chrF++_translate': 52.48}
+15:19:14 END train V1
+V1 fleurs_dev_asr_pho {"BLEU": 26.47, "chrF++": 52.48, "n": 361}
+V1 fleurs_test_asr_pho {"BLEU": 27.49, "chrF++": 52.5, "n": 857}
+V1 fleurs_test_clean {"BLEU": 36.21, "chrF++": 59.73, "n": 857}
+V1 fleurs_dev_clean {"BLEU": 35.97, "chrF++": 59.92, "n": 361}
+V1 phomt_test {"BLEU": 36.96, "chrF++": 58.07, "n": 19151}
+15:47:55 START train V2
+--- 17:2x: tiến trình V2 kẹt ở epoch 5 (bước 2200, VRAM bị tràn sang bộ nhớ chia sẻ khi Minecraft mở) → dừng, chạy tiếp từ checkpoint epoch 4 (--resume)
+17:23:02 START kiem B0 voi translate.py moi (dev cascade)
+17:23:02 bo qua B0_kiemtra/fleurs_dev_asr_pho (da co)
+B0 cu vs moi: giong 361 / 361
+17:23:02 START train V1
+best {'epoch': 1, 'dev_loss': 1.3865886444530329, 'dev_BLEU': 26.43, 'dev_chrF++': 52.4, 'minutes': 3.4, 'peak_vram_bytes': 4286369792, 'ram_rss_bytes': 2265833472, 'dev_BLEU_translate': 26.47, 'dev_chrF++_translate': 52.48}
+17:23:23 END train V1
+17:23:23 bo qua V1/fleurs_dev_asr_pho (da co)
+17:23:23 bo qua V1/fleurs_test_asr_pho (da co)
+17:23:23 bo qua V1/fleurs_test_clean (da co)
+17:23:23 bo qua V1/fleurs_dev_clean (da co)
+17:23:23 bo qua V1/phomt_test (da co)
+17:23:23 START train V2
+best {'epoch': 1, 'dev_loss': 1.3941076914689547, 'dev_BLEU': 26.11, 'dev_chrF++': 52.62, 'minutes': 6.63, 'peak_vram_bytes': 5994292736, 'ram_rss_bytes': 2272137216, 'dev_BLEU_translate': 26.45, 'dev_chrF++_translate': 52.74}
+17:34:52 END train V2
+V2 fleurs_dev_asr_pho {"BLEU": 26.45, "chrF++": 52.74, "n": 361}
+V2 fleurs_test_asr_pho {"BLEU": 27.47, "chrF++": 52.98, "n": 857}
+V2 fleurs_test_clean {"BLEU": 38.09, "chrF++": 61.35, "n": 857}
+V2 fleurs_dev_clean {"BLEU": 36.93, "chrF++": 61.24, "n": 361}
+V2 phomt_test {"BLEU": 40.41, "chrF++": 60.35, "n": 19151}
+17:52:28 bo qua B0/fleurs_dev_clean (da co)
+17:52:28 DEM2_DONE
+--- buổi 3 bắt đầu 21:33

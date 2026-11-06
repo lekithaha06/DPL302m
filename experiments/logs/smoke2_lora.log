@@ -1,0 +1,19 @@
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+{"epoch": 1, "dev_loss": 1.250030517578125, "dev_BLEU": 11.12, "dev_chrF++": 50.12, "minutes": 0.84, "peak_vram_bytes": 5648928256, "ram_rss_bytes": 7224008704}
+{"epoch": 2, "dev_loss": 1.2382466793060303, "dev_BLEU": 10.69, "dev_chrF++": 49.56, "minutes": 1.29, "peak_vram_bytes": 5649649152, "ram_rss_bytes": 7270014976}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/1
+{"BLEU": 11.08, "chrF++": 49.9, "n": 16}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/1
+{"BLEU": 10.66, "chrF++": 49.29, "n": 16}
+best {'epoch': 1, 'dev_loss': 1.250030517578125, 'dev_BLEU': 11.12, 'dev_chrF++': 50.12, 'minutes': 0.84, 'peak_vram_bytes': 5648928256, 'ram_rss_bytes': 7224008704, 'dev_BLEU_translate': 11.08, 'dev_chrF++_translate': 49.9}

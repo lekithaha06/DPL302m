@@ -1,0 +1,131 @@
+{
+  "protocol_id": "bao_asr_v1_20261027",
+  "status": "DESIGN_PENDING_KIET_EXECUTION",
+  "owner": "Bảo thiết kế; Kiệt chạy; Đăng tích hợp",
+  "models": [
+    {
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "a86b604c346caf7148c37512eafe783a16420adb",
+      "parameters_approx": 244000000,
+      "role": "ASR baseline A; đã fine-tune tiếng Việt, bao gồm VIVOS train"
+    },
+    {
+      "model_id": "openai/whisper-small",
+      "revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+      "parameters_approx": 244000000,
+      "role": "ASR đối chứng multilingual không fine-tune bổ sung bởi nhóm"
+    }
+  ],
+  "datasets": {
+    "vivos": {
+      "repo": "AILAB-VNUHCM/vivos",
+      "revision": "3cbfb2502e5e84776b4b778b020a09759f723f52",
+      "test_recordings_expected": 760,
+      "test_policy": "full official test; không xóa 178 câu trùng text train; báo cáo thêm phân tầng",
+      "dev_policy": "baseline không tuning; nếu train V1, dùng FLEURS dev chính hoặc speaker-heldout VIVOS train có manifest riêng và khai báo checkpoint đã thấy VIVOS train"
+    },
+    "fleurs": {
+      "repo": "google/fleurs",
+      "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "config": "vi_vn",
+      "test_recordings_expected": 857,
+      "test_sentence_ids_expected": 347,
+      "dev_recordings_expected": 361,
+      "asr_reference": "raw_transcription lưu text gốc; tính metric từ bản norm; giữ transcription gốc để audit",
+      "grouping": "recording_id = file_name; sent_id có thể lặp; cluster bootstrap theo sent_id",
+      "asr_pairing_policy": "ASR chỉ yêu cầu audio và nhãn vi, không loại vì thiếu câu en; manifest cascade_pair khác manifest ASR; test hiện tại vẫn 857"
+    }
+  },
+  "audio": {
+    "sampling_rate": 16000,
+    "channels": 1,
+    "representation": "float32 [-1,1] khi đưa vào processor",
+    "canonical_storage": "PCM_16 theo pipeline bàn giao, ghi hash và phiên bản chuyển đổi",
+    "normalization_of_amplitude": false,
+    "vad": false,
+    "test_filter": "không bỏ câu vì nhiễu, dài, hoặc dự đoán rỗng; lỗi đọc file chặn nghiệm thu; không silently skip"
+  },
+  "runtime_plan": {
+    "reference_python": "3.11.9",
+    "reference_transformers": "4.44.2",
+    "reference_torch": "2.0.1+cu117",
+    "device": "cuda",
+    "dtype": "float16",
+    "batch_size": 1,
+    "seed": 42,
+    "cpu_threads": 4,
+    "training_learning_rate": null,
+    "training_optimizer": null,
+    "training_epochs": null,
+    "note": "Baseline checkpoint inference only; LR optimizer epochs N/A. Ghi phiên bản máy Kiệt thực dùng; nếu đổi backend/dtype tạo run riêng."
+  },
+  "generation_common": {
+    "language": "vi",
+    "task": "transcribe",
+    "num_beams": 5,
+    "do_sample": false,
+    "max_new_tokens": 440,
+    "length_penalty": 1.0,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 0,
+    "prompt_ids": null,
+    "temperature_fallback": false,
+    "logprob_threshold": null,
+    "compression_ratio_threshold": null,
+    "no_speech_threshold": null,
+    "condition_on_prev_tokens": false,
+    "use_cache": true,
+    "suppress_tokens_policy": "copy explicit list từ openai/whisper-small revision trên cho cả hai; xuất danh sách resolved và hash",
+    "begin_suppress_tokens_policy": "cùng danh sách từ checkpoint Whisper; không chỉ ghi defaults"
+  },
+  "short_form": {
+    "condition": "audio <= 30s",
+    "processor_truncation": false,
+    "return_timestamps": false,
+    "context": "độc lập từng bản thu",
+    "processor_padding": "max_length",
+    "return_attention_mask": true
+  },
+  "long_form": {
+    "condition": "audio > 30s",
+    "strategy": "Transformers sequential long-form; toàn bộ feature không cắt 30s",
+    "processor_truncation": false,
+    "return_timestamps": true,
+    "condition_on_prev_tokens": false,
+    "batch_size": 1,
+    "text_output": "bỏ token đặc biệt và timestamp, ghép toàn bộ segment theo thứ tự; giữ raw segment trong logs",
+    "acceptance": "tổng khoảng thời gian xử lý phủ audio; log n_samples_input, n_frames và segments; 7 test dài phải có output; không ép no_timestamps token cho long-form",
+    "processor_padding": "longest",
+    "return_attention_mask": true
+  },
+  "scoring": {
+    "normalizer_id": "vi_nfc_ps_space_v1",
+    "operations": [
+      "Unicode NFC",
+      "lowercase",
+      "Unicode category P hoặc S -> space",
+      "collapse whitespace"
+    ],
+    "preserve_tones": true,
+    "number_conversion": false,
+    "word_segmentation": "whitespace tokens, gần đơn vị âm tiết tiếng Việt",
+    "cer_unit": "Unicode code point sau NFC, bỏ khoảng trắng",
+    "aggregation": "100 * sum(S+D+I) / sum(N_reference)",
+    "empty_reference": "chặn và audit; không tự bỏ mẫu",
+    "empty_prediction": "hợp lệ, chấm deletion",
+    "alignment_tie_order": "equal then substitute then delete then insert; nhiều căn chỉnh tối ưu có thể cho S D I khác jiwer nhưng tổng edit bằng nhau",
+    "diagnostics": "tone-only substitutions, omission, proper-name spans, number spans; nhãn không loại trừ nhau"
+  },
+  "artifacts_required": [
+    "manifest JSONL + SHA256",
+    "predictions JSONL đủ IDs",
+    "resolved generation config + SHA256",
+    "environment versions + GPU/CPU/CUDA",
+    "summary WER CER S D I N",
+    "per-utterance word/character alignments",
+    "error audit CSV",
+    "timing scope + measurements",
+    "source revisions and file hashes"
+  ],
+  "paper_comparability": "checkpoint rerun with disclosed protocol; không khẳng định tái lập chính xác khi paper thiếu decoding/normalization"
+}

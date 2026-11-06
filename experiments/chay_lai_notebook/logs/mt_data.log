@@ -1,0 +1,9 @@
+phomt_test.jsonl 19151 3a95cf917ad4e8a5
+phomt_dev.jsonl 18719 b4d9904a4c387408
+fleurs_test_clean.jsonl 857 c7ea4833435d3320
+fleurs_dev_clean.jsonl 361 cc4ea59564908554
+fleurs_train_clean.jsonl 2926 7dbb8ac703a99e92
+fleurs_test_asr_pho.jsonl 857 5a030810a3b6015f
+fleurs_dev_asr_pho.jsonl 361 643cd65570651e36
+fleurs_train_asr_pho.jsonl 2926 c8dd749edc4a65a2
+fleurs_test_asr_wsp.jsonl 857 95064c66664d3cb7

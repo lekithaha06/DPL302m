@@ -1,0 +1,5 @@
+﻿model,dataset,paper_WER_percent,paper_CER_percent,group_WER_percent,group_CER_percent,group_S,group_D,group_I,group_N,gap_pp,relative_gap_percent,status,paper_source,run_id,manifest_sha256,config_sha256,normalizer_id,comparability
+PhoWhisper-small,VIVOS test,6.33,NR,,,,,,,,,CHO_KIET,P1 Table 2 p2,,,,vi_nfc_ps_space_v1,chỉ tính gap khi cùng dataset và protocol đủ đối chiếu
+PhoWhisper-small,FLEURS vi_vn test,NR,NR,,,,,,,,,CHO_KIET,P1 không báo cáo,,,,vi_nfc_ps_space_v1,chỉ tính gap khi cùng dataset và protocol đủ đối chiếu
+whisper-small,VIVOS test,NR,NR,,,,,,,,,CHO_KIET,P2 không báo cáo,,,,vi_nfc_ps_space_v1,chỉ tính gap khi cùng dataset và protocol đủ đối chiếu
+whisper-small,FLEURS vi_vn test,21.2,NR,,,,,,,,,CHO_KIET,P2 Table 11 p23,,,,vi_nfc_ps_space_v1,chỉ tính gap khi cùng dataset và protocol đủ đối chiếu

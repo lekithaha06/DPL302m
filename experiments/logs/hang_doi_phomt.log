@@ -1,0 +1,5 @@
+05:06:29 START V1 phomt_test
+{"BLEU": 37.04, "chrF++": 58.14, "n": 19151}
+05:24:35 START V2 phomt_test
+{"BLEU": 40.44, "chrF++": 60.42, "n": 19151}
+05:37:51 PHOMT_DONE

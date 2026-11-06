@@ -1,0 +1,17 @@
+04:16:13 SMOKE train_lora (32 mẫu, 1 epoch, ra checkpoints/_smoke, không dùng kết quả)
+04:16:56 START S7 V1
+  return self.fget.__get__(instance, owner)()
+{"epoch": 1, "dev_loss": 1.3884549632957437, "dev_BLEU": 25.96, "dev_chrF++": 51.9, "minutes": 1.92, "peak_vram_bytes": 5915693568}
+{"epoch": 2, "dev_loss": 1.4382516713683955, "dev_BLEU": 25.61, "dev_chrF++": 52.37, "minutes": 1.87, "peak_vram_bytes": 5949142528}
+{"epoch": 3, "dev_loss": 1.5986392844746977, "dev_BLEU": 24.7, "dev_chrF++": 51.39, "minutes": 2.02, "peak_vram_bytes": 5949142528}
+{"epoch": 4, "dev_loss": 1.7509123394033586, "dev_BLEU": 22.59, "dev_chrF++": 50.57, "minutes": 1.85, "peak_vram_bytes": 5949142528}
+{"epoch": 5, "dev_loss": 1.8163922751048927, "dev_BLEU": 22.11, "dev_chrF++": 49.9, "minutes": 1.87, "peak_vram_bytes": 5949142528}
+best {'epoch': 1, 'dev_loss': 1.3884549632957437, 'dev_BLEU': 25.96, 'dev_chrF++': 51.9, 'minutes': 1.92, 'peak_vram_bytes': 5915693568}
+04:26:34 END S7 V1 train
+{"BLEU": 27.93, "chrF++": 52.68, "n": 857}
+{"BLEU": 36.19, "chrF++": 59.63, "n": 857}
+{"BLEU": 25.61, "chrF++": 51.9, "n": 361}
+04:31:02 V1_DONE
+04:31:02 START B0 phomt_test (sau V1 để V1 kịp xong trước 06:00)
+{"BLEU": 40.79, "chrF++": 60.73, "n": 19151}
+04:44:25 B0_PHOMT_DONE

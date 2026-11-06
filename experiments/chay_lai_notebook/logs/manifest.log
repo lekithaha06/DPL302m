@@ -1,0 +1,4 @@
+asr_vivos_test.jsonl {'n': 760, 'n_gt_30s': 0, 'n_sent_id': 760, 'sha256': 'b8f03af27b4d2cd3e36c29ba83a84c4880d16fb3aac481049ba92f69d97b21ac'}
+asr_fleurs_test.jsonl {'n': 857, 'n_gt_30s': 7, 'n_sent_id': 347, 'sha256': '020e0947893cfc57a313905a7c02d4bcdbb3608baf87c62bd52b8fec6530d36c'}
+asr_fleurs_dev.jsonl {'n': 361, 'n_gt_30s': 2, 'n_sent_id': 149, 'sha256': '7c9b19131a5d0363ef5e4233a4b6b6e034d290fce873eec7cfb88107c74566e3'}
+asr_fleurs_train.jsonl {'n': 2926, 'n_gt_30s': 4, 'n_sent_id': 1449, 'sha256': '50f02b519f20471507438a0fc95c441bf49225a96d626b8208aedd960f8b8202'}

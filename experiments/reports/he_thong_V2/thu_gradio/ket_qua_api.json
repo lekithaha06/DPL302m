@@ -1,0 +1,35 @@
+{
+ "health": {
+  "trang_thai": "ok",
+  "backend": "that",
+  "model_da_nap": true,
+  "mo_hinh": "vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best",
+  "can_api_key": false
+ },
+ "that.wav": {
+  "status": 200,
+  "chi_tiet": "Ephemeral also performed \"Bong Ba Han\", the singer who sings along with him.",
+  "mo_hinh": "vinai/PhoWhisper-small@a86b604c + vinai/vinai-translate-vi2en-v2@ae7baa85 + LoRA V2/best"
+ },
+ "rong.wav": {
+  "status": 400,
+  "chi_tiet": "File rỗng",
+  "mo_hinh": null
+ },
+ "hong.wav": {
+  "status": 400,
+  "chi_tiet": "Không đọc được audio .wav. File hỏng hoặc sai định dạng.",
+  "mo_hinh": null
+ },
+ "x.txt": {
+  "status": 400,
+  "chi_tiet": "Định dạng .txt không được hỗ trợ. Dùng một trong: .flac, .m4a, .mp3, .ogg, .wav, .webm",
+  "mo_hinh": null
+ },
+ "lon.wav": {
+  "status": 413,
+  "chi_tiet": "File 50.0 MB, vượt giới hạn 50 MB",
+  "mo_hinh": null
+ },
+ "5_request_giong_nhau": true
+}

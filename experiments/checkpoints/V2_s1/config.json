@@ -1,0 +1,37 @@
+{
+  "train": [
+    "/vol/data/fleurs_train_asr_pho.jsonl",
+    "/vol/data/phomt_train_mix.jsonl"
+  ],
+  "dev": "/vol/data/fleurs_dev_asr_pho.jsonl",
+  "out_dir": "/vol/out/checkpoints/V2_s1",
+  "revision": "ae7baa85da07dbe8e23ac26a9f5ef560c17e2138",
+  "epochs": 5,
+  "lr": 0.0002,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "warmup_ratio": 0.06,
+  "weight_decay": 0.0,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "targets": "q_proj,k_proj,v_proj,out_proj,fc1,fc2",
+  "max_len": 256,
+  "seed": 1,
+  "resume": true,
+  "model": "vinai/vinai-translate-vi2en-v2",
+  "optimizer": "AdamW (torch)",
+  "scheduler": "linear warmup/decay",
+  "precision": "fp32 weights + fp16 autocast",
+  "decode_dev": {
+    "num_beams": 5,
+    "max_new_tokens": 256,
+    "early_stopping": true,
+    "do_sample": false
+  },
+  "selection": "BLEU dev cao nhất",
+  "trainable_params": 8650752,
+  "all_params": 431850496,
+  "n_train": 7394,
+  "n_dev": 361
+}

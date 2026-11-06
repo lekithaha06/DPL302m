@@ -1,0 +1,94 @@
+03:12:08 START S5 kiet_t2_phowhisper-small_fleurs_dev
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+[kiet_t2_phowhisper-small_fleurs_dev] 50/361
+[kiet_t2_phowhisper-small_fleurs_dev] 100/361
+[kiet_t2_phowhisper-small_fleurs_dev] 150/361
+[kiet_t2_phowhisper-small_fleurs_dev] 200/361
+[kiet_t2_phowhisper-small_fleurs_dev] 250/361
+[kiet_t2_phowhisper-small_fleurs_dev] 300/361
+[kiet_t2_phowhisper-small_fleurs_dev] 350/361
+[kiet_t2_phowhisper-small_fleurs_dev] xong: 361/361 (mới 361)
+  "n": 361,
+  "WER_percent": 13.116484360007677,
+  "CER_percent": 9.866243986540974,
+03:19:04 END S5 kiet_t2_phowhisper-small_fleurs_dev
+03:19:04 START S5 kiet_t2_phowhisper-small_fleurs_train
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+[kiet_t2_phowhisper-small_fleurs_train] 50/2926
+[kiet_t2_phowhisper-small_fleurs_train] 100/2926
+[kiet_t2_phowhisper-small_fleurs_train] 150/2926
+[kiet_t2_phowhisper-small_fleurs_train] 200/2926
+[kiet_t2_phowhisper-small_fleurs_train] 250/2926
+[kiet_t2_phowhisper-small_fleurs_train] 300/2926
+[kiet_t2_phowhisper-small_fleurs_train] 350/2926
+[kiet_t2_phowhisper-small_fleurs_train] 400/2926
+[kiet_t2_phowhisper-small_fleurs_train] 450/2926
+[kiet_t2_phowhisper-small_fleurs_train] 500/2926
+[kiet_t2_phowhisper-small_fleurs_train] 550/2926
+[kiet_t2_phowhisper-small_fleurs_train] 600/2926
+[kiet_t2_phowhisper-small_fleurs_train] 650/2926
+[kiet_t2_phowhisper-small_fleurs_train] 700/2926
+[kiet_t2_phowhisper-small_fleurs_train] 750/2926
+[kiet_t2_phowhisper-small_fleurs_train] 800/2926
+[kiet_t2_phowhisper-small_fleurs_train] 850/2926
+[kiet_t2_phowhisper-small_fleurs_train] 900/2926
+[kiet_t2_phowhisper-small_fleurs_train] 950/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1000/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1050/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1100/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1150/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1200/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1250/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1300/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1350/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1400/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1450/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1500/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1550/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1600/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1650/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1700/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1750/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1800/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1850/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1900/2926
+[kiet_t2_phowhisper-small_fleurs_train] 1950/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2000/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2050/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2100/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2150/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2200/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2250/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2300/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2350/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2400/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2450/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2500/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2550/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2600/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2650/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2700/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2750/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2800/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2850/2926
+[kiet_t2_phowhisper-small_fleurs_train] 2900/2926
+[kiet_t2_phowhisper-small_fleurs_train] xong: 2926/2926 (mới 2926)
+  "n": 2926,
+  "WER_percent": 11.633069992087954,
+  "CER_percent": 8.7771763305025,
+04:11:55 END S5 kiet_t2_phowhisper-small_fleurs_train
+fleurs_test_clean.jsonl 857 c7ea4833435d3320
+fleurs_dev_clean.jsonl 361 cc4ea59564908554
+fleurs_train_clean.jsonl 2926 7dbb8ac703a99e92
+fleurs_test_asr_pho.jsonl 857 5a030810a3b6015f
+fleurs_dev_asr_pho.jsonl 361 643cd65570651e36
+fleurs_train_asr_pho.jsonl 2926 c8dd749edc4a65a2
+04:11:55 START S6 B0 fleurs_test_clean
+{"BLEU": 38.27, "chrF++": 61.54, "n": 857}
+04:12:50 START S6 B0 fleurs_test_asr_pho
+{"BLEU": 22.69, "chrF++": 49.38, "n": 857}
+04:15:10 START S6 B0 fleurs_dev_clean
+{"BLEU": 37.57, "chrF++": 61.63, "n": 361}
+04:15:41 START S6 B0 fleurs_dev_asr_pho
+{"BLEU": 22.96, "chrF++": 50.4, "n": 361}
+04:16:13 S6_DONE

@@ -1,0 +1,19 @@
+# Môi trường Task 2 – Kiệt (task3). torch theo protocol bao_asr_v1_20261027 (2.0.1+cu117).
+torch==2.0.1+cu117
+torchaudio==2.0.2+cu117
+numpy==1.26.4
+transformers==4.44.2
+tokenizers==0.19.1
+huggingface_hub==0.24.6
+accelerate==0.33.0
+peft==0.12.0
+sentencepiece==0.2.0
+sacrebleu==2.4.3
+soundfile==0.12.1
+scipy==1.13.1
+matplotlib==3.9.2
+pandas==2.2.2
+tqdm
+python-docx==1.1.2
+python-pptx==1.0.2
+protobuf==4.25.3

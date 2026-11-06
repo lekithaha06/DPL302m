@@ -1,0 +1,24 @@
+{
+ "A": "truoc_0411",
+ "B": "proposed",
+ "BLEU_A": 28.01,
+ "BLEU_B": 28.06,
+ "delta": 0.05,
+ "ci95": [
+  -0.24,
+  0.38
+ ],
+ "p_one_sided_delta_le_0": 0.309,
+ "n_resamples": 1000,
+ "n_clusters": 347,
+ "n_items": 857,
+ "cluster": "sent_id",
+ "seed": 42,
+ "so_ban_dich_khac": 165,
+ "so_loi_asr_khac": 10,
+ "cau_co_chu_so": {
+  "n": 171,
+  "BLEU_A": 22.39,
+  "BLEU_B": 23.2
+ }
+}

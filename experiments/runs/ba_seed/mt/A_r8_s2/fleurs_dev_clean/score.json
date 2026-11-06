@@ -1,0 +1,24 @@
+{
+  "BLEU": 37.42,
+  "chrF++": 61.4,
+  "bleu_signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3",
+  "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.4.3",
+  "n": 361,
+  "input": "/vol/data/fleurs_dev_clean.jsonl",
+  "input_sha256": "cc4ea59564908554c50ee3ff7e9c7b5d319277dba7f861e935eedaaa08891510",
+  "model": "vinai/vinai-translate-vi2en-v2",
+  "revision": "ae7baa85da07dbe8e23ac26a9f5ef560c17e2138",
+  "adapter": "/vol/out/checkpoints/A_r8_s2/best",
+  "decode": {
+    "num_beams": 5,
+    "max_new_tokens": 256,
+    "early_stopping": true,
+    "do_sample": false
+  },
+  "dtype": "float16 (adapter merge ở fp32)",
+  "batch_size": 16,
+  "n_oom_split": 0,
+  "elapsed_s_this_session": 19.2,
+  "n_new_this_session": 361,
+  "finished": "2026-11-04 09:08:28"
+}

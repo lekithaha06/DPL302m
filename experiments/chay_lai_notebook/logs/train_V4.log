@@ -1,0 +1,40 @@
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+{"epoch": 1, "dev_loss": 1.391740925424317, "dev_BLEU": 26.2, "dev_chrF++": 51.95, "minutes": 6.7, "peak_vram_bytes": 5994292736, "ram_rss_bytes": 2862104576}
+{"epoch": 2, "dev_loss": 1.41685601680893, "dev_BLEU": 25.32, "dev_chrF++": 52.08, "minutes": 6.68, "peak_vram_bytes": 5994292736, "ram_rss_bytes": 2744147968}
+{"epoch": 3, "dev_loss": 1.458540494422173, "dev_BLEU": 25.79, "dev_chrF++": 52.21, "minutes": 6.54, "peak_vram_bytes": 5994292736, "ram_rss_bytes": 2749063168}
+{"epoch": 4, "dev_loss": 1.5024091536978936, "dev_BLEU": 25.14, "dev_chrF++": 51.8, "minutes": 6.52, "peak_vram_bytes": 5994292736, "ram_rss_bytes": 2755010560}
+{"epoch": 5, "dev_loss": 1.5293285143342374, "dev_BLEU": 26.02, "dev_chrF++": 52.02, "minutes": 6.42, "peak_vram_bytes": 5994292736, "ram_rss_bytes": 2754457600}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/23
+{"BLEU": 26.33, "chrF++": 52.03, "n": 361}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/23
+{"BLEU": 25.38, "chrF++": 51.91, "n": 361}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/23
+{"BLEU": 25.79, "chrF++": 52.24, "n": 361}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/23
+{"BLEU": 25.14, "chrF++": 51.75, "n": 361}
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\transformers\tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+batch 1/23
+{"BLEU": 25.94, "chrF++": 52.0, "n": 361}
+best {'epoch': 1, 'dev_loss': 1.391740925424317, 'dev_BLEU': 26.2, 'dev_chrF++': 51.95, 'minutes': 6.7, 'peak_vram_bytes': 5994292736, 'ram_rss_bytes': 2862104576, 'dev_BLEU_translate': 26.33, 'dev_chrF++_translate': 52.03}

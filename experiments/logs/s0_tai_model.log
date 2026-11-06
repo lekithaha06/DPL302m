@@ -1,0 +1,74 @@
+START 02:06:12
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py:159: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\CAIDCM\teamwork\task3\hf_home\hub\models--vinai--PhoWhisper-small. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Fetching 11 files:  73%|███████▎  | 8/11 [00:02<00:01,  2.92it/s]Fetching 11 files:  91%|█████████ | 10/11 [00:20<00:02,  2.00s/it]Fetching 11 files: 100%|██████████| 11/11 [03:51<00:00, 21.07s/it]Fetching 11 files: 100%|██████████| 11/11 [03:51<00:00, 21.07s/it]
+vinai/PhoWhisper-small a86b604c346caf7148c37512eafe783a16420adb 925 MB
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py:159: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\CAIDCM\teamwork\task3\hf_home\hub\models--openai--whisper-small. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Fetching 12 files:  67%|██████▋   | 8/12 [00:02<00:01,  3.08it/s]Fetching 12 files:  83%|████████▎ | 10/12 [00:17<00:03,  1.77s/it]Fetching 12 files:  92%|█████████▏| 11/12 [03:54<00:21, 21.34s/it]Fetching 12 files: 100%|██████████| 12/12 [05:44<00:00, 28.68s/it]Fetching 12 files: 100%|██████████| 12/12 [05:44<00:00, 28.68s/it]
+openai/whisper-small 973afd24965f72e36ca33b3055d56a652f456b4d 1848 MB
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [00:01<00:03,  1.26s/it]Fetching 4 files:  25%|██▌       | 1/4 [00:01<00:03,  1.26s/it]
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py:159: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\CAIDCM\teamwork\task3\hf_home\hub\models--vinai--vinai-translate-vi2en-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Traceback (most recent call last):
+  File "D:\CAIDCM\teamwork\task3\scripts\tai_model.py", line 13, in <module>
+    p = snapshot_download(repo, revision=sha, allow_patterns=PAT, ignore_patterns=IGN)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\_snapshot_download.py", line 299, in snapshot_download
+    thread_map(
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\tqdm\contrib\concurrent.py", line 191, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\tqdm\contrib\concurrent.py", line 163, in _executor_map
+    return list(ex.map(
+           ^^^^^^^^^^^^
+  File "C:\Users\HP OMEN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP OMEN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP OMEN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP OMEN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\HP OMEN\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\_snapshot_download.py", line 273, in _inner_hf_hub_download
+    return hf_hub_download(
+           ^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\utils\_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py", line 1240, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py", line 1399, in _hf_hub_download_to_cache_dir
+    _create_symlink(blob_path, pointer_path, new_blob=True)
+  File "D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py", line 924, in _create_symlink
+    os.symlink(src_rel_or_abs, abs_dst)
+OSError: [WinError 1314] A required privilege is not held by the client: '..\\..\\blobs\\f70ed33c47f9bdbc79cae773ee6aa71045a79489' -> 'D:\\CAIDCM\\teamwork\\task3\\hf_home\\hub\\models--vinai--vinai-translate-vi2en-v2\\snapshots\\ae7baa85da07dbe8e23ac26a9f5ef560c17e2138\\config.json'
+EXIT 1
+END 02:22:40
+RETRY 02:22:58
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 3666.93it/s]
+vinai/PhoWhisper-small a86b604c346caf7148c37512eafe783a16420adb 925 MB
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 2566.50it/s]
+openai/whisper-small 973afd24965f72e36ca33b3055d56a652f456b4d 1848 MB
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\huggingface_hub\file_download.py:159: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in D:\CAIDCM\teamwork\task3\hf_home\hub\models--vinai--vinai-translate-vi2en-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00,  6.29it/s]Fetching 4 files: 100%|██████████| 4/4 [00:00<00:00,  6.28it/s]
+vinai/vinai-translate-vi2en-v2 ae7baa85da07dbe8e23ac26a9f5ef560c17e2138 1616 MB
+EXIT 0

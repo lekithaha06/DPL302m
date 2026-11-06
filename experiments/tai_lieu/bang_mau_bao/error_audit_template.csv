@@ -1,0 +1,1 @@
+﻿run_id,dataset,recording_id,sent_id,speaker_id,duration_s,reference_raw,hypothesis_raw,reference_norm,hypothesis_norm,word_ops,S,D,I,N,Sc,Dc,Ic,Nc,WER_percent,CER_percent,tone_only,omission,proper_name,number,repetition,audio_checked,reference_issue,reviewer,comment

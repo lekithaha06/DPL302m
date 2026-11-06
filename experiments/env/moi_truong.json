@@ -1,0 +1,33 @@
+{
+  "python": "3.11.1",
+  "torch": "2.0.1+cu117",
+  "cuda_runtime": "11.7",
+  "cudnn": 8500,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_capability": [
+    8,
+    9
+  ],
+  "arch_list": [
+    "sm_37",
+    "sm_50",
+    "sm_60",
+    "sm_61",
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "compute_37"
+  ],
+  "vram_total_bytes": 8585216000,
+  "transformers": "4.44.2",
+  "huggingface_hub": "0.24.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "fp16_matmul_ok": true,
+  "conv_ok": [
+    1,
+    64,
+    98
+  ]
+}

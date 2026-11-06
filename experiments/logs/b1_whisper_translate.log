@@ -1,0 +1,18 @@
+You have passed task=translate, but also have set `forced_decoder_ids` to [[1, None], [2, 50359]] which creates a conflict. `forced_decoder_ids` will be ignored in favor of task=translate.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+  B1 0/857
+  B1 100/857
+  B1 200/857
+  B1 300/857
+  B1 400/857
+  B1 500/857
+  B1 600/857
+  B1 700/857
+  B1 800/857
+B1_XONG D:\CAIDCM\teamwork\task3\runs\b1\predictions_b1.jsonl
+You have passed task=translate, but also have set `forced_decoder_ids` to [[1, None], [2, 50359]] which creates a conflict. `forced_decoder_ids` will be ignored in favor of task=translate.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+B1_XONG D:\CAIDCM\teamwork\task3\runs\b1\predictions_b1.jsonl
+You have passed task=translate, but also have set `forced_decoder_ids` to [[1, None], [2, 50359]] which creates a conflict. `forced_decoder_ids` will be ignored in favor of task=translate.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+B1_XONG D:\CAIDCM\teamwork\task3\runs\b1\predictions_b1.jsonl

@@ -1,0 +1,9 @@
+{
+  "version": "V2",
+  "change_vs_V1": "Thêm 4468 cặp PhoMT train sạch (danh sách chỉ số của Uyên, reports/data/can_bang/can_bang_v2_phomt_idx.txt) vào dữ liệu dạy V1; mọi siêu tham số giữ nguyên V1",
+  "reason_from_V1_failure_analysis_dev": "V1 overfit nhanh (BLEU dev cao nhất ở epoch 1, dev loss tăng từ epoch 2); 13/361 bản dịch dev bị rút gọn (độ dài < 0,7 tham chiếu, B0: 0); không cải thiện nhóm câu ASR sạch (27,26→27,01); BLEU FLEURS clean test giảm 38,27→36,19 → dấu hiệu lệch khỏi phân phối dịch gốc. Trộn PhoMT làm neo giữ khả năng dịch chung.",
+  "train": ["runs/mt_data/fleurs_train_asr_pho.jsonl", "runs/mt_data/phomt_train_mix.jsonl"],
+  "dev": "runs/mt_data/fleurs_dev_asr_pho.jsonl",
+  "epochs": 5, "lr": 0.0002, "batch_size": 8, "grad_accum": 2, "warmup_ratio": 0.06, "lora_r": 16, "lora_alpha": 32, "lora_dropout": 0.05,
+  "seed": 42, "selection": "BLEU dev cao nhất"
+}

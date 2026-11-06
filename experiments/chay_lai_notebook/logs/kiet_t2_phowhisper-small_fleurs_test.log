@@ -1,0 +1,22 @@
+D:\CAIDCM\teamwork\task3\env\.venv\Lib\site-packages\torch\_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+You have passed task=transcribe, but also have set `forced_decoder_ids` to [[1, None], [2, 50359]] which creates a conflict. `forced_decoder_ids` will be ignored in favor of task=transcribe.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[kiet_t2_phowhisper-small_fleurs_test] 50/857
+[kiet_t2_phowhisper-small_fleurs_test] 100/857
+[kiet_t2_phowhisper-small_fleurs_test] 150/857
+[kiet_t2_phowhisper-small_fleurs_test] 200/857
+[kiet_t2_phowhisper-small_fleurs_test] 250/857
+[kiet_t2_phowhisper-small_fleurs_test] 300/857
+[kiet_t2_phowhisper-small_fleurs_test] 350/857
+[kiet_t2_phowhisper-small_fleurs_test] 400/857
+[kiet_t2_phowhisper-small_fleurs_test] 450/857
+[kiet_t2_phowhisper-small_fleurs_test] 500/857
+[kiet_t2_phowhisper-small_fleurs_test] 550/857
+[kiet_t2_phowhisper-small_fleurs_test] 600/857
+[kiet_t2_phowhisper-small_fleurs_test] 650/857
+[kiet_t2_phowhisper-small_fleurs_test] 700/857
+[kiet_t2_phowhisper-small_fleurs_test] 750/857
+[kiet_t2_phowhisper-small_fleurs_test] 800/857
+[kiet_t2_phowhisper-small_fleurs_test] 850/857
+[kiet_t2_phowhisper-small_fleurs_test] xong: 857/857 (mới 857)

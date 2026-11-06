@@ -1,0 +1,200 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  # Runner CI khong co GPU va khong tai 2,69 GB trong so, nen chay backend gia.
+  # Backend gia KHONG dung de bao cao bat ky con so chat luong nao.
+  ASR_BACKEND: gia
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Cai ruff
+        run: pip install ruff==0.5.7
+
+      - name: Kiem loi cu phap
+        run: ruff check src api app tests
+
+      - name: Kiem dinh dang
+        run: ruff format --check src api app tests
+
+  test:
+    name: Test (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      - name: Cai thu vien he thong
+        run: sudo apt-get update && sudo apt-get install -y libsndfile1 ffmpeg
+
+      - name: Cai thu vien Python
+        # Khong cai torch/transformers trong CI: nang va khong can cho backend gia
+        run: |
+          pip install --upgrade pip
+          pip install numpy==1.26.4 soundfile==0.14.0 scipy==1.13.1 fastapi==0.115.6 pydantic==2.10.6 \
+                      python-multipart==0.0.33 httpx==0.28.1 sacrebleu==2.4.3 \
+                      pytest==8.3.3 pytest-cov==5.0.0
+
+      - name: Kiem xung dot phu thuoc
+        run: pip check
+
+      - name: Chay test
+        run: pytest --cov=src --cov=api --cov-report=term-missing --cov-report=xml
+
+      - name: Luu bao cao coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-py${{ matrix.python }}
+          path: coverage.xml
+          if-no-files-found: ignore
+
+  cai-sach:
+    name: Cai requirements.txt tu venv sach (F04)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Cai day du (ca torch) va kiem xung dot
+        run: |
+          python -m venv /tmp/sach
+          /tmp/sach/bin/python -m pip install --upgrade pip
+          /tmp/sach/bin/python -m pip install -r requirements.txt 2>&1 | tee pip_install.log
+          /tmp/sach/bin/python -m pip check
+          /tmp/sach/bin/python -c "import gradio, fastapi, uvicorn, websockets, transformers, peft; print(gradio.__version__, fastapi.__version__, uvicorn.__version__, websockets.__version__)"
+      - name: Luu log pip
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pip-install-log
+          path: pip_install.log
+          if-no-files-found: ignore
+
+  build:
+    name: Build Docker image
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build anh API
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile.api
+          tags: asr-vi-en-api:${{ github.sha }}
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build anh giao dien
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile.app
+          tags: asr-vi-en-app:${{ github.sha }}
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Thu khoi dong container API va goi /health
+        run: |
+          docker run -d --name thu -p 8000:8000 \
+            -e ASR_BACKEND=gia \
+            asr-vi-en-api:${{ github.sha }}
+
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8000/health; then
+              echo "health ok sau ${i}0 giay"; break
+            fi
+            sleep 10
+            if [ "$i" = "30" ]; then
+              echo "::error::container khong len sau 300 giay"
+              docker logs thu
+              exit 1
+            fi
+          done
+
+      - name: Thu endpoint /dich bang file wav sinh tai cho
+        run: |
+          python - <<'PY'
+          import wave, numpy as np
+          sr = 16000
+          t = np.arange(int(5 * sr)) / sr
+          x = (0.3 * np.sin(2 * np.pi * 220 * t) * 32767).astype("<i2")
+          with wave.open("thu.wav", "wb") as w:
+              w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
+              w.writeframes(x.tobytes())
+          PY
+          curl -fsS -F "file=@thu.wav" http://localhost:8000/dich | tee ra.json
+          python -c "
+          import json, sys
+          d = json.load(open('ra.json'))
+          assert d['cac_doan'], 'khong co doan nao'
+          assert d['backend'] == 'gia'
+          print('OK:', len(d['cac_doan']), 'doan, rtf', d['rtf'])
+          "
+
+      - name: Don container
+        if: always()
+        run: docker rm -f thu || true
+
+  deploy:
+    name: Deploy lên Hugging Face Spaces
+    runs-on: ubuntu-latest
+    needs: [build]
+    # Chi deploy khi day len main va repo da dat secret HF_TOKEN
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Kiem tra da co secret chua
+        id: kiem
+        run: |
+          if [ -z "${{ secrets.HF_TOKEN }}" ]; then
+            echo "co=false" >> $GITHUB_OUTPUT
+            echo "::notice::Chua dat secret HF_TOKEN nen bo qua buoc deploy."
+          else
+            echo "co=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Day lên Spaces
+        if: steps.kiem.outputs.co == 'true'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          git config user.name "ci"
+          git config user.email "ci@users.noreply.github.com"
+          git remote add space "https://user:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}"
+          git push --force space main

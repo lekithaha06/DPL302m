@@ -1,0 +1,63 @@
+{
+ "quy_tac": "reports/ablation/QUY_TAC_CHON.md",
+ "M_dev_cascade": 26.71,
+ "nhom_hoa": [
+  "V2",
+  "V4",
+  "V3",
+  "V1"
+ ],
+ "ban_chon": "V2",
+ "bang_dev": [
+  {
+   "bản": "V1",
+   "dev cascade": 26.47,
+   "dev sạch": 35.97,
+   "tham số train": 8650752,
+   "hoà (≥ M−0,5)": true
+  },
+  {
+   "bản": "V2",
+   "dev cascade": 26.45,
+   "dev sạch": 36.93,
+   "tham số train": 8650752,
+   "hoà (≥ M−0,5)": true
+  },
+  {
+   "bản": "V3",
+   "dev cascade": 26.71,
+   "dev sạch": 36.37,
+   "tham số train": 8650752,
+   "hoà (≥ M−0,5)": true
+  },
+  {
+   "bản": "V4",
+   "dev cascade": 26.33,
+   "dev sạch": 36.75,
+   "tham số train": 8650752,
+   "hoà (≥ M−0,5)": true
+  },
+  {
+   "bản": "A_r8",
+   "dev cascade": 25.97,
+   "dev sạch": 36.74,
+   "tham số train": 4325376,
+   "hoà (≥ M−0,5)": false
+  },
+  {
+   "bản": "A_r32",
+   "dev cascade": 25.88,
+   "dev sạch": 36.44,
+   "tham số train": 17301504,
+   "hoà (≥ M−0,5)": false
+  },
+  {
+   "bản": "A_aug",
+   "dev cascade": 24.6,
+   "dev sạch": 37.3,
+   "tham số train": 8650752,
+   "hoà (≥ M−0,5)": false
+  }
+ ],
+ "luc": "04/11/2026 12:08"
+}

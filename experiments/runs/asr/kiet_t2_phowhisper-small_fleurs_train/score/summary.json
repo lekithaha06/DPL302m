@@ -1,0 +1,30 @@
+{
+  "run_id": "kiet_t2_phowhisper-small_fleurs_train",
+  "n": 2926,
+  "status": "SCORED_PREDICTIONS_ONLY",
+  "normalizer_id": "vi_nfc_ps_space_v1",
+  "alignment_tie_order": "H S D I",
+  "WER_percent": 11.633069992087954,
+  "CER_percent": 8.7771763305025,
+  "word_counts": {
+    "S": 5400,
+    "D": 294,
+    "I": 4157,
+    "H": 78987,
+    "N": 84681
+  },
+  "char_counts": {
+    "S": 10882,
+    "D": 2839,
+    "I": 11931,
+    "H": 278537,
+    "N": 292258
+  },
+  "predictions_sha256": "d846073983287254049f401ed93f19abb1561f3bcdab1e2200ba94e261c855d7",
+  "manifest_sha256": "617aac7809aa6e940d39d832ccc40263c92aba282d65626bd53abbe72f0989f9",
+  "scorer_sha256": "db74bc5e66c2a88b181a5ec062f5c01fe1478822dc43b60c74509f314c47f24a",
+  "run_fingerprints": [
+    "6123e45f8e16e0efd99ae05357fae03fa2175e0f5c748342ca7cb0e273527b60"
+  ],
+  "note": "Không chứng nhận chất lượng audio, checkpoint hoặc timing; cần run metadata riêng."
+}

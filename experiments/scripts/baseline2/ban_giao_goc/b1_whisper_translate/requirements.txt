@@ -1,0 +1,6 @@
+transformers>=4.30.0
+torch>=2.0.0
+torchaudio>=2.0.0
+accelerate>=0.20.0
+sacrebleu==2.4.3
+tqdm

@@ -1,0 +1,9 @@
+﻿dataset,split,so_mau,pct_mau,gio,pct_gio,so_cau_goc,so_nguoi_noi
+fleurs,train,2926,70.61,8.856,67.84,1449,
+fleurs,dev,361,8.71,1.194,9.15,149,
+fleurs,test,857,20.68,3.004,23.01,347,
+vivos,train,11656,93.88,14.918,95.24,11656,46
+vivos,test,760,6.12,0.746,4.76,760,19
+phomt,train,2977170,98.74,,,2977170,
+phomt,dev,18719,0.62,,,18719,
+phomt,test,19151,0.64,,,19151,

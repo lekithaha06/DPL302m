@@ -1,0 +1,87 @@
+{
+  "script": "viec2_ghep_chia_fleurs_chong_trung.py",
+  "time_utc": "2026-10-29T19:23:50+00:00",
+  "args": {
+    "data_dir": "data",
+    "report_dir": "reports\\data",
+    "phomt_dir": "data\\phomt",
+    "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+    "limit": "0",
+    "with_test_audio": "True",
+    "skip_phomt": "False"
+  },
+  "versions": {
+    "python": "3.11.1",
+    "huggingface_hub": "0.24.6",
+    "requests": "2.34.2"
+  },
+  "platform": "Windows-10-10.0.26200-SP0",
+  "fleurs_revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "en_us": {
+    "sentences": 1976,
+    "bad_tsv_lines": 0,
+    "ids_with_different_en_text": 0
+  },
+  "id_split_conflicts": {
+    "n_ids": 0,
+    "examples": {}
+  },
+  "phomt": {
+    "files": {
+      "train.vi": "data\\phomt\\PhoMT\\detokenization\\train\\train.vi",
+      "train.en": "data\\phomt\\PhoMT\\detokenization\\train\\train.en",
+      "test.vi": "data\\phomt\\PhoMT\\detokenization\\test\\test.vi",
+      "test.en": "data\\phomt\\PhoMT\\detokenization\\test\\test.en"
+    },
+    "test_pairs": 19151,
+    "train_pairs": 2977999,
+    "fleurs_test_sentences_in_phomt_test": 0,
+    "phomt_train_lines_matching_fleurs_test": 0,
+    "note": "so trùng tuyệt đối sau chuẩn hoá; chưa kiểm câu gần giống"
+  },
+  "splits": {
+    "train": {
+      "tsv_rows": 2994,
+      "bad_tsv_lines": 0,
+      "wav_in_archive": 2994,
+      "recordings_kept": 2994,
+      "dropped": {},
+      "sentences_kept": 1482,
+      "hours_kept": 9.076,
+      "missing_en": 67,
+      "missing_audio": 0,
+      "gender": {
+        "FEMALE": 2228,
+        "MALE": 766
+      }
+    },
+    "dev": {
+      "tsv_rows": 361,
+      "bad_tsv_lines": 0,
+      "wav_in_archive": 361,
+      "recordings_kept": 361,
+      "dropped": {},
+      "sentences_kept": 149,
+      "hours_kept": 1.194,
+      "missing_en": 0,
+      "missing_audio": 0,
+      "gender": {
+        "MALE": 361
+      }
+    },
+    "test": {
+      "tsv_rows": 857,
+      "bad_tsv_lines": 0,
+      "wav_in_archive": 857,
+      "recordings_kept": 857,
+      "dropped": {},
+      "sentences_kept": 347,
+      "hours_kept": 3.004,
+      "missing_en": 0,
+      "missing_audio": 0,
+      "gender": {
+        "MALE": 857
+      }
+    }
+  }
+}
